@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-31T21:36:08.821804Z",
-  "last_attempt_at": "2026-10-31T21:36:08.821804Z",
+  "generated_at": "2026-11-01T00:59:52.623752Z",
+  "last_attempt_at": "2026-11-01T00:59:52.623752Z",
   "status": "ok",
   "method": "公開RSSメタデータを取得。記事の公開日時・見出しの同一性・フィード種別に基づく透明なスコア。PV、SNSシェア数、実際のトレンド順位は使用していません。",
   "feed_success": [
@@ -12,7 +12,7 @@
     {
       "name": "NHK社会",
       "url": "https://www.nhk.or.jp/rss/news/cat1.xml",
-      "count": 60
+      "count": 61
     },
     {
       "name": "BBC News 日本語",
@@ -22,12 +22,12 @@
     {
       "name": "Google ニュース・ゲーム",
       "url": "https://news.google.com/rss/search?q=%E3%82%B2%E3%83%BC%E3%83%A0%20%E6%96%B0%E4%BD%9C%20OR%20%E4%BB%BB%E5%A4%A9%E5%A0%82%20OR%20PlayStation&hl=ja&gl=JP&ceid=JP:ja",
-      "count": 45
+      "count": 44
     },
     {
       "name": "Google ニュース・アニメ",
       "url": "https://news.google.com/rss/search?q=%E3%82%A2%E3%83%8B%E3%83%A1%20%E6%96%B0%E4%BD%9C%20OR%20%E5%A3%B0%E5%84%AA%20OR%20%E5%8A%87%E5%A0%B4%E7%89%88&hl=ja&gl=JP&ceid=JP:ja",
-      "count": 42
+      "count": 43
     },
     {
       "name": "Google ニュース・車",
@@ -42,17 +42,17 @@
     {
       "name": "Google ニュース・仮想通貨",
       "url": "https://news.google.com/rss/search?q=%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%20OR%20%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8&hl=ja&gl=JP&ceid=JP:ja",
-      "count": 87
+      "count": 88
     },
     {
       "name": "Google ニュース・政治",
       "url": "https://news.google.com/rss/search?q=%E6%94%BF%E5%BA%9C%20OR%20%E5%9B%BD%E4%BC%9A%20OR%20%E6%97%A5%E9%8A%80&hl=ja&gl=JP&ceid=JP:ja",
-      "count": 93
+      "count": 95
     },
     {
       "name": "Google ニュース・スポーツ",
       "url": "https://news.google.com/rss/search?q=%E9%87%8E%E7%90%83%20OR%20%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%20OR%20%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84&hl=ja&gl=JP&ceid=JP:ja",
-      "count": 96
+      "count": 99
     }
   ],
   "feed_errors": [],
@@ -64,13 +64,13 @@
       "source": "NHK総合",
       "feed": "NHK総合",
       "category": "ニュース",
-      "published_at": "2026-10-31T21:15:45Z",
-      "score": 85,
+      "published_at": "2026-10-31T21:15:00Z",
+      "score": 82,
       "reason": {
-        "freshness_points": 60,
+        "freshness_points": 57,
         "additional_source_points": 15,
         "primary_feed_bonus": 10,
-        "age_hours": 0.3,
+        "age_hours": 3.7,
         "independent_publishers": 2,
         "source_names": [
           "NHK社会",
@@ -87,16 +87,38 @@
       "feed": "NHK総合",
       "category": "ニュース",
       "published_at": "2026-10-31T15:08:00Z",
-      "score": 80,
+      "score": 77,
       "reason": {
-        "freshness_points": 55,
+        "freshness_points": 52,
         "additional_source_points": 15,
         "primary_feed_bonus": 10,
-        "age_hours": 6.5,
+        "age_hours": 9.9,
         "independent_publishers": 2,
         "source_names": [
           "NHK社会",
           "NHK総合"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "047fe5db6b08fd",
+      "title": "トヨタ新型「ステーションワゴン」に“反響殺到”！「普段使いに最高！」「引き締まってカッコいい」の声！ “リッター28.8km”低燃費＆精悍「ブラック足回り」も装備！ “誕生60周年”を祝う「カローラツーリング」とは！",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTlFtTmNBcFZMeWJvSkJFa2tIYnBidW0xMHVxN2RnQWVVRFJhbzBma0FHSWo1ZWNYLXNLcGd0U282MkpBUjNXYUZpQzVJVFZLZTZ1X2I5T2N0YmlnYWZtb1lQaE9uZ05UNkJtMndwWVdUNkdHaDBBMU1vbnE0SW1xT9IBhgFBVV95cUxQc09hNkExWGN5OUREQ3pjb2tOUmVDVWRPT2dPbW9zbXdteFZvT0g1OUVxUjZiZ0ZwRzNDZ09kY0tfMkRGYXQyOE5ZWHpXbm9SbktTU1Q1WHlhZHdvSWpmS3dIVmlnNTI2WkZWc0phOW1BYWVfOWR6eDRsM19nUHlOdFBtZURUUQ?oc=5",
+      "source": "ｄメニューニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-10-31T23:15:50Z",
+      "score": 74,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 15,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.7,
+        "independent_publishers": 2,
+        "source_names": [
+          "Infoseek",
+          "ｄメニューニュース"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -109,12 +131,12 @@
       "feed": "Google ニュース・政治",
       "category": "政治・経済",
       "published_at": "2026-10-31T09:29:14Z",
-      "score": 75,
+      "score": 72,
       "reason": {
-        "freshness_points": 50,
+        "freshness_points": 47,
         "additional_source_points": 15,
         "primary_feed_bonus": 10,
-        "age_hours": 12.1,
+        "age_hours": 15.5,
         "independent_publishers": 2,
         "source_names": [
           "BBC",
@@ -131,16 +153,79 @@
       "feed": "Google ニュース・車",
       "category": "車・バイク",
       "published_at": "2026-10-31T20:03:24Z",
-      "score": 74,
+      "score": 71,
       "reason": {
-        "freshness_points": 59,
+        "freshness_points": 56,
         "additional_source_points": 15,
         "primary_feed_bonus": 0,
-        "age_hours": 1.5,
+        "age_hours": 4.9,
         "independent_publishers": 2,
         "source_names": [
           "47NEWS",
           "下野新聞社"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "aa76f154b95dde",
+      "title": "【地震情報】福島県で震度3 津波の心配なし",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69068",
+      "source": "NHK総合",
+      "feed": "NHK総合",
+      "category": "ニュース",
+      "published_at": "2026-10-31T22:21:00Z",
+      "score": 68,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 10,
+        "age_hours": 2.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "NHK総合"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "aca66eace54230",
+      "title": "茂木外相 ロシア外相と率直な意見交換 記者解放へ働きかけ継続",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69063",
+      "source": "NHK総合",
+      "feed": "NHK総合",
+      "category": "ニュース",
+      "published_at": "2026-10-31T21:51:22Z",
+      "score": 67,
+      "reason": {
+        "freshness_points": 57,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 10,
+        "age_hours": 3.1,
+        "independent_publishers": 1,
+        "source_names": [
+          "NHK総合"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "7fc79c3a06c24b",
+      "title": "【動画】Pickup NEWS（11月1日）",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261031de69022",
+      "source": "NHK社会",
+      "feed": "NHK社会",
+      "category": "ニュース",
+      "published_at": "2026-10-31T21:49:52Z",
+      "score": 67,
+      "reason": {
+        "freshness_points": 57,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 10,
+        "age_hours": 3.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "NHK社会"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -152,34 +237,13 @@
       "source": "NHK総合",
       "feed": "NHK総合",
       "category": "ニュース",
-      "published_at": "2026-10-31T21:17:25Z",
-      "score": 70,
+      "published_at": "2026-10-31T21:17:00Z",
+      "score": 67,
       "reason": {
-        "freshness_points": 60,
+        "freshness_points": 57,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 0.3,
-        "independent_publishers": 1,
-        "source_names": [
-          "NHK総合"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "398270a97d20df",
-      "title": "フランスで再び大規模デモ 32万人参加 一部で治安部隊と衝突も",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69060",
-      "source": "NHK総合",
-      "feed": "NHK総合",
-      "category": "ニュース",
-      "published_at": "2026-10-31T21:13:21Z",
-      "score": 70,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 10,
-        "age_hours": 0.4,
+        "age_hours": 3.7,
         "independent_publishers": 1,
         "source_names": [
           "NHK総合"
@@ -194,34 +258,13 @@
       "source": "NHK総合",
       "feed": "NHK総合",
       "category": "ニュース",
-      "published_at": "2026-10-31T20:52:10Z",
-      "score": 69,
+      "published_at": "2026-10-31T20:52:00Z",
+      "score": 67,
       "reason": {
-        "freshness_points": 59,
+        "freshness_points": 57,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 0.7,
-        "independent_publishers": 1,
-        "source_names": [
-          "NHK総合"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "792af812092661",
-      "title": "イラン外交団が仲介国で協議 最高指導者は大規模反撃を指示",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69050",
-      "source": "NHK総合",
-      "feed": "NHK総合",
-      "category": "ニュース",
-      "published_at": "2026-10-31T20:50:43Z",
-      "score": 69,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 10,
-        "age_hours": 0.8,
+        "age_hours": 4.1,
         "independent_publishers": 1,
         "source_names": [
           "NHK総合"
@@ -237,12 +280,12 @@
       "feed": "NHK総合",
       "category": "ニュース",
       "published_at": "2026-10-31T20:09:50Z",
-      "score": 69,
+      "score": 66,
       "reason": {
-        "freshness_points": 59,
+        "freshness_points": 56,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 1.4,
+        "age_hours": 4.8,
         "independent_publishers": 1,
         "source_names": [
           "NHK総合"
@@ -258,12 +301,12 @@
       "feed": "Google ニュース・ゲーム",
       "category": "ゲーム",
       "published_at": "2026-10-31T10:00:00Z",
-      "score": 65,
+      "score": 63,
       "reason": {
-        "freshness_points": 50,
+        "freshness_points": 48,
         "additional_source_points": 15,
         "primary_feed_bonus": 0,
-        "age_hours": 11.6,
+        "age_hours": 15.0,
         "independent_publishers": 2,
         "source_names": [
           "Infoseek",
@@ -273,23 +316,820 @@
       }
     },
     {
-      "id": "3615ed320f7267",
-      "title": "SUBARUが9大会ぶりの白星 トヨタ自動車を破る 日本選手権",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBKU0x1bExOUHluR1RSdUtybnQ2OXRkOUM5RE5uczJicEt5dzZwZTBBVUJXRzNaZzB4a1JMeDE3Y2tOc3NPWkVNRjdaR1VUSDBlR0lEd2o3LTAwMVh6VzgzLVJtODNHbFdJ?oc=5",
+      "id": "ec850673bc3081",
+      "title": "東芝vs日本製鉄鹿島 スタメン発表 社会人野球日本選手権（毎日新聞）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GbEVmRUFZaG5yZ1RxSUJ6TmgxY1BPN0szc2prWnM4OGJrRXAzdkJTaW01V1VMMVBDX09MSFd2bHM3TXZlUkZmY2tSMWdnUHZKUGtudXRlX0trRkVhSDFCWWM5WXpKbHlVYk9xOE5vRS1zb2JKQW1pWmFTVVZlLVk?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:54:28Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.1,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "68aa3355a14e5a",
+      "title": "プレミアリーグで日本選手６人出場 坂元達裕が初ゴール 鎌田大地が先発のパレスは降格圏（日刊スポーツ）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE41bkZSSGxPdjR3NGFhOGtWRFc1eHZTU1E4bDJjQTk5XzlhRm1Pei1pYnlCRGtXMkhxQ2kxT0xyVlB0NU1aMHo2dmhLMXpBYjIxVUVUdDVTeU01azltOEJnRjI3YTNkdXhIbFBPZEhPUmM0UGlhTWc1V1loV1d5ME0?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:54:14Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.1,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "f3b52a3ceee243",
+      "title": "ハッカーが仮想通貨取引所バイナンスから63億ドルを盗んだ。",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNc3BoanZfMUJJNWZHd0NIZHdxd1UzN2xUdGhqcU02M3MwbVZGR0l3WTlZZDMxc1lfZGFJaXhMcUJQd1dXUTJydFBOeDlvS0JhOUIxOV9WSnFSdWc2X3g0WmozVDY2UlljeGtISWF5RWFkQl85T3diWWZQa3dpWUJHWnlNblR6RktyTE1pd2ZEZjNNQzVYM3c?oc=5",
+      "source": "Vietnam.vn",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-11-01T00:53:01Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.1,
+        "independent_publishers": 1,
+        "source_names": [
+          "Vietnam.vn"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "d0ad0c6fdd7231",
+      "title": "優勝候補、初戦で敗退 トヨタ、5投手継投実らず 日本選手権",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1COFhnUzlRZG9tWmV0czI0YlJOY3JobV9GSnVBUS1mRzd2dFRNdkNhQnkzSmhqbXNkME5JRmRsZFZRa21jbHlzbHJ4ZzNwUFRGOUI4TWRNellOTk8wZHVRTmhLQmVObGhy?oc=5",
       "source": "毎日新聞",
       "feed": "Google ニュース・車",
       "category": "車・バイク",
-      "published_at": "2026-10-31T08:04:06Z",
-      "score": 64,
+      "published_at": "2026-11-01T00:52:41Z",
+      "score": 60,
       "reason": {
-        "freshness_points": 49,
-        "additional_source_points": 15,
+        "freshness_points": 60,
+        "additional_source_points": 0,
         "primary_feed_bonus": 0,
-        "age_hours": 13.5,
-        "independent_publishers": 2,
+        "age_hours": 0.1,
+        "independent_publishers": 1,
         "source_names": [
-          "毎日新聞",
-          "ｄメニューニュース"
+          "毎日新聞"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "22d1fcf6a46e90",
+      "title": "中間決算は増収減益 北電・２７年３ 月期業績",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yMG5jYjlLcVBicEs1NDhOb0JqZi1JWkhmd0JmNURDLTdkWHJNbnN0My1FQ0FWVURwU3JFbS00MTN1bFZJR19vQUhIQ2pidTJoejIzQWVyMm54N2xwR29BMHJMdmw?oc=5",
+      "source": "十勝毎日新聞",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-11-01T00:51:22Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.1,
+        "independent_publishers": 1,
+        "source_names": [
+          "十勝毎日新聞"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "a3562dee8be607",
+      "title": "\"24年ぶり復活\"のトヨタ「\"レトロ\"クルーザー」！ 4.7L「V8」搭載＆旧車デザイン採用！ 古そうだけど比較的新しいカスタムモデルとは",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5DVWFyZ0F1X2NJVS16SE5oSlZhYVFlYVJuckF4WFp3WVVpVDE1aTFERkVDSUxMY1BTSEp6XzlTMktsS0tYWTRXNlkxZ1U?oc=5",
+      "source": "くるまのニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:50:40Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "くるまのニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "7c64f13ab70517",
+      "title": "【想像イラスト】フィアット パンダ？いえ、今度はコアラです（笑） 「2CV」のイタリア版は「コアラ」だ！フィアットが手頃な価格の小型EVの開発を計画中！",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sRGRnbXp4RlpoaEFTUTREM3RLeGh4S3RMTDA1ZkFZVUhKa1ZHZjFYaENJYWlqWjFHSG1mNFpQeFlrU0RKanZTRUVrQWQzeUQ3X3BpUHo4ZnkyMWloRGpxTnNuVDNOVjBRUEduN3FTQURMWEJlbVlza2ZqcnVxVzA?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:50:23Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "a3c9703cce9c8e",
+      "title": "【政府のＧＭＯ問題対応】新たな脅威、続く手探り 首相前面、事態は変化",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBJaE9IcEk2NDAzLUNyMDNabDNLakM3QWpVZmlMeFNPYjJhVUNRXy1XOWZseGNpS2JvZUphUTdaalBTUjNjY0NqVlZxcUVxb3lvVHRjMVJiZzc3aTBraVE?oc=5",
+      "source": "沖縄タイムス社",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-11-01T00:50:00Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "沖縄タイムス社"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "1e05baf4d3878c",
+      "title": "【政府のＧＭＯ問題対応】新たな脅威、続く手探り",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mZ2pXOEtQNFRNQWs5T0ZySWswYWd3d0s0dk9DUGV1MmY1Mkh2VGttTDNPV1M0cFJYN0Jhc0h1bXBDZVJyR29HWEdFNmpaaTNLZl96amJ6ZnVVZw?oc=5",
+      "source": "中国新聞デジタル",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-11-01T00:50:00Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "中国新聞デジタル"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "2484eb2a23b882",
+      "title": "【巨人】竹丸和幸「いってきます！」侍ジャパン宮崎キャンプ前にナインにあいさつ…新人でチームトップ１１勝（スポーツ報知）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ES1ZXanRiTFFLdVZHcklqUTRIZTZ5ZW9aNWpEM3J4ZFFCRUt5T0IwWG5YUHJ2Rjh3OVVCcUJZNmRJY1UxMHZDRkpGT3VXU3dPNWQ2VEw3N0J6M2o0MEVCMDN2Tkd2MURaQ3VnaktaU0NRNDRMeWVrSkx6a0M0cmM?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:48:57Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "a95730187b6d24",
+      "title": "日本サッカー界に「朝から最高なニュース」 左足で完璧ショット…ファン待望「代表に呼ぼう」（FOOTBALL ZONE）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA0QndWdXlyaTZYLXZWWGJXdXFKc0hEZnNWTkVPV0NNaDk5dU1FZnlTQlBEQkc0TUd4MGU0TmF3X2dCYWxuZ21odkZhbWNYejJSUEpLajhzT19XNWVrQktEVC1IZ2ZPWDFOX1ZRVWlkYVlHMHZpaDN0VkxtNy1LMHc?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:48:12Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "e017bd651252cb",
+      "title": "【通行止め】車両火災のため東北自動車道上り線 福島西ICー二本松IC間 （福島テレビ）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1zMGRRdURtU3lna0RMbmpDQXItdVBEQUhWb3NrallfWlF6Tm5wakg1b3BfWjNvZ0ZHbnY5MDdVMUFfSDUtV1Y3SnVWWkJxck0wR2ZvRE90akllS1gteFJqazJDUzVOY1NHbVpLU1pFQXJ1RGV4NGRIQ0JXX2JFQms?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:45:01Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "7f354eb197ad61",
+      "title": "【巨人】「ダブル松井」共演にファン歓声 松井秀喜監督が松井稼頭央さんと談笑…秋季キャンプ３日目（スポーツ報知）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1ZnhIcmt3SGpfeU1zWXVkbXBLRkU2dnk2cE05eEpLWk5DQld3NUJvXzYteEFyQ2JrWF9yYkV5Mzg1Xzc3R0UwWTFoTXFPSFlCaEQ3QWNVVHRmRDBFNncyMHFxQU1OT0lYVEhpaU1mcnZKSEE5OXV5Nk9WZzEtLW8?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:44:09Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.3,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "778f008efe7479",
+      "title": "ダービー勝利にミランMFモドリッチ「素晴らしいパフォーマンスだった」 | セリエA",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU2kwbWh1RG5CdHJYZXdiM3lFQ3A1TVhuNWRrUkYzLUloV1NhR25KYUZCZF9sTUtrdUdSZ1A2aVJRYldvSGYzVU4wNWhHVWlHaW1HYUJCaU5TM3VpdEdkV3hiRUZXbFB5djdQaGY3ZE5tV3lLYVZnSU1JTm5oWG80Y0NGVjkzWHh4bUc5c1Qwd05rLUFjcDVsMlI0elAwV1EyN0xRWkdTWE9EWmpydnpjWTdZcTRKcHpRSXc?oc=5",
+      "source": "DAZN",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:41:16Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.3,
+        "independent_publishers": 1,
+        "source_names": [
+          "DAZN"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "f8be5121685952",
+      "title": "米連邦捜査局(FBI)が世界最大の仮想通貨取引所のバイナンスで発生した8兆ウォン台の仮想資産奪取事件の背後として、北朝鮮を公式に名指しした。 北朝鮮の精鋭ハッキング組織がバイナンスの保安網を突破し、2..",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Ka1UwLURaTGxzWGV6a2JtRTA3ak8xcGZHcV9aNmZ2OUFvbkZzTzhuTnNsR0U1ZGpabUc0S2lKTDRJMmRrSmF2di03OUF6NmM?oc=5",
+      "source": "매일경제",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-11-01T00:41:07Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.3,
+        "independent_publishers": 1,
+        "source_names": [
+          "매일경제"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "183f3489f890fb",
+      "title": "“元ＮＰＢ助っ人”の去就は？ 今季ともに自己最多１５勝と旋風 グリフィン＆マルティネスの市場価値 米野球専門誌が分析",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUTkg1eGhla3MwQUtHdG5XQV9oMG1iSy1oMnVMc0ZReWdRSXMyVkUtY25iQ2M4STJ3YjNxYnd1NFdpWTVaSnFGZWpuVlYxa3FLZWdDLVMtTXFzWG1TVExfaTc4STBYUzVJcXJnNXltNmRoTzNvWDFzY2lMNm12WTQ?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:38:51Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.4,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "ec734b6fe7d229",
+      "title": "土曜深夜…サッカー界に歓喜の一報「これは日本代表ある」「ドラマ化すべき」 30歳プレミア初ゴール（THE ANSWER）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ycTQ3N2ItbFV6YlB5R3VUbkNDVVliXzZldjJJeG9fZ3FNdlNWOGU5bEJibVlEYWNtZlZnbG5GZS1ZWC1qTEFXQThGbDRVV0U3b0hLU0lURUJrNWlweWN4dVVCTDc0cWtFVFRscWJvYkJGMW1hYXloMUxEN1I3dUU?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:34:43Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.4,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "bee4e155281556",
+      "title": "【巨人】松井秀喜監督にファン大集結 キャンプ３日目スタート 快晴の日曜日、背番号「９０」お披露目は？（スポーツ報知）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE03SWdQT3BDMm1fV1MzQ1R0TW5kWnZxczBmQTNWM1dIbHh6Ui1nYW1KTG5TWlRsZ1dQV3U3c2hFRW1LMDhKOE5iWWVHTmE0bWx3M184RFJueHJLc3EtS0xJcmRHWDdLdWFLcm11Zl9YVnpHa0FwY1dPbkhCTFR2bnM?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:31:05Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.5,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "b97392ef881351",
+      "title": "【オリックス】三木楽天前監督が１軍ヘッドコーチ、下園楽天前打撃コーチが１軍打撃コーチに就任（日刊スポーツ）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1WWEk0NDVuMGE4cTVWUEJVM1c5OG54ME9QU3RraTJ6TmFvOU9PbUVXWTA0QlJUa0hvM2x2VXZ6VXY2d3MwejJMTEhmQ2cxTHhCR1FJZ2RLbnZZcUtvMmpiNWkwSThFaEJzbHd6Q1NMLTBfcU81ZVMtWlhGQWJKRW8?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・スポーツ",
+      "category": "スポーツ",
+      "published_at": "2026-11-01T00:31:03Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.5,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "a1b80ff02e9333",
+      "title": "週刊仮想通貨ニュース（10/30）｜バイナンス流出・BTC価格予測・リップルの発表のまとめ",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFB6Yy1rUWZmY1RQcjN4UmtGXzVxeTltS1NKbkhSUHptNEcyNWpUcmRFODRJNjk0blZlZ1BiVE5KdVNNYWM?oc=5",
+      "source": "CoinPost",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-11-01T00:25:25Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "CoinPost"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "95214c2bd2d717",
+      "title": "「第2青函トンネル」構想浮上 高市首相が国交相に具体化指示 自動車道路と鉄道貨物線路",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5UQzJuZ0JrQlRybGR1cGxLdXNpRU5GNXNWbHZGWHI3TE5vWHh0akVCMkVrUnhoTjgwOUJpV1R1QWF5Qk9pU1JYRTNPU05VR3paTGxISzJnbjJObzZTdlU3RGRrVkkxNzJnSjdDdmNmWXpDeVB6ZVE?oc=5",
+      "source": "産経ニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:23:35Z",
+      "score": 60,
+      "reason": {
+        "freshness_points": 60,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "産経ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "5456cdf263114a",
+      "title": "【2026年9月の普通自動車販売台数TOP10】トヨタ・ヤリスが25カ月連続首位、ライズは21位へ後退（MotorFan）",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRkNWMHg0aV9PMXpFWDlGcC1pQnBSWi1TY3Y2UHRPVmF1ZXJkUVlJOHBLdng2MTQ3Z2o3dWxJRzZBVElibGdoQWUtempmT1k2UFJ5aXZHOWhyOVJBRm9mcU8zYWVQYWlrR3ZldjhiZW80VUNHSDJyamFHazNmak1nU2UxRHBqX1ZXSXNDeDJn?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:10:00Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.8,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "ae35d2534045be",
+      "title": "メルセデス・ベンツ日本の社長はなぜ新型「GLC」を“未体験SUV”と呼ぶ？ 単なる“人気SUVのEV版”ではない！ 出来栄えに自信を見せる理由とは（VAGUE）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13OHB5SUROTWl0WGVZUzlSaldFLWFkRHJPenNSSWUta3Ixb3AweDRoUDlSbzdmWHJxTzh6Nm5EVUlBVVRoX1FReEFUUnpDZHBVdmFsZTZnSkZtREI2Y2xUQkNQTDA1Smt1Zm0ybjNhMGlrRVhzWnpTTVhKOEJ5WG8?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:10:00Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 0.8,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "24b2eaf7378132",
+      "title": "慣らし運転もせずに納車即カスタム！ 米国製6ポットキャリパーが目を惹くトヨタ「プリウス」",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN1p4aDJiTnp4TlJPcnFFTXFreEdSVW51MngxT1lONnBlTktSMFozclRETURYWGtTNVBHQkQtclF3MjJvNlppZnRRVGNrcnVZRGNqWGZhN2tiWldLQXFpQzJ5TGJuUXFkbXNOZXVTb3ZKY2FKR2N0UWFzcFBNaDk1QjRwZ2M2dkE5?oc=5",
+      "source": "carview!",
+      "feed": "Google ニュース・車",
+      "category": "車・バイク",
+      "published_at": "2026-11-01T00:00:30Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.0,
+        "independent_publishers": 1,
+        "source_names": [
+          "carview!"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "bbdbbacae41afc",
+      "title": "今週発売の新作ゲーム『ゼルダの伝説 時のオカリナ』『Stellar Blade コンプリートエディション』『Marvel's Guardians of the Galaxy: Encore Edition』他",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE55OU43ZWxPejhQejJNdnJSNVZ2dGF0ck5HVzJCUk0zaEFsLUpBS0Ftbm9IazlzYU1aV1ZoWE51eTY3Z3VRaUNrTHp1OF9JamVOWDQzcm9ubElobTREVzdGRFVvWlZaZw?oc=5",
+      "source": "Game*Spark",
+      "feed": "Google ニュース・ゲーム",
+      "category": "ゲーム",
+      "published_at": "2026-11-01T00:00:04Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.0,
+        "independent_publishers": 1,
+        "source_names": [
+          "Game*Spark"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "5796544663dd5b",
+      "title": "デジタル庁のAIアプリで国会答弁案の作成支援、来年1月に本格提供へ",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HWTNLdXNZV0xJN1dGYnNSWlM3RUFnZ3NHUENNSS1IblpHdDdPejRJVTNweDlQQlU2MFJWLWk0OFFYT2E0OXR4dFVsSnBycFZrU1hQU0d4ZjJNakZaSmtBc3c5OEFVZHc?oc=5",
+      "source": "ケータイ Watch",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-11-01T00:00:00Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.0,
+        "independent_publishers": 1,
+        "source_names": [
+          "ケータイ Watch"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "a3fe1d01b30a39",
+      "title": "バイナンスの暗号資産盗難に北朝鮮関与 FBI発表",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XWEJnZWZ4MTJvR3hVYnQweHIzVVpEandTNWZXVk5QUFM2U0dOUFlvN3k5bUNadnowalRnQTBnb2h6Ykx2Y1BpMktpTFNLMlR6TzZ4MEdnbTlEaENWVWlOQ3lVZ1BHMDlzVUlZag?oc=5",
+      "source": "日本経済新聞",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-10-31T23:49:23Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "日本経済新聞"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "85e5ab6a31a0df",
+      "title": "ビットコインがS&P500を上回るも8万5000ドル届かず、その理由",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1FbXk4alpjT3dwQ0pJQl9YbjhjTlpHM3hGTENVZ0trc0VhaHMxbXVaeW1UNWpBS05qWlh3Y2xJMk03azB5TjVVMlhXVU82T0o4YmYyOEJ2S3NETG9nUjFJVjgzVnR3RGh1XzVweXM3M0lOUQ?oc=5",
+      "source": "BeInCrypto",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-10-31T23:47:27Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.2,
+        "independent_publishers": 1,
+        "source_names": [
+          "BeInCrypto"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "f62f2176a937da",
+      "title": "FBI「北朝鮮が関与」と発表 バイナンスの仮想通貨巨額盗難、被害額は推計1兆円",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVDJ3Q1AzcHZJWk1ZTUEyMExHbko4ejdpWkY2TTZjSkhKRk81QzhEeUg3NmpfU0pxQ3dmejF0dG56cDNBVFh4S1JfUFR1X3hUWjk5c3Awc3NiRExtSUZSZXcyNUdfaHlWWi1vVE9COGdjSDdNNXFjc3JLR1BUU3gtQnNLaDBlYU9YMHBGVQ?oc=5",
+      "source": "産経ニュース",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-10-31T23:43:14Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.3,
+        "independent_publishers": 1,
+        "source_names": [
+          "産経ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "ebf37af2be0820",
+      "title": "仮想通貨市場における重大な抜け穴。",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBocDVPVFl0RUI0Q1pCbzRKZFk4b1BHalNMTlMyLUUwY3hXYXcyTFlNYzFNTGV3N3d5M3ZBazlkMkZsMmNzUmMyUE11UldIWXc5NXk0R0FYSFF4V1pSY1g3dE1sWHJXd0l3dS1GYW5B?oc=5",
+      "source": "Vietnam.vn",
+      "feed": "Google ニュース・仮想通貨",
+      "category": "仮想通貨",
+      "published_at": "2026-10-31T23:25:30Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "Vietnam.vn"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "47bfe94e5c7f82",
+      "title": "「カッコ良すぎ」『ガンダム』新作アニメの“新メカ”に「スタイリッシュ」「敵勢力なのか…」（マグミクス）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9BSGY1b1E0Y2czRWtNNWZ3Vmp2R25sLTVGUXkyQS1TWklaaDc3TnRsdW5xNTJhdnBVNjE4a2RCX2hYZjJEQU11TW14RGlXY0dGdTJac0VTS1dtUnhqWlpIOFRERnYyaHQ3TjdScTRtZ2J3R1ZvOHlYMjY2dmViYVU?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・アニメ",
+      "category": "アニメ",
+      "published_at": "2026-10-31T23:22:02Z",
+      "score": 59,
+      "reason": {
+        "freshness_points": 59,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "79882ea7aad2a2",
+      "title": "来週（11/2〜11/6）の日経平均株価の予想レンジは6万1000～6万5000円！ 米・中間選挙や雇用統計、アップル決算、さらに金融政策や金利の動向に注目！",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE45YVR6OUVDMVhVZUJiMEJ1RGYxaWFuVzJCbWdMNEEzdHNwa2ZmSmNEV3I4cHp1RkliYnVrbW5BQmhTN1RPUHNreFdmQWE2aDV0M0sw?oc=5",
+      "source": "ダイヤモンド・オンライン",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T23:10:45Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.8,
+        "independent_publishers": 1,
+        "source_names": [
+          "ダイヤモンド・オンライン"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "51c3cf75ca18fe",
+      "title": "「税金で動かす以上……」 政府18万人が使うAI「源内」の「コストに関する工夫」とは（ITmedia ビジネスオンライン）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NSHBIMHA0Q1JpZVdqWFNybUI0RFliTHFib1RtV0hKRjlZRk1tdFdUeXBrazZNNzdINTc2aE9SU1hSM3Q4d2doLWpvMkdpQTl4LWVvWVd6R3FmNWpiUkZtR3I5TzJRdi1yYVBOUTFsczJqLWxNOU1USjZVOXdhSUU?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-10-31T23:09:51Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 1.8,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "cfb4daee7ecb64",
+      "title": "日経平均株価は\"3カ月ぶり\"下落､モメンタム低下が続くのか",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBEWE5uOU02N3dYWVJMenRPdkJRQXFIbmRGU2hWcFVnUjd6QzV5aElJS1p0NURFZDdvYzFLQnZUdWZpX2gyOVphUmc5dlI1ME9KMmR3VE1uYw?oc=5",
+      "source": "四季報オンライン",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T23:00:00Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 2.0,
+        "independent_publishers": 1,
+        "source_names": [
+          "四季報オンライン"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "1b7fa5d368bd6f",
+      "title": "健康費について区に対して質問・要望しました：令和８年第３回定例会決算特別委員会（５）",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JeV9IOW43bmNqdlRQLVM0a0FlVlVXZWZvWXVMTUQwZHRuSXBsOVVpMkRFWXRaaGluTUxhWGlxN1BjbjQ4a0pOTDh1WjBDWEd1bVlWcTdOU0tSVHA0SHZn?oc=5",
+      "source": "選挙ドットコム",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T22:24:37Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 2.6,
+        "independent_publishers": 1,
+        "source_names": [
+          "選挙ドットコム"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "3eb86ffc424c7a",
+      "title": "アンソロピックIPO》上場目論見書と直近決算から読み解く“収益構造と巨額投資の実態” 巨大ベンダー企業との「130兆円のAIインフラ契約」の全貌 特殊な企業形態によるリスクも（マネーポストWEB",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1mOElpQmRkSWg0VlRhUzhnb1NWVGR0cGtvRWlBNDB4Ul9ZSFBGa0lkNjNPdFMxZWZ2YUpITTRUSUlDczllNFNoMWhSNXRGbzUwOElsdnpfM2dZd0R4Y19iTTRVRUtWeTZPcEs3a0lNOHlqQkc3QWtwRTRYc0Uxbjg?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T22:20:45Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 2.7,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "deb4985720ca83",
+      "title": "【ポイント解説】日銀・植田総裁の会見読み解き＆エコノミストの利上げ予想・政策金利2％超えも・基調物価2％って何？",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ejJHbnUtb1VOTE1JYW9HNHlhQkQ1T1RVNS02RVp2NG8zbFJjdlpVUzFaaXhhQ1hza0FXMWs3dWx5VVZ1RHZpN1FfOVk4XzVCZkZlcHVQWFhSVHJ5V2xYc2JhbHBoc0pnQXRMdExqbnJ0dk1YV1dsYWxNa1BEUXM?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-10-31T22:18:37Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 2.7,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "1cb0f5ec54eeb3",
+      "title": "大規模緩和、「誤算」と「苦難」 2％物価、14年かけ到達 日銀、定着へ難路続く〔深層探訪〕（時事通信）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwZnFYbzJuN0Z1VHFzcGVqMXU5bEk3aWR1ejZCU1UydWhxZkxOTkx5aVNxT2pWc0ZsN3hwWHJZMXhaeFlCU0lrMzdXb2VxQXUtY2JqQWVFS3pUb3NXMzU2NjFIa3lJU1VPWENqdjdxQUU1ZjIzV1hkdXBZVTUxczQ?oc=5",
+      "source": "Yahoo!ニュース",
+      "feed": "Google ニュース・政治",
+      "category": "政治・経済",
+      "published_at": "2026-10-31T22:06:48Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 2.9,
+        "independent_publishers": 1,
+        "source_names": [
+          "Yahoo!ニュース"
+        ],
+        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
+      }
+    },
+    {
+      "id": "c381a26361d8ca",
+      "title": "身構える株式市場 米中間選挙後、期待と懸念交錯",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRHIzSFBrSmN4ci1vVUEzQXM1RF9veExlWnhuakpFRXRhQUNQbEQ1VFZsUEhScC01bnZnaEFvcDdtZVEtSWRybm1jTUNBMVYtaTloQ01PZDVPcktpWERITFRobUpqOGVIcDZsa01pS1dQaHhweThVVEhCbUd0Q3MwR05n?oc=5",
+      "source": "時事ドットコム",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T22:01:00Z",
+      "score": 58,
+      "reason": {
+        "freshness_points": 58,
+        "additional_source_points": 0,
+        "primary_feed_bonus": 0,
+        "age_hours": 3.0,
+        "independent_publishers": 1,
+        "source_names": [
+          "時事ドットコム"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -302,12 +1142,12 @@
       "feed": "NHK社会",
       "category": "ニュース",
       "published_at": "2026-10-31T10:46:26Z",
-      "score": 61,
+      "score": 58,
       "reason": {
-        "freshness_points": 51,
+        "freshness_points": 48,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 10.8,
+        "age_hours": 14.2,
         "independent_publishers": 1,
         "source_names": [
           "NHK社会"
@@ -323,33 +1163,12 @@
       "feed": "NHK社会",
       "category": "ニュース",
       "published_at": "2026-10-31T10:45:20Z",
-      "score": 61,
+      "score": 58,
       "reason": {
-        "freshness_points": 51,
+        "freshness_points": 48,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 10.8,
-        "independent_publishers": 1,
-        "source_names": [
-          "NHK社会"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "7e963ee7de7e67",
-      "title": "北海道 JR宗谷線特急 ヒグマと衝突で脱線 1日も運転見合わせ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261031de68820",
-      "source": "NHK社会",
-      "feed": "NHK社会",
-      "category": "ニュース",
-      "published_at": "2026-10-31T10:22:00Z",
-      "score": 61,
-      "reason": {
-        "freshness_points": 51,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 10,
-        "age_hours": 11.2,
+        "age_hours": 14.2,
         "independent_publishers": 1,
         "source_names": [
           "NHK社会"
@@ -365,12 +1184,12 @@
       "feed": "Google ニュース・ゲーム",
       "category": "ゲーム",
       "published_at": "2026-10-31T04:15:00Z",
-      "score": 61,
+      "score": 58,
       "reason": {
-        "freshness_points": 46,
+        "freshness_points": 43,
         "additional_source_points": 15,
         "primary_feed_bonus": 0,
-        "age_hours": 17.4,
+        "age_hours": 20.7,
         "independent_publishers": 2,
         "source_names": [
           "Excite エキサイト",
@@ -380,85 +1199,22 @@
       }
     },
     {
-      "id": "470ddd552ded4f",
-      "title": "【東京都大会】1日に準決勝！現在、東海大菅生は二松学舎大付に3連勝中【26年秋高校野球】（高校野球ドットコム）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1iWWZxaThuMWZNOUJ4dFB6NW1McmdPMjFfNzdhamUwbVR0Y2o2SXItdkw0QVhmT25qSmpUZF81RE9qMDRrSTE5YWdBM2c1X3VMVHphMk5EWDBIX0h4THRsU1N0N1hnV2l2MnNSd1ZUWlRXWFJVbUtodklHSUZ5TjQ?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:31:35Z",
-      "score": 60,
+      "id": "e3da2cf440cd1b",
+      "title": "(NEXT FUNDS)日経平均レバレッジ上場投信【1570】：株価・株式情報（夜間PTS含む）",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBoSXJOa2dkbWprTUdFYWNqMS1TUks2aF82bXFUblhxcThHSmY3S1I0cWJWeWlqc3QyalZoM3pUMFRpZVhQa3FidUcweFVhUFplRFE?oc=5",
+      "source": "Yahoo!ファイナンス",
+      "feed": "Google ニュース・株",
+      "category": "株・投資",
+      "published_at": "2026-10-31T21:09:28Z",
+      "score": 57,
       "reason": {
-        "freshness_points": 60,
+        "freshness_points": 57,
         "additional_source_points": 0,
         "primary_feed_bonus": 0,
-        "age_hours": 0.1,
+        "age_hours": 3.8,
         "independent_publishers": 1,
         "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "42f8c4f48b1cd4",
-      "title": "サッカーと麻雀の〝二刀流〟田島翔氏がスペイン新設クラブの戦略担当に就任 日本人の獲得も（東スポWEB）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0tWW1BQ3JTTFg5V1pLTHlvSUdxVmQyLWwyd1BnM2FsbElFNkVUOUV2TXRaWU1zUWpFYjZaUXl6b041dGd4Y3FqdzBKbnRUclB0REx2aW54S2stczBRT0RSMWhwal8xTzZGdnBtSG9mZUZqWXM0RlNuelR5V0x1RTA?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:27:47Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.1,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "6d7878bb02dbd2",
-      "title": "内閣総理大臣の夢を一時封印…日本ハム育成５位・今津慶介「まずは野球選手としてひと花」（スポーツ報知）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9Fek5faTZKcElFaDZXc1VIYWwyVXdoT01tYVZWZzJtSERVMWZWT1pyLWFBbnhsNUxVbk4tek5TOUwwTnN6M21jRUFvZXc4bDFLVXVxbF9kZEpldkpIbTVzVVd4cjhMMWZFVXQ4S3VlZXFSMWtDeFNtN1d5U0xwTHM?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:11:36Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.4,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "b0e307eee5934e",
-      "title": "【日本ハム】育成5位の慶大・今津慶介「大谷選手を三塁側から見てました」日本ハムファン公言（日刊スポーツ）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5qd05GSzRINWFCeFdMajhRYXZ1S2ZUXzNZeTFlN1hpS1JoUVJLUEFBbzdGNVQzUFozek1CdjlmWVJsZlBWaTVfXzc2NVNrZ1VfXzhOYktndElMWWtad3R3TGV2R0M5Rm5mNTg4YlVEbEwzc21SbUQyNlVpSmVmM0U?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:06:20Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.5,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
+          "Yahoo!ファイナンス"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -471,120 +1227,15 @@
       "feed": "Google ニュース・政治",
       "category": "政治・経済",
       "published_at": "2026-10-31T21:04:41Z",
-      "score": 60,
+      "score": 57,
       "reason": {
-        "freshness_points": 60,
+        "freshness_points": 57,
         "additional_source_points": 0,
         "primary_feed_bonus": 0,
-        "age_hours": 0.5,
+        "age_hours": 3.9,
         "independent_publishers": 1,
         "source_names": [
           "現代ビジネス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "2a4521eccbfc4a",
-      "title": "【近畿】1日に準決勝！22年ぶりの「兵庫勢決勝」に、明石商と報徳学園が挑む！【26年秋高校野球】（高校野球ドットコム）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5tcy1oR09Va0Z0NHhLSURUV3p2RUpJVWFJWkI1WHFhWmdiSGxXSF8xNGZHYXpaU1hjNWwtS1FSWTEwdDJlVzN3cXZqT0ZjRzEwbjBGc0o3OEJZS2dURnA1VTB4WWhuTjFiZXBrQXdNSVdBLVhEUmhCVll3a3ZzTWs?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:02:07Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "a933ea624716b1",
-      "title": "イチロー氏の警鐘から7年…「頭を使う野球」で頂点 ド軍を粉砕、世界一ブルワーズに見た“答え”（Full-Count）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LSlVoX1duNXJaZjBtbklQcW1fUGFpcXZjU0lwVFoteUpGTXZJVFJrSndxb1NkWmJtOU1hTW5keExsbVNkU29MT0puSjZZWGRycUtackZKTndNaHQ0WTZSMmJpNzQxSUdUUXI0S3QwaHdCbmJRSHhOM1JMeDN0NVk?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:00:34Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "a69067cb817eb9",
-      "title": "ホンダ・スーパーONE（前編）",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5DWDJNY1RoT1UyM2Zib2gyZ1RkSWduYUg3OEJ3WXlDZFRYb2xTTkt3bDBnS3hleU5pcE9oazV3V3ZILVVHTnFXQUFhWEQxQXfSAVJBVV95cUxPM2EwckJLMGp1TVRMZlBUbGx4ZUwzcWVxa1QxTGVkLU15UzJZdzF1SjNkZHRUYkpkNkZ3M3Y5eXRkcS1RTUVNUmhpODRSbzBlT3Z3?oc=5",
-      "source": "webCG",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T21:00:00Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "webCG"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "07fea80f1efb54",
-      "title": "経営危機でも野球部を残した東芝、名門チームの監督が語る企業スポーツの存在意義と勝つ組織の条件 東芝野球部監督・大河原正人が振り返る経営危機の日々、都市対抗出場の重圧と会社員として学んだ成果への執念(1/5)",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqZ3dSblJ0ekVuTXRRU1Bvb042Yi1CcUxLRE91WWFnbWlOSVFIa043bGdwMzU0SWxLTkkwdE9VY1NKeUVYaTFCY3FBT0d1SXg4cXlJRFd3?oc=5",
-      "source": "JBpress",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:00:00Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "JBpress"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "200b3133d49b49",
-      "title": "就任初年度に都市対抗を逃した東芝野球部監督、選手に本音で向き合って見えてきた常勝組織への道 強豪の監督との違いを痛感した大河原正人、選手の見方を改め人員刷新に踏み出した3年間の試行錯誤(1/3)",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xWVBsYUU4ZjZ0alYyOXNYMS1wcXktTVdPM1RQRUNvZkp1akk2NUhvbUh1ZFRrR3A5cFpPRDNkblp5ZGVjdjVxdmZHVlZBUHRhS0VWWDVR?oc=5",
-      "source": "JBpress",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T21:00:00Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 60,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "JBpress"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -597,12 +1248,12 @@
       "feed": "BBC News 日本語",
       "category": "アジア・翻訳",
       "published_at": "2026-10-31T09:44:57Z",
-      "score": 60,
+      "score": 57,
       "reason": {
-        "freshness_points": 50,
+        "freshness_points": 47,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 11.9,
+        "age_hours": 15.2,
         "independent_publishers": 1,
         "source_names": [
           "BBC News 日本語"
@@ -618,37 +1269,15 @@
       "feed": "BBC News 日本語",
       "category": "アジア・翻訳",
       "published_at": "2026-10-31T09:05:06Z",
-      "score": 60,
+      "score": 57,
       "reason": {
-        "freshness_points": 50,
+        "freshness_points": 47,
         "additional_source_points": 0,
         "primary_feed_bonus": 10,
-        "age_hours": 12.5,
+        "age_hours": 15.9,
         "independent_publishers": 1,
         "source_names": [
           "BBC News 日本語"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "f9042b4afa2d1d",
-      "title": "新たな支援金で論戦 誰にいくら？財源は？ 政府「今の段階では…」",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBLWHEwTHVTTmRFakNkMTRtWDlaTE94OGxsa2FMYWsyb3J2RVJBZTVRUV9Bd21nTFpHZ2tiaXFnTDlDTzlzSFpjZTJBMUlHZGM?oc=5",
-      "source": "khb東日本放送",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T03:45:23Z",
-      "score": 60,
-      "reason": {
-        "freshness_points": 45,
-        "additional_source_points": 15,
-        "primary_feed_bonus": 0,
-        "age_hours": 17.8,
-        "independent_publishers": 2,
-        "source_names": [
-          "khb東日本放送",
-          "テレ朝NEWS"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
@@ -661,12 +1290,12 @@
       "feed": "Google ニュース・仮想通貨",
       "category": "仮想通貨",
       "published_at": "2026-10-31T20:46:20Z",
-      "score": 59,
+      "score": 56,
       "reason": {
-        "freshness_points": 59,
+        "freshness_points": 56,
         "additional_source_points": 0,
         "primary_feed_bonus": 0,
-        "age_hours": 0.8,
+        "age_hours": 4.2,
         "independent_publishers": 1,
         "source_names": [
           "Iolite（アイオライト）"
@@ -682,531 +1311,6 @@
       "feed": "Google ニュース・株",
       "category": "株・投資",
       "published_at": "2026-10-31T20:45:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.9,
-        "independent_publishers": 1,
-        "source_names": [
-          "ダイヤモンド・オンライン"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "d363c830c0b065",
-      "title": "中畑清氏「長嶋茂雄はこの上を飛び回っています」 少年野球教室で松井監督就任の喜び代弁（スポーツ報知）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wdVpuNFh5bE9SalVFRXlZcDNkZFhzbDNtRmRka3d0M0lUNEJWMFduQXN3Zi1vek56N3VyRHFaV3BRbnRxN3VQQmczRU9vckJqcktOWExUaDhZVWNwaVhwVElQeU82WUptbEhJTWVodUF5MzE5aGdpd0hsVHpNZEU?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T20:44:54Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 0.9,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "e9805afef7d038",
-      "title": "＜SUBARU・トヨタ自動車＞8回、適時打を放つSUBARU・外山（撮影・長谷川 柚香）",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTC1jbmJ5T3N6R19mMmUtZzBoSFNUSGEzTmpuejc1WHdHV0RiZmM3bXJ5SzlXanhYNHR3b0ppWW5SRzlsYl9kclBiTUhLdU1IdG1ybzhOWjMyLWFET0hvTWZnSHg4OEhjS3FlZ1l4RkxSNVVJOERwaG5ycEVhTlIyMTBjTm9obFRsNElRekZ5OA?oc=5",
-      "source": "スポニチ Sponichi Annex",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T20:34:31Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.0,
-        "independent_publishers": 1,
-        "source_names": [
-          "スポニチ Sponichi Annex"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "3b517a3ddf7b87",
-      "title": "【障害者手帳の自動車税減免】家族名義の車でも上限4万5000円まで減免に。ただし「2km以内」「1人1台」「5月31日まで」に注意【東京都の場合】",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB3UGo5ODVRRzdxejlPc1ZmOWRkZ0c2R056WC1mQmVhUXVZc19YVE42NFpSdkJrYXI3NlVyNGxuNnlaYW9uQW5DQUlSekQ?oc=5",
-      "source": "LIMO | くらしとお金の経済メディア",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T20:22:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.2,
-        "independent_publishers": 1,
-        "source_names": [
-          "LIMO | くらしとお金の経済メディア"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "c67f8b3cecd7fd",
-      "title": "【名古屋・ミシャ監督語録】「連戦の疲労は感じていたが、先制してからうまくゲームをコントロールしていた」「追加点を取れなかったのは課題」（中日スポーツ）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB3Q2NDMDZHMC1mTlRubEszb3prNnI4T3FiSGoyZGFralU1b2J1T2M5WXhfaXJnSW1Ia0NHQ1RBN210SjQyc0hwemFXc1RiOTJ3elZhSzJ3bjE2SWx4MUMwUFBVckwyLVZvSjVLRWdVbW5id3dtM3BuRzExYmhDWms?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・スポーツ",
-      "category": "スポーツ",
-      "published_at": "2026-10-31T20:18:02Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.3,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "4d2c84449f4a70",
-      "title": "Ｎｅｗｓモーニングサテライト【日銀・利上げのペースとターミナルレート】",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQb0dBRkRkU3FMemtkRzNEVnhSQ0lsM19CRmhLcXZMVE9xajV2X3RHRmRjZm94YS1KbmpKbWhrdC1jWG5ybWtIaVVsRTZXQUVvVmUtZVZTZDRZU1c0Rnk5Q0t5RV9tU1c0WGRPX1prUnU3aDl4QkxVdFVtNDJDUDhZQWx6aVE3Z1dTekFnbDRmdUt1UQ?oc=5",
-      "source": "テレビ東京",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T20:15:05Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.4,
-        "independent_publishers": 1,
-        "source_names": [
-          "テレビ東京"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "6c3a207da25530",
-      "title": "「AIを使える職員に仕事が集中」--政府の生成AI調査に負担増の声も",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1oUldidHlMZUllLXhxaWdZZXRJelVpRGJwOFVrUEEwZC03eVM1a2FheVhJS1V0M2xabVRVYVB6QnkyS3pPNk9jcDVzT2M0N2lVbkJaTGVkT1RfeFBYOS0teEVGRC1vcFNOaktxN053czNHVUJSY2FFbjJTNUxERW8?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T20:14:51Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.4,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "79882ea7aad2a2",
-      "title": "来週（11/2〜11/6）の日経平均株価の予想レンジは6万1000～6万5000円！ 米・中間選挙や雇用統計、アップル決算、さらに金融政策や金利の動向に注目！",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE45YVR6OUVDMVhVZUJiMEJ1RGYxaWFuVzJCbWdMNEEzdHNwa2ZmSmNEV3I4cHp1RkliYnVrbW5BQmhTN1RPUHNreFdmQWE2aDV0M0sw?oc=5",
-      "source": "ダイヤモンド・オンライン",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T20:07:08Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.5,
-        "independent_publishers": 1,
-        "source_names": [
-          "ダイヤモンド・オンライン"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "1410ae608819a2",
-      "title": "現兵庫三菱自動車監督の父へバトンを渡す時…パナソニック野波祐太郎、父子の絆",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONTBESDg0SndyLTZEbENIU2xPUHJ2NWlIZDRtSVRuUWpEaWRtazdSWHdBcVlxM29vMW55bzRCX1AzNVFPWmJacDROSndNMmhHZWJOV0xwZjhiaFNHUzFYVVktckJENlp2bWZLYlFxVElhMllhVWhLb2p4ZnpOMzI5aUprTlJ1Z182emZTU0NKQQ?oc=5",
-      "source": "日刊スポーツ",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T20:04:12Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.5,
-        "independent_publishers": 1,
-        "source_names": [
-          "日刊スポーツ"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "78c7f10c4e08d0",
-      "title": "コスト半減を褒めないマスク氏 EVで学んだ量産、スペースXに応用",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hWmtOSS1PR2FqQ0EtVmZqdkRWYk5UNGJrZFhJaWw2SmJxVUNQTFlxMDVyS1FBZDJKRTNVSnJ4TGM4cjhJZEhpUTBRR2U3bWstaGI4ZzFva3o0V2tHLWFQRHdYM3lnd0lyajFsTg?oc=5",
-      "source": "日本経済新聞",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "日本経済新聞"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "fbf40f3c79772b",
-      "title": "SUBARU・外山 適時打3本で快勝けん引「周りはトヨタが勝つだろうと…ひっくり返したかった」（スポニチアネックス）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9EUnNxaHpnODEwRTRmT3hYdVNGR1EzM3NaMk8taFo5VjkzMk5MWEJFNzF1YWJkTGRUdnM1ejk4c2g4SjBoTTJfNjhEY29SV1Z4X3RWeHZNdkJHYTd1MnI5ZXg0cW4zN0txLXFKS2h5eGhva2pTeExDRnFxb3Q4OVk?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "fedbd836671856",
-      "title": "公債費比率 10市町村悪化 25年度決算 財政4指標発表",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA2bVpqa19MZ2V3Q3JzZzlEb20yVjdBZk9BT3o4aVFPUVhwdGEwaXBYTHZuT0FWVVZXXzNTNlRzdm9HcXljOHJMb2s0MXJGRzk4ZmZCWVdn?oc=5",
-      "source": "徳島新聞デジタル",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "徳島新聞デジタル"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "82fc25478e1f17",
-      "title": "やりとり避けＳＮＳ多用 会見、取材対応少なく 高市氏 国会答弁数が最少 表層深層",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBXUjRqenU3dnRucFNpRm1Eb1lrRXh2T3BFZGFHUTBzTmRhdkdNT2NZTkhmaGlOUWdjY19pdXJEZnA5cElWT3hpSWlsVmxHVC1LUVROM2NKQWRXcFYwOFE?oc=5",
-      "source": "福井新聞社",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "福井新聞社"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "faf5d5f67123b0",
-      "title": "国会議員動静（11月1日） | 行政・社会 | 佐賀県のニュース",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE85bDhVLV9LSGxZZTlqWEp2d0F2RzFTeXJtaEc5N1FacS0xTjl0ZlhwODl4Qnp6WDJSTVFnNXRGV3pDY0F0SHhTWkMtU3VRTDBENnhWVTRB?oc=5",
-      "source": "佐賀新聞",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "佐賀新聞"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "05dce71294e5ca",
-      "title": "高市氏、国会答弁数最少 ＳＮＳ投稿は突出５首相平均 「審議軽視」データ裏付け 国民に向けて 丁寧な説明を",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5fS2tMdEpQS1ZZWmRmS0JCcUtyTmdrWnJpYTNzRDNrMHNRN0wzbHFVMDNhRkppV3I4X3dMWVFqSExUVlY0VlpOV3pyT09KVHphY0stcWs2ZnZ4RHNMWXhVdg?oc=5",
-      "source": "琉球新報デジタル",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T20:00:00Z",
-      "score": 59,
-      "reason": {
-        "freshness_points": 59,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "琉球新報デジタル"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "418e39c85678d8",
-      "title": "日経平均株価の指数情報・推移",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5SRDk1ZENIQUIzSUZyMHZRNHpCR2xlcTI5UTJRYXVoMDBrM3BmNndBT29vV0dDZWdQazZHb2tURGZNYy1OMU93R0kyUUZUT3VmU2VhbA?oc=5",
-      "source": "Yahoo!ファイナンス",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T19:44:48Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 1.9,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "53e20033edd72d",
-      "title": "ホンダ、モレイラが追い上げを見せ入賞。ミルはギャンブル失敗「スプリントでの教訓が明日に活かされる」／MotoGP第19戦マレーシアGP（オートスポーツweb）",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE01ZzRDZlFfaWhmSFJ6QnNOeFR2elduNm91WFNWbE1JaW1vd3hFcENxVTRUSHdGaE5OaWZwbkJKUlVMcXRzOEY0Yk1UWVNBXzZIaGNaX2hFYzV0QUwzNER0Qk1zeHhmUmF0T0hvd0VtQkhBSUxSVUJ1QjJrZlVwVlk?oc=5",
-      "source": "Yahoo!ニュース",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T19:36:50Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.0,
-        "independent_publishers": 1,
-        "source_names": [
-          "Yahoo!ニュース"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "947898b8ffc575",
-      "title": "Strive CEOのマット・コール氏、63億ドルのBinanceハッキングはビットコインを揺るがさずと発言、回復には6〜9カ月かかると警告",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CYzZkQnpZcUswUUlrOFJwUlNLSF9zRXBXV0tOeEFzVmszSDlXMGFWS3dhb2IyMWk4ckdHc2hwLWxSWTVock9ndzRHUk9hRzI5WVYxTVVWR2pMYll6dnctR3FQRmFaYW5PY2kzaDFYTHBoNmxY?oc=5",
-      "source": "BigGo ファイナンス",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T19:35:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.0,
-        "independent_publishers": 1,
-        "source_names": [
-          "BigGo ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "9ab7dc92c13d7f",
-      "title": "ビットコイン18周年：ホワイトペーパーの遺産は今やウォール街の背骨に",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTbkhRTnoxbG9mQmpoR3NtZW1iNjV0Z2NGbmpNbkRNUHNFZXk2SkZHMlRSWnJLc0xBZ3lvRWs0dzdHWnFsU0gwV3MzeGJSSF83T05IWDNnZElKQlN6WUtseE1jdUU2YUhBOGFNV0g2ZE13U2VP?oc=5",
-      "source": "BigGo ファイナンス",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T19:25:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.2,
-        "independent_publishers": 1,
-        "source_names": [
-          "BigGo ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "f18639d94be08a",
-      "title": "不正アクセス 対応後手 GMO 能動的サイバー防御要請 政府、根本解決見通せず",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA3M0doZ3pSV3NHTTNiNGFYZTVwQlRralFERnc4cHkxRmpXVk1wQms1T1lyOVhFWFpUUldjMjl1X1BNR1F3Q0pPWHVibDZseWRucGlpbHNZdzExUHZvbkE?oc=5",
-      "source": "沖縄タイムス社",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T18:59:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "沖縄タイムス社"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "0ea53111510cbc",
-      "title": "「沖縄 自分事に」 崎浜さん 国会前で訴え",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5GWWJqMTV3cW0zRnNuUm82akdPd3lwR0dTaTdmTGdJeDIxMFhZS0xfQVJfaklmNGpqbnNuNGpOdFBWVlA5QWc2QnY1ZUFoa2ktUDJwc0VsaTl0WTd5ekE?oc=5",
-      "source": "沖縄タイムス社",
-      "feed": "Google ニュース・政治",
-      "category": "政治・経済",
-      "published_at": "2026-10-31T18:58:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "沖縄タイムス社"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "78336cc05bbe88",
-      "title": "安間 地元で勝利貢献 トヨタ自動車開幕戦飾る バスケ女子Wリーグ",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBPX1U4eEdmbjgtRnN6RHRYb2tTVHlUM3NDQUFjQUlPZXBCMXkxTktaLXZZZktnMk1ONWRwRHQ0aFc4QlE1cDhqSWZ3SWhQeTgzenV2dUpIR3dPcTJqbVE?oc=5",
-      "source": "沖縄タイムス社",
-      "feed": "Google ニュース・車",
-      "category": "車・バイク",
-      "published_at": "2026-10-31T18:57:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.7,
-        "independent_publishers": 1,
-        "source_names": [
-          "沖縄タイムス社"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "4e5ce04d4eefa4",
-      "title": "［よろず支援拠点 カルテ＠沖縄］CASE601 決算月を変更したい 業務や資金考慮し判断",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lSTFITTZsT0RzQ1l6cUJ6NUk1R0VXTF9uOUdLbHZRbDQxdVpKVTZCdkRybC1DeGhSQlgxR0lrUm5MMHdjQURKSUxEZjJMek9QVzVfeHF0Tkp1eEh0MGc?oc=5",
-      "source": "沖縄タイムス社",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T18:57:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 2.7,
-        "independent_publishers": 1,
-        "source_names": [
-          "沖縄タイムス社"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "008aaabf49abb1",
-      "title": "米国中間選挙・雇用統計・大手ハイテク決算が集中、AI懸念と重なる正念場の一週間",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mM3JSTXRuX2Jwb09teWRweVhlWVdBcXdlOWh0Yk90VlhGSzAwZEJaT25TYmhxWldGWGhFUkV5TENkRzR2ODRSal82UXlsakhyOU9yUERBTHBzZUl2elNiV1RLNVEtRFFvSHYxSHlaNnZwQzE3?oc=5",
-      "source": "BigGo ファイナンス",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T18:35:00Z",
-      "score": 58,
-      "reason": {
-        "freshness_points": 58,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 3.0,
-        "independent_publishers": 1,
-        "source_names": [
-          "BigGo ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "09df37f06e39d6",
-      "title": "ウクライナ南部オレシュキから数百人避難、異例の局地的停戦",
-      "url": "https://www.bbc.com/japanese/articles/cqkgkpxg47j3o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News 日本語",
-      "feed": "BBC News 日本語",
-      "category": "アジア・翻訳",
-      "published_at": "2026-10-31T06:10:57Z",
-      "score": 57,
-      "reason": {
-        "freshness_points": 47,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 10,
-        "age_hours": 15.4,
-        "independent_publishers": 1,
-        "source_names": [
-          "BBC News 日本語"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "3b87c5db002f60",
-      "title": "ビットコインETF、1日で6.43億ドル流出 1週間分の買いを消し飛ばす",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9OSkdVQ00yRExUdEtBdlYycFVfOE0tZnZHanVrbGlWZ1FubEJSakJCYm5SeWpjLXVxeWRqS1FDSVJrODUyRmd6bnlkaXhYbG93VUVFRUZqRmcwT3Zic3l5eEdkM3RXNmd3UlROQnA0NWtiWTdJ?oc=5",
-      "source": "BigGo ファイナンス",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T17:25:00Z",
       "score": 56,
       "reason": {
         "freshness_points": 56,
@@ -1215,112 +1319,7 @@
         "age_hours": 4.2,
         "independent_publishers": 1,
         "source_names": [
-          "BigGo ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "3f586e7f7b1b05",
-      "title": "アナリスト：ビットコインは短期保有者のコストベーシスを試している、FTX崩壊時と比べて現在のビットコインはより底堅い",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9wY3FNMGRuMjl3N1JNY0E2NDVQUkhCcHhjaGh2dE5YSUJaaGt6ZWNUanZseGhLckVkVVVzQ2RpdXlOcTJKQXp2RnlHMThUUFQxT3F4b2szZkNrcU1DUVIzNVZWM05JbXd5MVMwblhJZ3RXTzlXR0MycElvTkdFZXc?oc=5",
-      "source": "PANews",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T16:20:40Z",
-      "score": 56,
-      "reason": {
-        "freshness_points": 56,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 5.3,
-        "independent_publishers": 1,
-        "source_names": [
-          "PANews"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "f2a90f6272c1bc",
-      "title": "ギャラクシーのアベベ氏：ビットコインの8万ドルという「窓」は急速に閉じつつある",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qYzNRN0Qyd0Rfa0xRSTFxN0lUVW5xTWZEZVVmNnk5dW45UnB5RjlvcVpwOFJULXBLZVZ1d3ZwbEtnM1BjTnBVRDYxN19hdmZaYVpndWNHOElYemVsZzl4UDdrOVhOd29LZTY5ejNqdHJtdXBn?oc=5",
-      "source": "BigGo ファイナンス",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T16:05:00Z",
-      "score": 55,
-      "reason": {
-        "freshness_points": 55,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 5.5,
-        "independent_publishers": 1,
-        "source_names": [
-          "BigGo ファイナンス"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "508b6f864ea781",
-      "title": "米国は、仮想通貨取引所バイナンスへの攻撃について捜査を進めている。",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQU5MbzAxcG5xXzlfUFVDY3FOMmMtaHRtcnB4SmFtY0haYlNJM00wQ2d3TUhTYVdkSEdVYzJ6SUdCa042Ujc3Y3JlSWZKRzYyWDAySEIwajhEWkt5cHhDRmhnRGJield3WTJhUWJkYjJBRG9aZFpRTGpKUE5TS3padmZ6MDFKdzFoVmc?oc=5",
-      "source": "Vietnam.vn",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T15:58:55Z",
-      "score": 55,
-      "reason": {
-        "freshness_points": 55,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 5.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "Vietnam.vn"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "413cfdfbb8fe1d",
-      "title": "バイナンスSAFUファンドが1時間前に7,500BTC $ビットコイン (BTC.CC)$（5億8,088万ドル相当）を新しいウォレットへ送金しました。 [リンク: arkm.com/explorer/addre…]",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdEdUSGFVcmEtdElVeURJcDdSOWduaDNST0psRGc4MzJ0VmJpZFlUb3ZJbVIzZXZxTDdiQmd1SmlvTWxELXVpV19vbGpTN3IycWYtNWNxVmx2M2pPQU5CMWlsTXNZcnVtZzUzU3VaWTZIWWxfbDBKdWFUaDZMM0tNckJZOUJ3Y185MUllRV9JTWdoWk5lcGdMNWRnMGR1anBKRGY4RGhsLTZ3d3RTWjNkVA?oc=5",
-      "source": "Moomoo",
-      "feed": "Google ニュース・仮想通貨",
-      "category": "仮想通貨",
-      "published_at": "2026-10-31T15:57:51Z",
-      "score": 55,
-      "reason": {
-        "freshness_points": 55,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 5.6,
-        "independent_publishers": 1,
-        "source_names": [
-          "Moomoo"
-        ],
-        "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
-      }
-    },
-    {
-      "id": "4d08a3fffcbe2c",
-      "title": "決算後のブラックスワン：$INTC、28%急落",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUzVsSDBJVVRIUmw5UmpFZzVDb2JjaF93cW8tZldINExGVGVqYzB4WHJnVmtlWEtFdGZMdWl3dlF1WW1iZnZXUmdzY0tjcjVGOU9GR2E1aE9GSXh6UkoxX1JVdFd6QXlpaWY2emJVbFctZUpJcXN4QTBfVFNyN0tDM1RRSE9GOUd4QVJDeFdiNUhYRVcyZnZYTGRITQ?oc=5",
-      "source": "Moomoo",
-      "feed": "Google ニュース・株",
-      "category": "株・投資",
-      "published_at": "2026-10-31T15:40:58Z",
-      "score": 55,
-      "reason": {
-        "freshness_points": 55,
-        "additional_source_points": 0,
-        "primary_feed_bonus": 0,
-        "age_hours": 5.9,
-        "independent_publishers": 1,
-        "source_names": [
-          "Moomoo"
+          "ダイヤモンド・オンライン"
         ],
         "scoring_rule": "新しさ 0〜60点（72時間で減衰）＋異なる媒体の同一見出し 1媒体追加ごとに15点・最大30点＋NHK/BBCフィード 10点。SNSの実測人気ではありません。"
       }
