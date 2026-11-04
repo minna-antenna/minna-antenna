@@ -69,4 +69,4 @@ refresh.onclick=load;load();
 <script>
 (()=>{'use strict';const input=document.getElementById('newsSearch');const clear=document.getElementById('clearSearch');const root=document.getElementById('realNewsRows');if(!input||!root)return;let q='';function apply(){root.querySelectorAll('.real-row').forEach(row=>{row.hidden=!!q&&!row.textContent.toLocaleLowerCase('ja').includes(q)})}input.addEventListener('input',()=>{q=input.value.trim().toLocaleLowerCase('ja');apply()});clear.addEventListener('click',()=>{input.value='';q='';apply();input.focus()});const observer=new MutationObserver(()=>apply());observer.observe(root,{childList:true});})();
 </script>
-</body></html>
+<section style="max-width:1100px;margin:20px auto;padding:20px;background:white;border:1px solid #d8e5df;border-radius:10px"><h2>📚 トピック基地の独自記事</h2><p>ニュースの背景や仕組みを分かりやすく解説しています。</p><a href="./articles/bitcoin-halving.html">ビットコインの半減期とは？仕組み・2028年の予定・価格への影響を解説 →</a></section></body></html>
