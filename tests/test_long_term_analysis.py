@@ -71,6 +71,22 @@ class CalculationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parse_fed(b'<html><p>Temporarily unavailable</p></html>')
 
+    def test_independent_decimal_audit_and_raw_evidence(self):
+        result = subprocess.run([sys.executable, str(ROOT/'scripts/audit_long_term.py'), '--check'], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
+
+    def test_modified_raw_response_is_rejected(self):
+        import gzip
+        from audit_long_term import verify_raw
+        with tempfile.TemporaryDirectory() as name:
+            path=Path(name)
+            (path/'raw').mkdir()
+            payload=gzip.decompress((DATA/'raw/BTC-USD.json.gz').read_bytes())
+            (path/'raw/BTC-USD.json.gz').write_bytes(gzip.compress(payload+b' '))
+            manifest=json.loads((DATA/'sources.json').read_text())
+            with self.assertRaisesRegex(AssertionError,'Raw hash mismatch'):
+                verify_raw(path,manifest,[])
+
 
 if __name__ == '__main__':
     unittest.main()
