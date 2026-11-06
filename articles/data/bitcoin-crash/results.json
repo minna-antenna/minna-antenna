@@ -1,0 +1,135 @@
+{
+  "provider": "Bitstamp",
+  "currency": "USD",
+  "price_field": "close",
+  "utc_interval_label": "start date; close boundary next day 00:00 UTC / 09:00 JST",
+  "period_start": "2013-01-01",
+  "period_end": "2026-11-05",
+  "calendar_rows": 5057,
+  "trading_rows": 5054,
+  "excluded_zero_volume_dates": [
+    "2015-01-06",
+    "2015-01-07",
+    "2015-01-08"
+  ],
+  "selection": "Five explicitly declared windows, not a complete non-overlapping all-time crash ranking. Recovery searches all subsequent valid closes through cutoff.",
+  "events": [
+    {
+      "label": "2013–2015",
+      "window_start": "2013-01-01",
+      "window_end": "2015-12-31",
+      "peak_date": "2013-12-04",
+      "peak_usd": "1132.01",
+      "trough_date": "2015-01-14",
+      "trough_usd": "171.41",
+      "drawdown_pct": "-84.85790761565710550260156712",
+      "peak_to_trough_days": 406,
+      "recovery_date": "2017-02-23",
+      "peak_to_recovery_days": 1177,
+      "trough_to_recovery_days": 771,
+      "unrecovered_days": null,
+      "model_principal_jpy": 1000000,
+      "model_trough_jpy": 151421,
+      "required_rebound_pct": "560.4107111603757073682982323"
+    },
+    {
+      "label": "2017–2018",
+      "window_start": "2017-01-01",
+      "window_end": "2018-12-31",
+      "peak_date": "2017-12-16",
+      "peak_usd": "19187.78",
+      "trough_date": "2018-12-15",
+      "trough_usd": "3179.54",
+      "drawdown_pct": "-83.42934930460949625230224653",
+      "peak_to_trough_days": 364,
+      "recovery_date": "2020-11-30",
+      "peak_to_recovery_days": 1080,
+      "trough_to_recovery_days": 716,
+      "unrecovered_days": null,
+      "model_principal_jpy": 1000000,
+      "model_trough_jpy": 165707,
+      "required_rebound_pct": "503.4766035338445183894525623"
+    },
+    {
+      "label": "2020年1–3月",
+      "window_start": "2020-01-01",
+      "window_end": "2020-03-31",
+      "peak_date": "2020-02-14",
+      "peak_usd": "10364.04",
+      "trough_date": "2020-03-12",
+      "trough_usd": "4841.67",
+      "drawdown_pct": "-53.28395104611715122674169532",
+      "peak_to_trough_days": 27,
+      "recovery_date": "2020-07-27",
+      "peak_to_recovery_days": 164,
+      "trough_to_recovery_days": 137,
+      "unrecovered_days": null,
+      "model_principal_jpy": 1000000,
+      "model_trough_jpy": 467160,
+      "required_rebound_pct": "114.0591985823073443667164429"
+    },
+    {
+      "label": "2021–2022",
+      "window_start": "2021-01-01",
+      "window_end": "2022-12-31",
+      "peak_date": "2021-11-08",
+      "peak_usd": "67559.00",
+      "trough_date": "2022-11-21",
+      "trough_usd": "15766.00",
+      "drawdown_pct": "-76.66336091416391598454684054",
+      "peak_to_trough_days": 378,
+      "recovery_date": "2024-03-04",
+      "peak_to_recovery_days": 847,
+      "trough_to_recovery_days": 469,
+      "unrecovered_days": null,
+      "model_principal_jpy": 1000000,
+      "model_trough_jpy": 233366,
+      "required_rebound_pct": "328.5107192693137130534060637"
+    },
+    {
+      "label": "2024–2026",
+      "window_start": "2024-01-01",
+      "window_end": "2026-11-05",
+      "peak_date": "2025-10-06",
+      "peak_usd": "124728.00",
+      "trough_date": "2026-06-30",
+      "trough_usd": "58526.17",
+      "drawdown_pct": "-53.07695946379321403373741261",
+      "peak_to_trough_days": 267,
+      "recovery_date": null,
+      "peak_to_recovery_days": null,
+      "trough_to_recovery_days": null,
+      "unrecovered_days": 395,
+      "model_principal_jpy": 1000000,
+      "model_trough_jpy": 469230,
+      "required_rebound_pct": "113.1149193600059597270759388"
+    }
+  ],
+  "ranking": [
+    "2013–2015",
+    "2017–2018",
+    "2021–2022",
+    "2020年1–3月",
+    "2024–2026"
+  ],
+  "last_close_usd": "75971.22",
+  "last_drawdown_from_recent_peak_pct": "-39.09048489513180681162208967",
+  "halvings": [
+    {
+      "date": "2012-11-28",
+      "height": 210000
+    },
+    {
+      "date": "2016-07-09",
+      "height": 420000
+    },
+    {
+      "date": "2020-05-11",
+      "height": 630000
+    },
+    {
+      "date": "2024-04-20",
+      "height": 840000
+    }
+  ]
+}

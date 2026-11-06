@@ -1,0 +1,109 @@
+{
+  "status": "reviewed_for_declared_claims",
+  "checked_on_utc": "2026-11-06",
+  "sources": [
+    {
+      "url": "https://bitcoin.org/en/halving",
+      "retrieved_at_utc": "2026-11-06T17:47:17.264851+00:00",
+      "sha256": "86f4215e6593b1af13d91381f545193b69934bc84186b89d4758b40c78136024",
+      "verified_claim": "半減期の実施日4件と210000ブロック間隔を確認。将来価格の根拠にしない。"
+    },
+    {
+      "url": "https://blog.bitstamp.net/post/bitstamp-is-open-for-business-better-than-ever/",
+      "retrieved_at_utc": "2026-11-06T17:47:18.139214+00:00",
+      "sha256": "107bad72253e25af723880a2a6d38734409fcc7da2f5fe269e3ad722fb9aa6c2",
+      "verified_claim": "2015年1月のウォレット侵害と再開の公表。出来高ゼロ日の補間理由にせずデータ制約として扱う。"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/",
+      "retrieved_at_utc": "2026-11-06T17:47:19.908717+00:00",
+      "sha256": "8d265ed528bec05754f44e8a05ef43b14e862c32a548576fa9f10a5384bc6ac0",
+      "verified_claim": "OHLCのstep、timestamp、close、exclude_current_candle等。UTC区切りは秒単位データと時間足でも照合。"
+    },
+    {
+      "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/understand_risks_of_virtual_currency.html",
+      "retrieved_at_utc": "2026-11-06T17:47:17.095393+00:00",
+      "sha256": "05129844313faa626b2ec1d553d9fa6ce5d826c592637a5da5f676637566136e",
+      "verified_claim": "変動とレバレッジによる損失拡大を注意喚起。各暴落の清算寄与率の証拠ではない。"
+    },
+    {
+      "url": "https://www.chicagofed.org/publications/chicago-fed-letter/2023/479",
+      "retrieved_at_utc": "2026-11-06T17:47:17.732869+00:00",
+      "sha256": "9b61f27c21c23a47aace2bafc669f76fbad96dcc7465a6545b81509da1c21a37",
+      "verified_claim": "2022年のプラットフォームからの資金流出を分析。因果寄与率は転記しない。"
+    },
+    {
+      "url": "https://www.cmegroup.com/notices/ser/2017/12/SER-8051R.html",
+      "retrieved_at_utc": "2026-11-06T17:47:17.695617+00:00",
+      "sha256": "0479dc85a4e1fd3bbf34bb80db6c5fd57a4b4fa93326dd485a6a69e5efe3ccfa",
+      "verified_claim": "2017年12月18日取引日のビットコイン先物上場通知。暴落の単独原因とはしない。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/econres/feds/the-financial-stability-implications-of-digital-assets.htm",
+      "retrieved_at_utc": "2026-11-06T17:47:17.998684+00:00",
+      "sha256": "dee3fdd202e08e64c1510799b92490e544f260d87d582d70d8ff42b2ea2d8b92",
+      "verified_claim": "デジタル資産の複数の脆弱性を検討する研究。著者の見解でありFRB理事会の公式見解と同一視しない。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm",
+      "retrieved_at_utc": "2026-11-06T17:47:18.089679+00:00",
+      "sha256": "eac9b3fcdb13d7c30048cc78dae7f985539d166b0b41e409f78b774de94f6f3e",
+      "verified_claim": "2020年3月15日の金融環境・感染症対応。3月12日の下落より後。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
+      "retrieved_at_utc": "2026-11-06T17:47:18.278819+00:00",
+      "sha256": "1ea7596798ff7cbd31c8e0d198673e82a6c23b5228bac7c73dc80e83ed65d97e",
+      "verified_claim": "2022年3月16日の目標レンジ0.25〜0.50%への引上げ。ピークはその前。"
+    },
+    {
+      "url": "https://www.fsa.go.jp/policy/virtual_currency/",
+      "retrieved_at_utc": "2026-11-06T17:47:18.494258+00:00",
+      "sha256": "886cd3d1ffdf8db7df7d3b8fae6a49d49a634b06a61f749e404f6a8b2f7aa7ce",
+      "verified_claim": "暗号資産の価格変動・事業者確認などの利用者向け注意。"
+    },
+    {
+      "url": "https://www.mtgox.com/img/pdf/20140723_report_en.pdf",
+      "retrieved_at_utc": "2026-11-06T17:47:19.489544+00:00",
+      "sha256": "1ad9ab326a698b9d80bd18e93b370e4fa6e98ed6980fa5b999d4648d2da89637",
+      "verified_claim": "2014年2月28日の民事再生開始申立てを管財人報告で確認。"
+    },
+    {
+      "url": "https://www.sec.gov/newsroom/press-releases/2022-219",
+      "retrieved_at_utc": "2026-11-06T17:47:18.983555+00:00",
+      "sha256": "d0dfed512ae55c82c0928e12296d5fe304f47f5e9a7d8388c7bf5e6a75651637",
+      "verified_claim": "2022年12月13日のFTX創業者への提訴。発表時点の訴状の主張として扱う。"
+    },
+    {
+      "url": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
+      "retrieved_at_utc": "2026-11-06T17:47:19.014854+00:00",
+      "sha256": "aec8c915d5b6d0da8dd947d7061dc65fd9f14fd646f6fed37a98dbec5732218b",
+      "verified_claim": "2024年1月10日の現物BTC ETP承認。BTC自体の承認・推奨とは異なる。"
+    }
+  ],
+  "halving_dates": [
+    {
+      "date": "2012-11-28",
+      "height": 210000
+    },
+    {
+      "date": "2016-07-09",
+      "height": 420000
+    },
+    {
+      "date": "2020-05-11",
+      "height": 630000
+    },
+    {
+      "date": "2024-04-20",
+      "height": 840000
+    }
+  ],
+  "limits": [
+    "No causal contribution percentages estimated",
+    "No equity correlation coefficient calculated",
+    "No attribution to specific geopolitical event or whale sale",
+    "Single venue USD closes; zero-volume rows excluded",
+    "Five fixed windows are not exhaustive or statistically independent"
+  ]
+}

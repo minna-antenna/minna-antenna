@@ -1,0 +1,150 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ビットコインはなぜ暴落する？過去の下落原因と回復までの期間を徹底比較｜トピック基地</title><meta name="description" content="ビットコインの主要5局面の暴落率と高値回復日を、2013〜2026年の同一取引所の米ドル終値で独自比較。未回復局面、半減期・金利・取引所破綻との関係、100万円の下落モデルと再現データを解説します。"><meta name="robots" content="index,follow"><link rel="canonical" href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-crash-history.html"><meta property="article:published_time" content="2026-11-06"><meta property="article:modified_time" content="2026-11-06"><meta property="og:type" content="article"><meta property="og:title" content="ビットコインはなぜ暴落する？過去の下落原因と回復までの期間を徹底比較｜トピック基地"><meta property="og:description" content="ビットコインの主要5局面の暴落率と高値回復日を、2013〜2026年の同一取引所の米ドル終値で独自比較。未回復局面、半減期・金利・取引所破綻との関係、100万円の下落モデルと再現データを解説します。"><meta property="og:url" content="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-crash-history.html"><meta property="og:site_name" content="トピック基地"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://minna-antenna.github.io/minna-antenna/articles/data/bitcoin-crash/long-price.png"><meta property="og:image:width" content="1440"><meta property="og:image:height" content="864"><style>
+:root{--ink:#203a42;--muted:#657b83;--green:#176b57;--dark:#173d3b;--line:#d8e5df;--bg:#f5f7f5;--soft:#eef5f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Yu Gothic",Meiryo,sans-serif;font-size:15px;line-height:1.9}a{color:#126a58;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
+header{background:var(--dark);color:white;border-bottom:4px solid #d7bd76}header .bar{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 18px}header a{color:white;text-decoration:none}header .brand{font-size:23px;font-weight:800;letter-spacing:.01em}header .return{font-size:13px}
+.wrap{max-width:900px;margin:24px auto 60px;padding:0 18px}.crumb{font-size:12px;color:var(--muted);margin-bottom:16px}.crumb a{color:var(--muted)}article{background:white;border:1px solid var(--line);border-radius:12px;padding:38px 43px;box-shadow:0 2px 8px rgba(21,67,59,.025)}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.075em}.date{font-size:12px;color:var(--muted);margin-top:14px}h1{font-size:clamp(24px,3.1vw,34px);line-height:1.5;letter-spacing:.01em;margin:13px 0 18px}h2{font-size:21px;line-height:1.45;margin:38px 0 15px;padding-bottom:9px;border-bottom:2px solid #b8dcd0}h3{font-size:17px;margin:26px 0 9px}p{margin:14px 0}ul,ol{padding-left:1.5em}li{margin:6px 0}.lead{font-size:16px}.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:27px 0 33px}.toc strong{display:block;margin-bottom:6px}.toc ol{margin:6px 0}.toc a{font-size:14px}.note{padding:14px 18px;background:#fdf8ee;border-left:3px solid #cda647;border-radius:4px;margin:22px 0}.takeaway{padding:18px 20px;background:var(--soft);border-radius:8px;margin:24px 0}.table-wrap{overflow-x:auto;margin:17px 0}table{width:100%;border-collapse:collapse;min-width:580px;font-size:13px}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft)}.small{font-size:12px;color:var(--muted)}.related{padding:18px 20px;border:1px solid var(--line);border-radius:8px;margin-top:35px}.refs{font-size:13px;overflow-wrap:anywhere}.refs li{margin:9px 0}.faq dt{font-weight:700;margin-top:18px}.faq dd{margin:4px 0 16px}footer{text-align:center;padding:6px 15px 35px;font-size:13px;color:var(--muted)}footer a{margin:0 8px}strong{font-weight:750}
+@media(max-width:650px){header .bar{padding:14px 16px}header .brand{font-size:19px}.wrap{padding:0 12px;margin-top:17px}article{padding:25px 20px}h2{font-size:19px}h1{font-size:25px}}
+
+h1{text-wrap:balance}@media(min-width:651px){h1{font-size:clamp(24px,3vw,32px)}}body{overflow-wrap:anywhere}.bar{flex-wrap:wrap}.table-wrap{max-width:100%;overscroll-behavior-x:contain}.table-wrap:focus-visible,a:focus-visible{outline:3px solid #d59c22;outline-offset:3px}table{min-width:720px}caption{text-align:left;font-weight:700;margin-bottom:10px}h2[id],h3[id],li[id]{scroll-margin-top:16px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+figure{margin:24px 0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}figcaption{font-size:12px;color:var(--muted);line-height:1.7;margin-top:9px}code{overflow-wrap:anywhere}table{min-width:760px}pre{overflow:auto;max-width:100%}
+
+.simulation-table table{min-width:580px}.refs a{overflow-wrap:anywhere}
+
+.flow{list-style:none;padding:0}.flow li{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--soft);margin:12px 0}.blocked{border:2px solid #9b4024;padding:16px;background:#fff4ec;border-radius:8px}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ビットコインはなぜ暴落する？過去の下落原因と回復までの期間を徹底比較", "description": "ビットコインの主要5局面の暴落率と高値回復日を、2013〜2026年の同一取引所の米ドル終値で独自比較。未回復局面、半減期・金利・取引所破綻との関係、100万円の下落モデルと再現データを解説します。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "inLanguage": "ja", "image": "https://minna-antenna.github.io/minna-antenna/articles/data/bitcoin-crash/long-price.png", "author": {"@type": "Organization", "name": "トピック基地", "url": "https://minna-antenna.github.io/minna-antenna/about.html"}, "publisher": {"@type": "Organization", "name": "トピック基地", "url": "https://minna-antenna.github.io/minna-antenna/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://minna-antenna.github.io/minna-antenna/articles/bitcoin-crash-history.html"}}</script></head><body><header><div class="bar"><a class="brand" href="../">⌂ トピック基地</a><a class="return" href="../#news">新着ニュースを見る</a></div></header><main class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="../">ホーム</a> &gt; <a href="../#original-articles">独自解説</a> &gt; ビットコイン暴落の歴史</nav><article><div class="eyebrow">独自解説 第8号｜終値で測る下落と回復</div>
+<h1>ビットコインはなぜ暴落する？<br>過去の下落原因と回復までの期間を徹底比較</h1>
+<p class="date">公開・更新：<time datetime="2026-11-06">2026年11月6日</time>（UTC）<br>著者・編集：<a href="../about.html">トピック基地</a>／調査・取得日：2026年11月6日（UTC）</p>
+<p class="lead">ビットコインの暴落は、一つのニュースだけで説明できるとは限りません。過熱した期待、借入や証拠金を使った取引、流動性の低下、金融環境、取引所への信用不安などが重なると、売りが売りを呼ぶことがあります。本稿は<strong>BitstampのBTC/USD日足終値</strong>を使い、5つの対象期間の下落率と高値回復までの時間を同じ方法で比較します。</p>
+<div class="takeaway"><strong>先に押さえたい3点</strong><ul><li>比較するのは単一取引所の米ドル建て終値。市場全体の瞬間的な最高値・最安値ではありません。</li><li>「底までの日数」「ピークから回復まで」「底から回復まで」を分けます。未回復の事例も含みます。</li><li>過去に回復した事実は、今後の回復や同じ周期を保証しません。100万円の例は為替固定の仮定です。</li></ul></div>
+<p class="small">一般的な情報と条件を限定した分析です。売買や特定の保有期間を推奨しません。個別の税務については<a href="./crypto-tax-japan-guide.html">暗号資産の税金と申告</a>も参照し、必要に応じて専門窓口へ確認してください。<a href="../about.html">編集・訂正方針</a>に基づき、誤りが判明した場合は修正します。</p>
+<nav class="toc" aria-label="この記事の目次"><strong>この記事の内容</strong><ol><li><a href="#why">なぜ暴落するのか</a></li><li><a href="#method">データと計算条件</a></li><li><a href="#comparison">5期間の比較表</a></li><li><a href="#early">2013〜2015年</a></li><li><a href="#bubble">2017〜2018年</a></li><li><a href="#covid">2020年3月</a></li><li><a href="#credit">2021〜2022年</a></li><li><a href="#recent">2024〜2026年</a></li><li><a href="#ranking">下落率ランキング</a></li><li><a href="#recovery">回復までの期間</a></li><li><a href="#halving">半減期と暴落</a></li><li><a href="#rates">金利・株式・地政学</a></li><li><a href="#leverage">取引所破綻と清算</a></li><li><a href="#simulation">100万円の下落モデル</a></li><li><a href="#behavior">避けたい行動</a></li><li><a href="#long-term">長期保有の注意点</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">まとめ・参考資料</a></li></ol></nav>
+
+<h2 id="why">1. ビットコインはなぜ暴落する？価格が大きく動く仕組み</h2>
+<h3>買いたい価格と売りたい価格が急に変わる</h3>
+<p>市場価格は、その時点で成立する売買によって決まります。将来への期待が先行して買いが増えていても、期待の見直しや資金需要で売りが増え、同じ価格で受け止める買い注文が少なければ、価格は下がります。時価総額が大きいことと、任意の数量を同じ価格で売れることは別です。板の厚みや時間帯、取引所によっても約定価格は異なります。</p>
+<p>ビットコインは株式のような企業利益への請求権や配当を持ちません。評価の拠り所として利用・保有需要、供給制約、ネットワークへの信頼などが意識されますが、将来の需要は確定していません。金融庁も暗号資産の価格変動や取引内容を理解する必要性を案内しています。<a href="#ref-fsa">［12］</a></p>
+<h3>レバレッジと流動性の組合せ</h3>
+<p>証拠金に対して大きなポジションを持つ取引は、損失も拡大します。相場が逆行して必要証拠金を維持できなくなると、取引条件に従ってポジションが清算される場合があります。買い持ちの清算が売り注文につながり、薄い板でさらに値段が下がる、という増幅経路が考えられます。CFTCも、暗号資産取引の変動とレバレッジによる損失拡大を注意喚起しています。<a href="#ref-cftc">［5］</a></p>
+<p>ただし、この一般的な仕組みを説明するだけでは、特定の日の下落の何割が清算によるものかは分かりません。本稿のOHLCデータには建玉や強制清算の内訳がないため、その寄与率を推計した数字は載せません。</p>
+
+<h2 id="method">2. 分析条件：同じ取引所・米ドル建て・UTCの日足終値でそろえる</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="価格分析の条件"><table><caption>調査日と価格の対象最終日は異なります</caption><tbody><tr><th scope="row">提供元・取引市場</th><td>Bitstamp公式OHLC API、BTC/USD現物。同取引所で観測した価格であり世界共通の統一価格ではない</td></tr><tr><th scope="row">対象期間</th><td>2013-01-01〜2026-11-05。2026-11-06の取得時点で未完了の日足を含めない</td></tr><tr><th scope="row">価格と時刻</th><td>APIのcloseのみ。Unix timestampはUTC日足区間の開始。日付Dの終値はD翌日00:00 UTCの区切り（日本時間09:00）。日中high/lowは極値分析に使わない</td></tr><tr><th scope="row">通貨</th><td>1 BTC当たり米ドル。実際の円建て投資収益は計算しない</td></tr><tr><th scope="row">データ点</th><td>5,057暦日。出来高ゼロの2015-01-06〜08の3行は実取引終値として除外し、5,054日を分析。欠けた価格を補間しない</td></tr><tr><th scope="row">抽出範囲</th><td>2013–2015、2017–2018、2020年1–3月、2021–2022、2024–2026-11-05の5期間。全暴落を網羅するランキングではない</td></tr></tbody></table></div>
+<p>APIが返す日付と、日本のニュースが「その日に付けた」と報じる日付は一致しないことがあります。例えばUTC日付の終値は日本では翌朝に確定します。同じ日でも日中安値は終値より低い場合があります。終値と日中価格を入れ替えると、下落率も回復日も変わります。<a href="#ref-api">［1］</a></p>
+<h3>ピーク・底値・回復日をどう選んだか</h3>
+<p>各対象期間の各日について、その日以前の同期間内の最高終値を求め、「当日終値÷それまでの最高終値−1」を計算します。その比率が最も低くなるピークと底の組を、その期間の最大下落として採用します。期間全体の最高値の後だけを見る方法ではなく、<strong>先に高値、後に底</strong>という順序を守ります。同じ高値・同率の底が複数あるときは最初の観測を採用します。</p>
+<p>回復日は、底の後に、選んだピークの終値以上へ初めて戻った有効日足の日付です。回復探索は抽出期間の末日で打ち切らず、取得最終日まで続けます。底まで・回復までの日数は暦日の差で、取引日数ではありません。未回復の場合に日数を0としたり、将来の回復日を予想したりしません。</p>
+<p class="note">2020年1–3月は、その年初からの局面を測る<strong>局所的な比較</strong>です。2017年の史上高値を基準にした長い下落局面とは異なります。5期間の比較は統計的に独立した5標本でも、世界中の暴落の完全な順位でもありません。取引停止期間や単一市場の制約もあるため、「全市場でこの日に底打ちした」とは解釈できません。</p>
+<figure><img src="./data/bitcoin-crash/long-price.svg" width="900" height="540" alt="2013年1月から2026年11月5日までのBitstamp BTC/USD終値。対数目盛の長期推移で、出来高ゼロの3日は欠測。" loading="lazy" decoding="async"><figcaption>図1：1 BTCの米ドル建て終値、縦軸は対数。等間隔は同じ価格差ではなく同じ倍率を示します。出典：Bitstamp、UTC 2013-01-01〜2026-11-05。<a href="./data/bitcoin-crash/long-price.svg">拡大表示</a>。</figcaption></figure>
+
+<h2 id="comparison">3. 主要5期間の最大下落率と回復日を比較</h2>
+<p>以下の価格は米ドル建て日足終値です。日付はすべてUTC区間ラベル。比率は計算時に丸めず、表示時だけ小数第2位へ丸めています。</p>
+<!-- CRASH:START -->
+<div class="table-wrap" role="region" tabindex="0" aria-label="5期間の終値ベース最大下落と回復"><table><caption>Bitstamp BTC/USD日足終値：事前に定めた5期間の比較</caption><thead><tr><th scope="col">抽出期間</th><th scope="col">ピーク・USD</th><th scope="col">底・USD</th><th scope="col">最大下落率</th><th scope="col">ピーク→底</th><th scope="col">最初の回復日</th><th scope="col">ピーク→回復</th><th scope="col">底→回復</th></tr></thead><tbody><tr><th scope="row">2013–2015</th><td>2013-12-04<br>$1,132.01</td><td>2015-01-14<br>$171.41</td><td>-84.86%</td><td>406日</td><td>2017-02-23</td><td>1,177日</td><td>771日</td></tr><tr><th scope="row">2017–2018</th><td>2017-12-16<br>$19,187.78</td><td>2018-12-15<br>$3,179.54</td><td>-83.43%</td><td>364日</td><td>2020-11-30</td><td>1,080日</td><td>716日</td></tr><tr><th scope="row">2020年1–3月</th><td>2020-02-14<br>$10,364.04</td><td>2020-03-12<br>$4,841.67</td><td>-53.28%</td><td>27日</td><td>2020-07-27</td><td>164日</td><td>137日</td></tr><tr><th scope="row">2021–2022</th><td>2021-11-08<br>$67,559.00</td><td>2022-11-21<br>$15,766.00</td><td>-76.66%</td><td>378日</td><td>2024-03-04</td><td>847日</td><td>469日</td></tr><tr><th scope="row">2024–2026</th><td>2025-10-06<br>$124,728.00</td><td>2026-06-30<br>$58,526.17</td><td>-53.08%</td><td>267日</td><td>未回復</td><td>395日経過・未回復</td><td>未回復</td></tr></tbody></table></div>
+<!-- CRASH:END -->
+<p>各行の期間は上の分析条件で固定しています。回復に時間がかかった局面を短いものに見せるため、途中で基準価格を切り下げていません。一方、2020年のような局所高値を使う行は、その基準の違いが読者に分かるよう範囲を表示しています。</p>
+
+<h2 id="early">4. 2013〜2015年：価格下落と取引所への信用不安</h2>
+<p>この期間の最大下落は、Bitstamp終値で2013年12月4日の1,132.01ドルから2015年1月14日の171.41ドルまでです。後述の回復日まで含めると、下落の深さだけでなく、資金が長く拘束され得ることが分かります。</p>
+<p>確認できる出来事として、MtGoxの破産管財人報告は、同社が2014年2月28日に民事再生手続開始を申し立てたことを記載しています。またBitstamp自身も、2015年1月のウォレット侵害とサービス再開を公表しています。これらは、当時の取引所保管・事業者信用のリスクを示す一次情報です。<a href="#ref-mtgox">［3］</a><a href="#ref-reopen">［2］</a></p>
+<p>ただし、この二つの出来事だけで2013年末からの全下落を説明することはできません。MtGoxの申立ては選定ピークより後であり、Bitstampの障害も下落期間の一部です。期待の反転や流動性の変化は考え得る経路ですが、本稿はそれぞれの寄与を特定していません。</p>
+<p class="small">Bitstampが返した2015年1月6〜8日の出来高ゼロ行は、価格が動かなかった証拠としては扱いません。この3日は図を途切れさせ、ピーク・底・回復の候補から除外しました。採用された極値・回復日は出来高がある日です。</p>
+
+<h2 id="bubble">5. 2017〜2018年：期待の拡大と、その反転を分けて見る</h2>
+<p>2017〜2018年の対象期間では、2017年12月16日の19,187.78ドルから2018年12月15日の3,179.54ドルへの下落が最大でした。一般に語られる「約2万ドル」と異なり、この比較では特定市場の日足終値を正確な基準にしています。</p>
+<p>CMEは2017年12月18日を取引日とするビットコイン先物の上場を案内しました。市場参加手段が広がったことは確認できますが、上場とピークが近いことだけで「先物上場が暴落を起こした」とは結論できません。期待の拡大・利益確定・買い需要の変化など、価格を動かす経路は複数あります。<a href="#ref-cme">［4］</a></p>
+<p>「バブル崩壊」という呼び方は、この大きな上昇後の反落を説明する表現です。本稿のデータだけで当時の適正価格や投機需要の割合を測定したわけではありません。過去の最高値に近いことだけを買い根拠にすると、下落を受け止める資金計画が不足する可能性があります。</p>
+
+<h2 id="covid">6. 2020年3月：市場全体の資金需要が強まった局面</h2>
+<p>2020年1〜3月の局所比較では、2月14日の10,364.04ドルから3月12日の4,841.67ドルまで下落しました。これは日中の最安値を使った比較ではありません。回復の基準も、2017年高値ではなく、この局所ピークです。</p>
+<p>FRBの2020年3月15日の声明は、新型コロナウイルスによる経済活動への影響や金融環境の悪化を踏まえた対応を説明しています。市場全体の不安や現金需要が強かったことを考える資料になりますが、3月12日のBTC下落を、その後の声明が引き起こしたとする時系列の説明はできません。<a href="#ref-fed2020">［6］</a></p>
+<p>危機時には「安全と思っていた資産を含めて現金化する」という行動も想定されます。ただし、取引主体ごとの売却目的はこの価格データに含まれません。株式と同時に下落した場面があっても、常に同じ相関で動くとか、分散効果が必ずなくなるとは言えません。</p>
+
+<h2 id="credit">7. 2021〜2022年：金融引き締めと暗号資産企業の信用問題</h2>
+<p>この対象期間は、2021年11月8日の67,559.00ドルから2022年11月21日の15,766.00ドルまでが最大下落でした。ピークと底の間には1年以上あり、単日のニュースによる値動きだけを測っていません。</p>
+<p>FRBは2022年3月16日に政策金利の目標レンジを0.25〜0.50%へ引き上げ、追加の引上げを想定する方針を示しました。リスク資産を保有する機会費用や資金調達環境を考える材料ですが、この政策だけで下落率全体を説明したとは言えません。選定ピークは利上げ開始より前です。<a href="#ref-fed2022">［7］</a></p>
+<p>一方、シカゴ連銀の研究は、2022年の暗号資産プラットフォームからの資金流出や破綻を分析しています。SECは2022年12月13日に、FTXに関して投資家を欺いたとして創業者を提訴したと公表しました。発表当時の訴状に基づく主張と、その後の司法判断は区別する必要があります。<a href="#ref-runs">［8］</a><a href="#ref-sec2022">［9］</a></p>
+<p>金融環境の変化と、暗号資産業界内の信用不安が同じ年に存在したことは確認できます。どちらが何%の下落を生んだかは、本稿では推定していません。保有資産の市場価格だけでなく、取引所から引き出せるかというリスクも別に考える必要があります。</p>
+
+<h2 id="recent">8. 2024〜2026年：制度の進展後も大きな下落は残る</h2>
+<p>SECは2024年1月10日に、複数の現物ビットコインETP持分の上場・取引を承認したと公表しました。同声明はビットコインそのものへの承認・推奨とは異なることも説明しています。投資手段の制度整備が進んだことと、価格の安全が保証されることは別です。<a href="#ref-sec2024">［10］</a></p>
+<p>取得したBitstamp終値では、2024年初〜2026年11月5日の対象期間の最大下落は、2025年10月6日の124,728.00ドルから2026年6月30日の58,526.17ドルまででした。取得最終日の終値は75,971.22ドルで、選定ピークを回復していません。</p>
+<p>この節の2025〜2026年の数値は、取得できた価格系列からの観測結果です。大口保有者の売却、特定の政策発言、地政学ニュースなどの寄与は確認できていないため、もっともらしい説明で補いません。2026年11月全体の実績でもなく、11月6日以後の値動きは含みません。</p>
+
+<h2 id="ranking">9. 下落率ランキング：分析対象5期間の範囲内で比較</h2>
+<p>大きく下落した順は以下の通りです。これは本稿で事前に定めた5期間の順位であり、2013年以前を含む全史上の暴落率ランキングではありません。観測期間の長さや局所高値の取り方も異なるため、行の順位を将来の危険度に置き換えないでください。</p>
+<!-- RANKING:START -->
+<ol><li>2013–2015：-84.86%</li><li>2017–2018：-83.43%</li><li>2021–2022：-76.66%</li><li>2020年1–3月：-53.28%</li><li>2024–2026：-53.08%</li></ol>
+<!-- RANKING:END -->
+<figure><img src="./data/bitcoin-crash/drawdowns.svg" width="900" height="540" alt="対象5期間の終値ベース最大下落率を比較。全暴落を網羅した順位ではない。" loading="lazy" decoding="async"><figcaption>図2：ピークから底への変化率（%）。出典：Bitstamp BTC/USD日足終値、UTC 2013-01-01〜2026-11-05の各抽出期間。<a href="./data/bitcoin-crash/drawdowns.svg">拡大表示</a>。数値は比較表を参照。</figcaption></figure>
+
+<h2 id="recovery">10. 高値回復までの期間：「底から」と「ピークから」は違う</h2>
+<p>買った日の価格を取り戻すまでの待ち時間を考えるなら、ピークから回復までが一つの目安になります。一方、底を事後的に選んだ「底から回復まで」は短くなります。実際の投資で底をあらかじめ知ることはできないので、後者だけを示すとリスクを小さく見せてしまいます。</p>
+<p>本分析の回復は、選定ピーク以上へ終値が最初に戻ったことを意味します。その後ずっと高値を維持したことや、同じ日に売買できたことを保証しません。取引手数料・スプレッド・税金・円高を考慮すると、米ドル価格が元に戻っても個人の円建て損益は元に戻らない場合があります。</p>
+<figure><img src="./data/bitcoin-crash/recovery-days.svg" width="900" height="540" alt="ピークから回復までの暦日数。2013〜2015年は1177日、2017〜2018年は1080日、2020年局面は164日、2021〜2022年は847日。直近局面は未回復。" loading="lazy" decoding="async"><figcaption>図3：単位はピークからの暦日数。未回復の斜線バーは観測打切りまでの経過で、確定した回復期間ではありません。出典：Bitstamp BTC/USD、UTC 2013-01-01〜2026-11-05。<a href="./data/bitcoin-crash/recovery-days.svg">拡大表示</a>。</figcaption></figure>
+<p>未回復の事例を除いて「平均すれば何年で戻る」と示すと、回復したものだけを選ぶ偏りが生じます。将来の回復時期の予測値として平均日数は掲載しません。長期保有を予定していても、生活上必要になる時期までに回復するとは限りません。</p>
+
+<h2 id="halving">11. 半減期と暴落は関係する？時系列と因果を区別する</h2>
+<p>ビットコインのブロック補助金は210,000ブロックごとに半減します。Bitcoin.orgの履歴で、2012年11月28日、2016年7月9日、2020年5月11日、2024年4月20日の半減期を確認しました。新規供給の仕組みに関する予定であって、需要や市場価格の予定ではありません。<a href="#ref-halving">［11］</a></p>
+<figure><img src="./data/bitcoin-crash/halving-timeline.svg" width="900" height="540" alt="2012〜2024年の半減期と5期間のピーク・底・回復または観測打切りを時系列で配置。" loading="lazy" decoding="async"><figcaption>図4：縦線は半減期。実線はピーク→底、破線は底→回復または2026-11-05の打切り。横軸は年。価格分析はUTC 2013-01-01以後、半減期履歴は2012年から。出典：Bitstamp、Bitcoin.org。<a href="./data/bitcoin-crash/halving-timeline.svg">拡大表示</a>。</figcaption></figure>
+<p>半減期と上昇・下落を同じ図に置くと、並び順は確認できます。しかし事例は少なく、金融政策や市場構造も変化しています。2020年3月の急落は、その年5月の半減期より前です。「半減期の後だから必ず暴落」「4年待てば必ず回復」という法則は、この図からは導けません。</p>
+<p>供給の仕組みは<a href="./bitcoin-halving.html">ビットコインの半減期の記事</a>、周期説の限界は<a href="./bitcoin-four-year-cycle.html">4年周期を検討した記事</a>で補足しています。似た形のチャートを探すだけでなく、成立条件が変わっていないかを確認してください。</p>
+
+<h2 id="rates">12. 金利・株式市場・地政学・大口売却をどう考えるか</h2>
+<div class="table-wrap" role="region" tabindex="0" aria-label="原因の検証可能範囲"><table><caption>観測できることと、本稿で確認できないこと</caption><thead><tr><th scope="col">論点</th><th scope="col">確認・分析できること</th><th scope="col">断定しないこと</th></tr></thead><tbody><tr><th scope="row">金利・金融政策</th><td>FRBの発表日と決定内容。資金調達費用・機会費用を通じた経路を考える</td><td>利上げだけでBTC下落率全体を説明したとはしない</td></tr><tr><th scope="row">株式との関係</th><td>FRB研究は暗号資産と金融システムの接点・脆弱性を検討している</td><td>本稿は株価との相関係数を計算していない。恒常的な連動や逆相関を主張しない</td></tr><tr><th scope="row">規制変更</th><td>SECのETP承認等の公表内容と日付</td><td>規制の進展が価格下落を防ぐとはしない</td></tr><tr><th scope="row">地政学リスク</th><td>不確実性が資金需要・リスク許容度を変える可能性を考える</td><td>今回の下落と特定事件との因果は未検証。数字や事件名を補わない</td></tr><tr><th scope="row">大口保有者</th><td>大きな売り注文は、板の厚みによって価格へ影響し得る</td><td>ウォレット移動を売却と同一視しない。売り主や下落への寄与率は不明</td></tr></tbody></table></div>
+<p>FRBのデジタル資産に関する研究は、価格評価、取り付け、レバレッジ、既存金融とのつながりなどを論点にしています。研究著者の見解であり、FRB理事会の公式見解と同一とは限りません。これは複数のリスク経路を調べるための資料であって、本稿の各日付の下落原因を特定した調査ではありません。出来事との時間的な一致、統計的な相関、因果関係は分けて読みましょう。<a href="#ref-fedresearch">［13］</a></p>
+
+<h2 id="leverage">13. 取引所破綻とレバレッジ清算は、価格下落以外の損失も生む</h2>
+<p>現物を借入なしで保有していても、預け先の破綻・流出・出金停止で資産にアクセスできなくなる可能性があります。市場価格が回復しても、破綻した事業者から同じ数量が返還されるとは限りません。価格リスクと保管・取引先リスクは別です。自己管理にも秘密鍵の紛失や誤送付のリスクがあり、単純に一方が無条件で安全とは言えません。</p>
+<p>一方、レバレッジ取引では、最終的に価格が戻る前に清算されることがあります。「数年待てば戻る」という過去の現物チャートを、証拠金取引の耐久力の根拠にはできません。清算条件や追加損失の可能性は商品・事業者で異なるので、契約を確認する必要があります。<a href="#ref-cftc">［5］</a><a href="#ref-runs">［8］</a></p>
+
+<h2 id="simulation">14. 100万円を投資したら、暴落でいくらになる？</h2>
+<p>各局面のピークで100万円相当を投じ、同じ米ドル建て下落率だけが起きると仮定します。<strong>為替レート固定、手数料・税金・スプレッドなし</strong>の説明用モデルで、実際の円建てBTC投資実績ではありません。評価額は100万円×底終値÷ピーク終値、表示は1円へ四捨五入しています。</p>
+<!-- LOSS:START -->
+<div class="table-wrap simulation-table" role="region" tabindex="0" aria-label="100万円の下落率連動モデル"><table><caption>為替固定・コスト税金なしの仮定。実際の円建て運用実績ではない</caption><thead><tr><th scope="col">期間</th><th scope="col">当初元本</th><th scope="col">底の評価額</th><th scope="col">元本との差</th><th scope="col">元値へ必要な上昇率</th></tr></thead><tbody><tr><th scope="row">2013–2015</th><td>1,000,000円</td><td>151,421円</td><td>-848,579円</td><td>560.41%</td></tr><tr><th scope="row">2017–2018</th><td>1,000,000円</td><td>165,707円</td><td>-834,293円</td><td>503.48%</td></tr><tr><th scope="row">2020年1–3月</th><td>1,000,000円</td><td>467,160円</td><td>-532,840円</td><td>114.06%</td></tr><tr><th scope="row">2021–2022</th><td>1,000,000円</td><td>233,366円</td><td>-766,634円</td><td>328.51%</td></tr><tr><th scope="row">2024–2026</th><td>1,000,000円</td><td>469,230円</td><td>-530,770円</td><td>113.11%</td></tr></tbody></table></div>
+<!-- LOSS:END -->
+<figure><img src="./data/bitcoin-crash/million-yen.svg" width="900" height="540" alt="100万円に各局面の米ドル建て下落率を当てはめた為替固定モデル。評価額は比較表に掲載。" loading="lazy" decoding="async"><figcaption>図5：縦軸は万円、破線は元本100万円。出典：Bitstamp終値比率（UTC 2013-01-01〜2026-11-05内の5期間）。為替固定・コスト税金なしの仮定。<a href="./data/bitcoin-crash/million-yen.svg">拡大表示</a>。</figcaption></figure>
+<p>50%下落した資産は50%上がっても元に戻らず、100%の上昇が必要です。80%下落なら元値へ400%の上昇が必要になります。これは「元値÷底値−1」という算数であり、その上昇が将来起きる予測ではありません。大きな損失を取引回数やレバレッジで急いで埋めようとすると、さらに損失が拡大する可能性があります。</p>
+
+<h2 id="behavior">15. 暴落時に避けたい投資行動</h2>
+<ul><li><strong>生活費や近く使う資金を追加する：</strong>回復が遅れたときに必要な支出を賄えないおそれがあります。</li><li><strong>損失を取り返すため倍率を上げる：</strong>現物の回復より先に清算され得ます。</li><li><strong>安くなったことだけで買い増す：</strong>価格低下が割安さを保証するわけではありません。保有割合や損失許容額を確認します。</li><li><strong>SNSの断定をそのまま使う：</strong>「底確定」「必ず何倍」は検証可能な根拠と区別してください。</li><li><strong>税務・取引履歴を後回しにする：</strong>損失があっても別の取引に申告上の所得がある場合があります。円への出金だけで判断しないでください。</li></ul>
+<p>暴落時に売るか持ち続けるかを、本稿が一律に決めることはできません。資金の使用予定、資産全体の割合、借入の有無、保管方法を事前に整理しておく方が、その場の予想に全面依存するより判断条件を明確にできます。</p>
+
+<h2 id="long-term">16. 長期保有でも消えないリスク</h2>
+<p>過去のBTCは、回復した局面だけでなく、長い含み損や未回復局面も経験しています。生き残った資産の過去チャートだけを見ると、将来も同じ結果になるように感じやすくなりますが、技術・規制・需要・競争環境は変化します。</p>
+<p>さらに、購買力の低下、円高、コストや税負担を考慮すると、名目の米ドル高値回復と実生活での資金回復は同じではありません。本稿は物価調整後の実質回復日も計算していません。株式との仕組みの違いは<a href="./bitcoin-vs-stocks-long-term.html">ビットコインと株式投資の長期比較</a>、他の暗号資産の固有リスクは<a href="./crypto-eth-sol-xrp-comparison.html">ETH・SOL・XRP比較</a>を参照してください。</p>
+
+<h2 id="faq">17. よくある質問</h2>
+<dl class="faq"><dt>Q. 暴落は何%からですか？</dt><dd>市場共通の一つの定義はありません。本稿は暴落を判定する一律の閾値を設けず、明示した5期間の最大終値下落率を比較しています。</dd>
+<dt>Q. 検索で見た最高値の日付と違うのはなぜ？</dt><dd>取引所、通貨、日中価格か終値か、UTCか日本時間かで変わります。本稿はBitstamp BTC/USDのUTC日足終値に統一しています。</dd>
+<dt>Q. 何年待てば必ず戻りますか？</dt><dd>保証できません。表は過去の観測で、直近の対象局面には未回復の行があります。期限を伴う支出に過去の回復日数をそのまま当てはめないでください。</dd>
+<dt>Q. 半減期の後は必ず暴落しますか？</dt><dd>そのような法則は確認していません。新規供給の変化と市場需要・金融環境は別で、事例数も限られています。</dd>
+<dt>Q. 2020年の回復が短いのは安全だったから？</dt><dd>局所高値を基準にしているため、2017年高値を基準にする場合と条件が違います。日数の短さだけで安全性を判断できません。</dd>
+<dt>Q. 100万円の表は日本で投資した実績ですか？</dt><dd>違います。米ドル下落率を為替固定で当てはめたモデルです。実際の円建て評価額にはドル円や取引条件が影響します。</dd>
+<dt>Q. 下落しているなら税金は関係ありませんか？</dt><dd>保有中の含み損と、売却・交換・報酬等の所得計算は異なります。<a href="./crypto-tax-japan-guide.html">第7号の税金・確定申告</a>を参照してください。</dd></dl>
+
+<h2>まとめ：下落の深さと、待てる時間を両方確認する</h2>
+<p>過去の下落を比べるときは、同じ価格の定義で測り、ピークから底、ピークから回復を分けて確認することが重要です。ニュースの理由付けは、確認された出来事と、価格への影響に関する解釈を区別します。未回復の事例や保管リスクも含め、将来の回復を前提にしすぎない資金計画を考える材料として利用してください。</p>
+<h3 id="reproduce">データと再現手順</h3>
+<p><a href="./data/bitcoin-crash/observations.csv">日足OHLC・出来高CSV</a>、<a href="./data/bitcoin-crash/results.json">計算結果JSON</a>、<a href="./data/bitcoin-crash/chart-data.json">グラフ入力</a>、<a href="./data/bitcoin-crash/sources.json">取得URL・日時・ハッシュ</a>、<a href="./data/bitcoin-crash/point-checks.json">極値・回復日の個別再取得記録</a>を公開します。配布した<a href="./data/bitcoin-crash/analyze_bitcoin_crashes.py.txt" download>計算コード</a>と<a href="./data/bitcoin-crash/audit_bitcoin_crashes.py.txt" download>別実装の監査コード</a>で照合できます。<a href="./data/bitcoin-crash/fetch_bitcoin_crashes.py.txt" download>再取得コード</a>は新しい保存先へ出力し、監査済みデータを上書きしません。</p>
+<p>再現コマンドと制約は<a href="./data/bitcoin-crash/METHOD.md">計算方法</a>へまとめています。提供元が過去データを訂正すれば再取得値は変わり得ます。差が出た場合は既存スナップショットを黙って置き換えず、再監査します。日付・期間の選び方を変えた結果を同じ分析の再現と呼びません。</p>
+<h2 id="sources">参考資料</h2><p class="small">調査日：2026年11月6日（UTC）。価格対象：2013-01-01〜2026-11-05。価格の観測、公式発表の事実、編集部の解釈を区別しています。</p>
+<ol class="refs">
+<li id="ref-api"><a href="https://www.bitstamp.net/api/" target="_blank" rel="noopener noreferrer">Bitstamp公式API仕様（OHLC）</a> — step=86400、close、Unix時刻。取得リクエストURLはデータ記録に保存。</li>
+<li id="ref-reopen"><a href="https://blog.bitstamp.net/post/bitstamp-is-open-for-business-better-than-ever/" target="_blank" rel="noopener noreferrer">Bitstamp：2015年1月9日のサービス再開発表</a> — ウォレット侵害と運用復旧。</li>
+<li id="ref-mtgox"><a href="https://www.mtgox.com/img/pdf/20140723_report_en.pdf" target="_blank" rel="noopener noreferrer">MtGox：破産管財人報告（2014年7月23日、PDF）</a> — 2014年2月28日の民事再生申立て等。</li>
+<li id="ref-cme"><a href="https://www.cmegroup.com/notices/ser/2017/12/SER-8051R.html" target="_blank" rel="noopener noreferrer">CME：ビットコイン先物の上場通知（2017年12月）</a> — 取引日12月18日。</li>
+<li id="ref-cftc"><a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/understand_risks_of_virtual_currency.html" target="_blank" rel="noopener noreferrer">CFTC：暗号資産取引リスクの注意喚起</a> — 変動・レバレッジ・損失リスク。</li>
+<li id="ref-fed2020"><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm" target="_blank" rel="noopener noreferrer">FRB：2020年3月15日FOMC声明</a> — 感染症、経済・金融環境への対応。</li>
+<li id="ref-fed2022"><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm" target="_blank" rel="noopener noreferrer">FRB：2022年3月16日FOMC声明</a> — 金利目標引上げと方針。</li>
+<li id="ref-runs"><a href="https://www.chicagofed.org/publications/chicago-fed-letter/2023/479" target="_blank" rel="noopener noreferrer">シカゴ連銀：2022年の暗号資産プラットフォーム取り付けの分析（2023年）</a> — 資金流出・信用問題。</li>
+<li id="ref-sec2022"><a href="https://www.sec.gov/newsroom/press-releases/2022-219" target="_blank" rel="noopener noreferrer">SEC：FTX創業者への提訴発表（2022年12月13日）</a> — 当時の訴状に基づく主張を記載。</li>
+<li id="ref-sec2024"><a href="https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023" target="_blank" rel="noopener noreferrer">SEC：現物ビットコインETP承認に関する声明（2024年1月10日）</a> — 承認の範囲と注意。</li>
+<li id="ref-halving"><a href="https://bitcoin.org/en/halving" target="_blank" rel="noopener noreferrer">Bitcoin.org：半減期の仕組みと履歴</a> — ブロック高と実施日。</li>
+<li id="ref-fsa"><a href="https://www.fsa.go.jp/policy/virtual_currency/" target="_blank" rel="noopener noreferrer">金融庁：暗号資産の利用者向け案内</a> — 価格変動・事業者確認等。</li>
+<li id="ref-fedresearch"><a href="https://www.federalreserve.gov/econres/feds/the-financial-stability-implications-of-digital-assets.htm" target="_blank" rel="noopener noreferrer">FRB：デジタル資産の金融安定への影響（2022年8月）</a> — 複数の脆弱性・金融システムとの接点。</li>
+</ol>
+<section class="related" aria-labelledby="related-heading"><h2 id="related-heading">関連記事</h2>
+<p><a href="./bitcoin-halving.html">第1号：ビットコインの半減期の仕組みと限界</a></p><p><a href="./bitcoin-four-year-cycle.html">第2号：ビットコインの4年周期説を検証</a></p><p><a href="./crypto-eth-sol-xrp-comparison.html">第3号：ETH・SOL・XRPの違いとリスク</a></p><p><a href="./bitcoin-vs-stocks-long-term.html">第4号：ビットコインと株式投資の長期比較</a></p><p><a href="./crypto-tax-japan-guide.html">第7号：暗号資産の税金と確定申告</a></p></section>
+<p><a href="../#original-articles">← 独自記事一覧に戻る</a></p>
+</article></main><footer><a href="../">ホーム</a><a href="../about.html">運営者情報</a><a href="../privacy.html">プライバシー</a><a href="../contact.html">お問い合わせ</a><p>© トピック基地</p></footer></body></html>
