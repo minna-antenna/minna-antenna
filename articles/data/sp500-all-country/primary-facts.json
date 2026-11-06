@@ -1,0 +1,193 @@
+{
+  "verified_date_utc": "2026-11-06",
+  "holdings_as_of": "2026-09-30",
+  "index_country_as_of": "2026-10-30",
+  "note": "Issuer factsheet values transcribed and independently checked against PDF text. Percentages are rounded published values; not the domestic eMAXIS Slim funds.",
+  "spy": {
+    "top10": [
+      [
+        "NVIDIA",
+        8.38
+      ],
+      [
+        "APPLE",
+        7.37
+      ],
+      [
+        "MICROSOFT",
+        5.77
+      ],
+      [
+        "AMAZON.COM",
+        3.71
+      ],
+      [
+        "ALPHABET A",
+        3.06
+      ],
+      [
+        "BROADCOM",
+        2.53
+      ],
+      [
+        "ALPHABET C",
+        2.46
+      ],
+      [
+        "META PLATFORMS A",
+        2.42
+      ],
+      [
+        "MICRON TECHNOLOGY",
+        1.82
+      ],
+      [
+        "TESLA",
+        1.52
+      ]
+    ],
+    "sectors": {
+      "Information Technology": 39.71,
+      "Financials": 11.4,
+      "Communication Services": 9.95,
+      "Health Care": 9.26,
+      "Consumer Discretionary": 8.6,
+      "Industrials": 8.05,
+      "Consumer Staples": 4.37,
+      "Energy": 3.4,
+      "Utilities": 1.88,
+      "Real Estate": 1.7,
+      "Materials": 1.7
+    },
+    "expense_ratio_percent": 0.0945,
+    "official_market_cagr_percent": {
+      "5": 13.66,
+      "10": 15.18
+    }
+  },
+  "acwi": {
+    "top10": [
+      [
+        "NVIDIA",
+        5.09
+      ],
+      [
+        "APPLE",
+        4.74
+      ],
+      [
+        "MICROSOFT",
+        3.51
+      ],
+      [
+        "AMAZON.COM",
+        2.34
+      ],
+      [
+        "ALPHABET A",
+        1.96
+      ],
+      [
+        "TAIWAN SEMICONDUCTOR",
+        1.86
+      ],
+      [
+        "META PLATFORMS A",
+        1.54
+      ],
+      [
+        "ALPHABET C",
+        1.54
+      ],
+      [
+        "BROADCOM",
+        1.54
+      ],
+      [
+        "MICRON TECHNOLOGY",
+        1.17
+      ]
+    ],
+    "sectors": {
+      "Information Technology": 33.07,
+      "Financials": 16.09,
+      "Industrials": 10.24,
+      "Health Care": 8.39,
+      "Consumer Discretionary": 8.2,
+      "Communication Services": 7.97,
+      "Consumer Staples": 4.5,
+      "Energy": 3.94,
+      "Materials": 3.5,
+      "Utilities": 2.23,
+      "Other": 1.86
+    },
+    "expense_ratio_percent": 0.32,
+    "official_market_cagr_percent": {
+      "5": 11.64,
+      "10": 12.45
+    }
+  },
+  "index_us_percent": {
+    "sp500": 100,
+    "msci_acwi": 64.63
+  },
+  "index_us_note": "S&P500: US-equity eligible universe, not issuer revenue geography or ETF cash weight; MSCI: published country weight.",
+  "sources": [
+    {
+      "name": "msci",
+      "url": "https://www.msci.com/documents/10199/255599/msci-acwi-net.pdf",
+      "final_url": "https://www.msci.com/documents/10199/255599/msci-acwi-net.pdf",
+      "status": 200,
+      "sha256": "6fdc21e8ade2d5d86f82cf2217a31c6393011a0b2f49cc001196fb8ec435b67f",
+      "retrieved_at": "2026-11-06T15:36:43.700813+00:00"
+    },
+    {
+      "name": "spy",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "final_url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": 200,
+      "sha256": "1f24751925d2a2863c806c6374e327e2ab0654f521486dd9e916a20926cced6a",
+      "retrieved_at": "2026-11-06T15:36:43.881142+00:00"
+    },
+    {
+      "name": "acwi",
+      "url": "https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf-acwi",
+      "final_url": "https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf-acwi",
+      "status": 200,
+      "sha256": "1e32f4901ed3ae6e4c97230aa2354e9d1fd1dee278a7a9d8b47c8d1927a1f4cb",
+      "retrieved_at": "2026-11-06T15:36:44.682463+00:00"
+    },
+    {
+      "name": "sp",
+      "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+      "final_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+      "status": 200,
+      "sha256": "41e8416a4f36d7492ddd56d29f587be1af8cdc84ef51b3d773400cd14ec06bb9",
+      "retrieved_at": "2026-11-06T15:36:43.808761+00:00"
+    },
+    {
+      "name": "ftse",
+      "url": "https://research.ftserussell.com/Analytics/FactSheets/Home/DownloadSingleIssue?issueName=GEISLMS&IsManual=False",
+      "final_url": "https://research.ftserussell.com/Analytics/FactSheets/Home/DownloadSingleIssue?issueName=GEISLMS&IsManual=False",
+      "status": 200,
+      "sha256": "d2639f8c7e73cb5d3a7fcc46d5b03a8160b3433224d2959860f46f5f2ebeca33",
+      "retrieved_at": "2026-11-06T15:36:44.699830+00:00"
+    },
+    {
+      "name": "spy_factsheet",
+      "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+      "final_url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+      "status": 200,
+      "sha256": "b4daa578ceb976dc6debab7e7b202ccf282f17d291fe31d9fe2240d4becbdcfa",
+      "retrieved_at": "2026-11-06T15:37:46.617957+00:00"
+    },
+    {
+      "name": "acwi_factsheet",
+      "url": "https://www.ishares.com/us/literature/fact-sheet/acwi-ishares-msci-acwi-etf-fund-fact-sheet-en-us.pdf",
+      "final_url": "https://www.ishares.com/us/literature/fact-sheet/acwi-ishares-msci-acwi-etf-fund-fact-sheet-en-us.pdf",
+      "status": 200,
+      "sha256": "6278e1accc3bc2e3ebf0cc9b5e5adab1515cf4c9c1a48d839bb46b0aace5edd9",
+      "retrieved_at": "2026-11-06T15:37:46.774578+00:00"
+    }
+  ]
+}

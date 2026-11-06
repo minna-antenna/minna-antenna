@@ -1,0 +1,25 @@
+{
+  "start": "2016-09-30",
+  "end": "2026-09-30",
+  "input_sha256": "8e3056f4c0e19dd5781b3951420cab0ac4a74344d08f97e58228bfa414a0ca8c",
+  "sources": [
+    {
+      "name": "SPY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1475193600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "retrieved_at": "2026-11-06T15:38:51.895734+00:00",
+      "sha256": "7200207598a83f1e28e1fb27939dfa07676d0d373411aed760e5c62597c4a0ed"
+    },
+    {
+      "name": "ACWI",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1475193600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "retrieved_at": "2026-11-06T15:38:52.474504+00:00",
+      "sha256": "89f4b585f1363d89ab273112cf406ec9a781162508e884ec48cf357570523ade"
+    },
+    {
+      "name": "FED_JPY",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "retrieved_at": "2026-11-06T15:38:52.861881+00:00",
+      "sha256": "b979438cc4fb1878b1e4535de16cb94751d6a70fa9f6ac10200275a16652d20e"
+    }
+  ]
+}
