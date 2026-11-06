@@ -1,0 +1,300 @@
+{
+  "model": "hypothetical-effective-annual-rate-month-end-v1",
+  "currency": "JPY",
+  "initial_yen": 0,
+  "contribution_timing": "month-end",
+  "annual_rate_definition": "effective; net of assumed ongoing fund costs",
+  "monthly_rate": "(1 + annual_percent / 100) ** (1/12) - 1",
+  "withdrawals": false,
+  "rounding": "half-up to integer yen at output only",
+  "scenarios": [
+    {
+      "monthly_yen": 10000,
+      "years": 10,
+      "annual_percent": 0,
+      "principal_yen": 1200000,
+      "final_yen": 1200000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 10,
+      "annual_percent": 3,
+      "principal_yen": 1200000,
+      "final_yen": 1394480,
+      "gain_yen": 194480
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 10,
+      "annual_percent": 5,
+      "principal_yen": 1200000,
+      "final_yen": 1543632,
+      "gain_yen": 343632
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 10,
+      "annual_percent": 7,
+      "principal_yen": 1200000,
+      "final_yen": 1710517,
+      "gain_yen": 510517
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 20,
+      "annual_percent": 0,
+      "principal_yen": 2400000,
+      "final_yen": 2400000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 20,
+      "annual_percent": 3,
+      "principal_yen": 2400000,
+      "final_yen": 3268544,
+      "gain_yen": 868544
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 20,
+      "annual_percent": 5,
+      "principal_yen": 2400000,
+      "final_yen": 4058045,
+      "gain_yen": 1658045
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 20,
+      "annual_percent": 7,
+      "principal_yen": 2400000,
+      "final_yen": 5075364,
+      "gain_yen": 2675364
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 30,
+      "annual_percent": 0,
+      "principal_yen": 3600000,
+      "final_yen": 3600000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 30,
+      "annual_percent": 3,
+      "principal_yen": 3600000,
+      "final_yen": 5787130,
+      "gain_yen": 2187130
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 30,
+      "annual_percent": 5,
+      "principal_yen": 3600000,
+      "final_yen": 8153759,
+      "gain_yen": 4553759
+    },
+    {
+      "monthly_yen": 10000,
+      "years": 30,
+      "annual_percent": 7,
+      "principal_yen": 3600000,
+      "final_yen": 11694526,
+      "gain_yen": 8094526
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 10,
+      "annual_percent": 0,
+      "principal_yen": 3600000,
+      "final_yen": 3600000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 10,
+      "annual_percent": 3,
+      "principal_yen": 3600000,
+      "final_yen": 4183440,
+      "gain_yen": 583440
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 10,
+      "annual_percent": 5,
+      "principal_yen": 3600000,
+      "final_yen": 4630895,
+      "gain_yen": 1030895
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 10,
+      "annual_percent": 7,
+      "principal_yen": 3600000,
+      "final_yen": 5131552,
+      "gain_yen": 1531552
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 20,
+      "annual_percent": 0,
+      "principal_yen": 7200000,
+      "final_yen": 7200000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 20,
+      "annual_percent": 3,
+      "principal_yen": 7200000,
+      "final_yen": 9805633,
+      "gain_yen": 2605633
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 20,
+      "annual_percent": 5,
+      "principal_yen": 7200000,
+      "final_yen": 12174135,
+      "gain_yen": 4974135
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 20,
+      "annual_percent": 7,
+      "principal_yen": 7200000,
+      "final_yen": 15226091,
+      "gain_yen": 8026091
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 30,
+      "annual_percent": 0,
+      "principal_yen": 10800000,
+      "final_yen": 10800000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 30,
+      "annual_percent": 3,
+      "principal_yen": 10800000,
+      "final_yen": 17361391,
+      "gain_yen": 6561391
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 30,
+      "annual_percent": 5,
+      "principal_yen": 10800000,
+      "final_yen": 24461277,
+      "gain_yen": 13661277
+    },
+    {
+      "monthly_yen": 30000,
+      "years": 30,
+      "annual_percent": 7,
+      "principal_yen": 10800000,
+      "final_yen": 35083578,
+      "gain_yen": 24283578
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 10,
+      "annual_percent": 0,
+      "principal_yen": 6000000,
+      "final_yen": 6000000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 10,
+      "annual_percent": 3,
+      "principal_yen": 6000000,
+      "final_yen": 6972400,
+      "gain_yen": 972400
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 10,
+      "annual_percent": 5,
+      "principal_yen": 6000000,
+      "final_yen": 7718158,
+      "gain_yen": 1718158
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 10,
+      "annual_percent": 7,
+      "principal_yen": 6000000,
+      "final_yen": 8552587,
+      "gain_yen": 2552587
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 20,
+      "annual_percent": 0,
+      "principal_yen": 12000000,
+      "final_yen": 12000000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 20,
+      "annual_percent": 3,
+      "principal_yen": 12000000,
+      "final_yen": 16342722,
+      "gain_yen": 4342722
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 20,
+      "annual_percent": 5,
+      "principal_yen": 12000000,
+      "final_yen": 20290224,
+      "gain_yen": 8290224
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 20,
+      "annual_percent": 7,
+      "principal_yen": 12000000,
+      "final_yen": 25376819,
+      "gain_yen": 13376819
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 30,
+      "annual_percent": 0,
+      "principal_yen": 18000000,
+      "final_yen": 18000000,
+      "gain_yen": 0
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 30,
+      "annual_percent": 3,
+      "principal_yen": 18000000,
+      "final_yen": 28935652,
+      "gain_yen": 10935652
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 30,
+      "annual_percent": 5,
+      "principal_yen": 18000000,
+      "final_yen": 40768795,
+      "gain_yen": 22768795
+    },
+    {
+      "monthly_yen": 50000,
+      "years": 30,
+      "annual_percent": 7,
+      "principal_yen": 18000000,
+      "final_yen": 58472630,
+      "gain_yen": 40472630
+    }
+  ]
+}

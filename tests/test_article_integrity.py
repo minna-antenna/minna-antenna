@@ -77,8 +77,8 @@ class ArticleIntegrityTests(unittest.TestCase):
                 self.assertTrue(ld.get('datePublished'))
                 self.assertTrue(ld.get('dateModified'))
 
-    def test_first_four_articles_are_registered_once_and_linked(self):
-        names = ('bitcoin-halving.html', 'bitcoin-four-year-cycle.html', 'crypto-eth-sol-xrp-comparison.html', 'bitcoin-vs-stocks-long-term.html')
+    def test_first_five_articles_are_registered_once_and_linked(self):
+        names = ('bitcoin-halving.html', 'bitcoin-four-year-cycle.html', 'crypto-eth-sol-xrp-comparison.html', 'bitcoin-vs-stocks-long-term.html', 'new-nisa-beginners-guide.html')
         index = Page(ROOT / 'index.html')
         urls = [x.text for x in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
         self.assertEqual(len(urls), len(set(urls)))
