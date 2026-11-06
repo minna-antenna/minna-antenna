@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "numeric_checks": 82,
+  "primary_label_value_checks": 49,
+  "common_dates": 2485,
+  "source_hashes": "passed",
+  "raw_to_csv": "passed",
+  "corporate_actions": {
+    "SPY": {
+      "events": 40,
+      "splits": 0,
+      "max_adjustment_relative_error": 5.836068348454472e-07
+    },
+    "ACWI": {
+      "events": 22,
+      "splits": 0,
+      "max_adjustment_relative_error": 4.801476914683598e-07
+    }
+  },
+  "official_reconciliation_limit_percentage_points": 0.1,
+  "note": "Official performance is a methodological cross-check, not the identical adjusted-close calculation. Primary holdings/fees checked against source PDFs at acquisition; published source hash and extracted numeric facts retained."
+}
