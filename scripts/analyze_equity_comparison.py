@@ -154,6 +154,9 @@ def plots():
     for offset,key,color in [(-.18,'spy','#176b57'),(.18,'acwi','#a66a12')]:ax.barh([i+offset for i in range(5)],[p[key]['sectors'][s] for s in sectors],height=.34,label=key.upper(),color=color)
     ax.set_yticks(range(5),sectors);ax.invert_yaxis();ax.set(xlabel='Weight (%)',title='ETF sector weights | 2026-09-30');ax.legend();ax.grid(axis='x',alpha=.2);fig.tight_layout();fig.savefig(DATA/'sectors.svg',metadata={'Date':None});fig.savefig(DATA/'sectors.png',dpi=160);plt.close(fig)
 
+    for path in DATA.glob('*.svg'):
+        path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
+
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');parser.add_argument('--plots',action='store_true');a=parser.parse_args()
