@@ -1,0 +1,44 @@
+name: Build article index and sitemap
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'index.html'
+      - 'about.html'
+      - 'privacy.html'
+      - 'contact.html'
+      - 'sitemap.xml'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/**'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('site-pr-{0}', github.event.pull_request.number) || 'site-content-update' }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref == 'refs/heads/main' && 'main' || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/build_site.py
+      - name: Commit generated pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: rebuild article index and sitemap'
+            git push
+          fi

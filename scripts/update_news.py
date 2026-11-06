@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Retrieve public RSS metadata and rank news candidates; no scraping article bodies."""
+import tempfile
 import argparse, datetime as dt, hashlib, json, os, re, sys, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -106,9 +107,23 @@ def main():
  if out.exists():
   try:previous=json.loads(out.read_text(encoding='utf-8'))
   except Exception:pass
- items=build(all_items,now) if success else previous.get('articles',[])
- output=dict(generated_at=now.isoformat().replace('+00:00','Z') if success else previous.get('generated_at'),last_attempt_at=now.isoformat().replace('+00:00','Z'),status='ok' if success and not errors else ('partial' if success else 'error'),method='公開RSSメタデータを取得。記事の公開日時・見出しの同一性・フィード種別に基づく透明なスコア。PV、SNSシェア数、実際のトレンド順位は使用していません。',feed_success=success,feed_errors=errors,articles=items)
- out.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ candidate=build(all_items,now) if success else []
+ # An empty/invalid RSS response must not wipe the last usable snapshot.
+ usable=bool(candidate)
+ if not usable:
+  errors.append(dict(feed='all',error='No usable recent news; previous snapshot retained'))
+ items=candidate if usable else previous.get('articles',[])
+ # Preserve news from failed feeds while replacing successful feeds normally.
+ failed={e['feed'] for e in errors}
+ known={x.get('url') for x in items}
+ if usable:
+  items += [x for x in previous.get('articles',[]) if x.get('feed') in failed and x.get('url') not in known]
+ output=dict(generated_at=now.isoformat().replace('+00:00','Z') if usable else previous.get('generated_at'),last_attempt_at=now.isoformat().replace('+00:00','Z'),status='ok' if usable and not errors else ('partial' if usable else 'error'),method='公開RSSメタデータを取得。記事の公開日時・見出しの同一性・フィード種別に基づく透明なスコア。取得失敗時は以前のデータを保持するため古い記事を含む場合があります。PV、SNSシェア数、実際のトレンド順位は使用していません。',feed_success=success,feed_errors=errors,articles=items)
+ with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=out.parent,delete=False) as f:
+  temporary=Path(f.name)
+  f.write(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
+ try:temporary.replace(out)
+ finally:temporary.unlink(missing_ok=True)
  print(f'Feeds OK={len(success)} errors={len(errors)} articles={len(items)} out={out}')
- if not success:sys.exit(1)
+ if not usable:sys.exit(1)
 if __name__=='__main__':main()
