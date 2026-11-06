@@ -12,7 +12,7 @@
 2. Settings > Actions > General で workflow permissions に **Read and write permissions** を設定（リポジトリ設定によっては制限されます）。
 3. Actions > **Update news RSS** > Run workflow を押して最初の取得を実行。
 4. `data/news.json` の `generated_at` が入ったことを確認。
-5. Settings > Pages で Deploy from a branch、main / root を選んでGitHub Pagesを有効化。反映まで時間差がある場合あり。
+5. この更新版では Settings > Pages > Source を **GitHub Actions** にします。既存のブランチ公開からの移行順序は **DEPLOYMENT.md** を確認してください。
 6. 以後、3時間ごとのワークフローが `data/news.json` を更新。訪問者はページ表示時と更新ボタンで新しいJSONを取得。
 
 注: サイトは**GitHub PagesなどHTTPサーバー経由で閲覧**してください。`index.html` をローカルでダブルクリックすると `fetch('./data/news.json')` が失敗するブラウザがあります。
@@ -56,6 +56,7 @@ python -m http.server 8000
 ```
 
 ## 公開設定（初回のみ）
+既存サイトの正確な移行順序と復旧手順は **DEPLOYMENT.md** を参照してください。公開元の切り替えはmainへのマージ前に行います。
 1. 修正一式を既存リポジトリに反映します。既存ファイルへの上書きと新規ファイルの追加で、記事や `data/news.json` を削除する必要はありません。
 2. Settings → Actions → General で、ワークフローによるリポジトリ書き込みを許可します。
 3. Settings → Pages → Build and deployment → Source を **GitHub Actions** に変更します。
@@ -73,3 +74,6 @@ python -m http.server 8000
 - ブラウザで再読み込みに失敗した場合、表示済みニュースは保持します。
 
 AdSense・品質確認と残課題は `QUALITY_REVIEW.md` を参照してください。
+
+## 本番前の追加検証
+記事数が3本以上になると固定件数テストが失敗する不具合を修正しました。3〜5本の記事を持つ一時コピーで全テストと生成処理を確認しています。既存2記事の本文・相互リンクも保持されます。公開ワークフローはSourceがGitHub Actionsでない場合に公開前に停止します。

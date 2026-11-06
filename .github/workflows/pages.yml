@@ -26,6 +26,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Require GitHub Actions as Pages source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          source_type=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type')
+          if [ "$source_type" != "workflow" ]; then
+            echo '::error::Pages Source must be GitHub Actions before deploying. Existing branch publishing has been left unchanged.'
+            exit 1
+          fi
       - uses: actions/checkout@v4
         with:
           ref: main

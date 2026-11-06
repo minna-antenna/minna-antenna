@@ -1,5 +1,4 @@
 import datetime as dt
-import importlib.util
 import json
 from pathlib import Path
 import shutil
@@ -8,7 +7,6 @@ import sys
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
-from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -33,9 +31,23 @@ class SiteTests(unittest.TestCase):
         self.assertIn(b'A &amp; B &lt;test&gt;', first)
         self.assertIn(b'articles/%E5%9F%BA%E7%A4%8E/new.html', first)
         urls = ET.parse(self.root / 'sitemap.xml').findall('.//{*}loc')
-        self.assertEqual(len(urls), 7)
+        self.assertEqual(len(urls), 4 + len(list((self.root / 'articles').rglob('*.html'))))
+        self.assertIn(build_site.BASE + 'articles/%E5%9F%BA%E7%A4%8E/new.html', [u.text for u in urls])
         build_site.build(self.root)
         self.assertEqual(first, (self.root / 'index.html').read_bytes())
+
+    def test_existing_articles_and_reciprocal_links_survive_build(self):
+        names = ('bitcoin-halving.html', 'bitcoin-four-year-cycle.html')
+        before = {name: (self.root / 'articles' / name).read_bytes() for name in names}
+        build_site.build(self.root)
+        index = (self.root / 'index.html').read_text()
+        urls = [u.text for u in ET.parse(self.root / 'sitemap.xml').findall('.//{*}loc')]
+        for name, other in (names, tuple(reversed(names))):
+            content = (self.root / 'articles' / name).read_bytes()
+            self.assertEqual(content, before[name])
+            self.assertIn(f'href="./{other}"', content.decode())
+            self.assertIn(f'href="./articles/{name}"', index)
+            self.assertIn(build_site.BASE + 'articles/' + name, urls)
 
     def test_invalid_article_does_not_change_generated_files(self):
         before = (self.root / 'index.html').read_bytes()
