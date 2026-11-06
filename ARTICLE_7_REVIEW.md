@@ -49,7 +49,7 @@ Web閲覧結果だけでなく原HTMLを再取得して同じ内容を確認。�
 - [金融庁の成立法一覧](https://www.fsa.go.jp/common/diet/)
 - [財務省の成立・公布日](https://www.mof.go.jp/about_mof/bills/221diet/index.html)
 - [基礎控除](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1199.htm)、[給与所得控除](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm)、[施行時点Q&A](https://www.nta.go.jp/users/gensen/2026kiso/pdf/0026005-024.pdf)
-- [申告判断](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm)、[復興税](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2037.htm)、[株式](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm)
+- [申告判断](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm)、[復興税](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm)、[株式](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm)
 
 ## 試算と再現
 
@@ -100,3 +100,10 @@ PRはDraft/Blockedで作成しCI結果を報告する。本番公開URL・公開
 - `ARTICLE_7_REVIEW.md`、`EDITORIAL_PUBLISHING.md`
 
 第8〜13号は共通品質手順のみ記録し、記事制作や公開は開始していない。
+
+## 外部リンクとCIの再確認
+
+[ARTICLE_7_RECHECK.md](./ARTICLE_7_RECHECK.md)に今回の詳細を記載。
+旧No.2037 URLはHTTP200の日本語エラーページだったため、No.1000へ差替。前回のHTTP到達確認だけでは判定が不十分だった。
+修正後は外部13 URLの内容確認が合格。分類テスト等5件追加後のPythonは39件中38件合格、資料内容のゲート1件失敗を保持している。
+停止中の理由はURL到達性と分け、No.2260計算例内の不一致および制度適用日監査の未完了とする。

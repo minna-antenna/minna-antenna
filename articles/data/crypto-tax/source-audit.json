@@ -21,5 +21,22 @@
   "additional_release_checks": [
     "Confirm crypto regulatory effective date and conditional tax applicability against current primary legislation/decrees",
     "Review 2026 December-effective deductions and normal-return assumptions separately from pre-effective quasi-final returns"
+  ],
+  "rechecks": [
+    {
+      "checked_at_utc": "2026-11-06T16:44:35.352213+00:00",
+      "source_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "http_status": 200,
+      "source_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "content_mismatch_still_present": true,
+      "link_repair": {
+        "old_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2037.htm",
+        "old_http_status": 200,
+        "old_classification": "soft_404",
+        "replacement_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+        "replacement_classification": "reachable"
+      },
+      "publication_status": "blocked"
+    }
   ]
 }

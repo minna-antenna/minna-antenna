@@ -80,7 +80,10 @@
       "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2037.htm",
       "status": 200,
       "sha256": "700138cae1f347c2be03b380ba74007e704ceb81fe2a62d547e3559d4b851d55",
-      "retrieved_at": "2026-11-06T16:22:50.025975+00:00"
+      "retrieved_at": "2026-11-06T16:22:50.025975+00:00",
+      "content_status": "invalid_source_soft_404",
+      "replacement_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "note": "Historical HTTP200 was not content validation. Superseded after Japanese error-page check."
     },
     {
       "name": "stocks",
@@ -116,6 +119,26 @@
       "sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
       "status": 200,
       "retrieved_on_utc": "2026-11-06"
+    },
+    {
+      "name": "reconstruction_replacement",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "checked_at_utc": "2026-11-06T16:46:24.250834+00:00",
+      "status": 200,
+      "final_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 27049,
+      "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ],
+      "content_verified": "No.1000: basic income tax, reconstruction 2.1%, filing/payment calculation and 2027 notice"
     }
   ],
   "publication_status": "blocked"
