@@ -1,0 +1,78 @@
+{
+  "provider": "Bitstamp",
+  "market": "BTC/USD",
+  "interval_seconds": 86400,
+  "start_date": "2013-01-01",
+  "end_date": "2026-11-05",
+  "requested_rows": 5057,
+  "actual_rows": 5057,
+  "missing_dates": [],
+  "duplicates": 0,
+  "input_sha256": "1a97d56bec02b600a4f255cb2051206be7b9ffb75d2d87825ddeadb96a396956",
+  "chunks": [
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1356998400&end=1443312000&exclude_current_candle=true",
+      "file": "bitstamp-2013-01-01-2015-09-27.json",
+      "sha256": "a75f63530a5b98d3edacb71543fd261db2a7689654ff79e8aaaa4b5a55fcaaa4",
+      "retrieved_at_utc": "2026-11-06T17:36:17.225145+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2013-01-01",
+      "returned_last_date": "2015-09-27"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1443398400&end=1529712000&exclude_current_candle=true",
+      "file": "bitstamp-2015-09-28-2018-06-23.json",
+      "sha256": "ae2a2c65751572a08ab67494beddbbfe457813dc305f46c0ed26508c2a25374f",
+      "retrieved_at_utc": "2026-11-06T17:36:18.194719+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2015-09-28",
+      "returned_last_date": "2018-06-23"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1529798400&end=1616112000&exclude_current_candle=true",
+      "file": "bitstamp-2018-06-24-2021-03-19.json",
+      "sha256": "8340a6711f50220f70e4597f265c40fda5648b040dd3e14f853c59221b651d23",
+      "retrieved_at_utc": "2026-11-06T17:36:18.693808+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2018-06-24",
+      "returned_last_date": "2021-03-19"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1616198400&end=1702512000&exclude_current_candle=true",
+      "file": "bitstamp-2021-03-20-2023-12-14.json",
+      "sha256": "34eafae6271663bf72b84e842873a7187c1777d5f962e8cb5d812a1df50c170e",
+      "retrieved_at_utc": "2026-11-06T17:36:20.135129+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2021-03-20",
+      "returned_last_date": "2023-12-14"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1702598400&end=1788912000&exclude_current_candle=true",
+      "file": "bitstamp-2023-12-15-2026-09-09.json",
+      "sha256": "400b079d11f4a0eb68feba35bc2d2c8a0a86e296f5e02466bbd69b16144ba582",
+      "retrieved_at_utc": "2026-11-06T17:36:20.629109+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2023-12-15",
+      "returned_last_date": "2026-09-09"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=86400&limit=1000&start=1788998400&end=1793836800&exclude_current_candle=true",
+      "file": "bitstamp-2026-09-10-2026-11-05.json",
+      "sha256": "bab93573559048ab7841987122680135997d173cc35684fcb165264d48e513e5",
+      "retrieved_at_utc": "2026-11-06T17:36:21.150331+00:00",
+      "status": 200,
+      "rows": 1000,
+      "returned_first_date": "2024-02-10",
+      "returned_last_date": "2026-11-05"
+    }
+  ],
+  "raw_overlap_rows": 943,
+  "overlap_all_fields_consistent": true,
+  "timestamp_convention": "Unix UTC interval start; close of [timestamp, timestamp+86400). Label is UTC date; close boundary is next day 00:00 UTC / 09:00 JST.",
+  "selection": "End-bounded chunks may return 1000 rows even for a shorter requested final span; deduplicate only identical overlapping observations, filter to declared dates; never interpolate."
+}
