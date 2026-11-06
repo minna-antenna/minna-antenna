@@ -23,18 +23,37 @@ def income_tax(taxable):
         if ceiling is None or base<ceiling:return max(0,base*rate//100-offset)
 
 
+def national_tax_components(taxable_income_yen,*,pre_reconstruction_credit_yen=0):
+    """2025/2026 ordinary resident model, after specified eligible tax credits.
+
+    The caller must establish that a credit reduces the reconstruction-tax base.
+    Foreign tax credit and distribution-adjustment credit are not modeled here.
+    None is unknown evidence, never silently treated as zero.
+    """
+    if not isinstance(pre_reconstruction_credit_yen,int) or pre_reconstruction_credit_yen<0:
+        raise ValueError('An explicit nonnegative eligible tax credit is required')
+    assessed=income_tax(taxable_income_yen)
+    applied=min(assessed,pre_reconstruction_credit_yen)
+    base=assessed-applied
+    reconstruction=base*21//1000
+    return dict(assessed_income_tax_yen=assessed,pre_reconstruction_credit_yen=applied,
+                base_income_tax_yen=base,reconstruction_tax_yen=reconstruction,
+                national_annual_yen=(base+reconstruction)//100*100)
+
+
 def annual(model,profit,year):
     if profit<0:raise ValueError('Examples do not model losses')
     total=model['salary_income_yen']+profit
     basic=basic_deduction(total,year)
     taxable=max(0,total-model['social_insurance_yen']-basic)//1000*1000
-    tax=income_tax(taxable);surtax=tax*21//1000
+    components=national_tax_components(taxable,pre_reconstruction_credit_yen=0)
+    tax=components['assessed_income_tax_yen'];surtax=components['reconstruction_tax_yen']
     # Resident: standard 6%+4%, basic 430k, no dependants, adjustment credit 1500+1000.
     # All model cases are above exemption thresholds and the 50k personal-deduction difference.
     resident_base=max(0,total-model['social_insurance_yen']-430000)//1000*1000
     ward=max(0,resident_base*6//100-1500)//100*100
     prefecture=max(0,resident_base*4//100-1000)//100*100
-    return dict(total_income_yen=total,basic_deduction_yen=basic,taxable_income_yen=taxable,income_tax_yen=tax,reconstruction_tax_yen=surtax,national_annual_yen=(tax+surtax)//100*100,resident_taxable_income_yen=resident_base,resident_income_levy_yen=ward+prefecture)
+    return dict(total_income_yen=total,basic_deduction_yen=basic,taxable_income_yen=taxable,income_tax_yen=tax,assessed_income_tax_yen=tax,pre_reconstruction_credit_yen=0,base_income_tax_yen=components['base_income_tax_yen'],reconstruction_tax_yen=surtax,national_annual_yen=components['national_annual_yen'],resident_taxable_income_yen=resident_base,resident_income_levy_yen=ward+prefecture)
 
 
 def calculate():
@@ -65,7 +84,7 @@ def tables(rows):
 
 def outputs():
     rows=calculate()
-    result=dict(status='review_only_publication_blocked',calculated_on_utc='2026-11-06',model_assumptions='Single employed resident, no dependants or other deductions/income; fixed social insurance; crypto treated as miscellaneous in these hypothetical facts only; all crypto included on return, no exemption determination; resident standard rates 6%+4%, constant per-capita/forest levies cancel; no insurance premium increase',scenarios=rows)
+    result=dict(status='review_only_publication_blocked',calculated_on_utc='2026-11-06',model_assumptions='Single employed resident, no dependants or other deductions/income; eligible pre-reconstruction tax credits explicitly zero; fixed social insurance; crypto treated as miscellaneous in these hypothetical facts only; all crypto included on return, no exemption determination; resident standard rates 6%+4%, constant per-capita/forest levies cancel; no insurance premium increase',scenarios=rows)
     files={'results.json':json.dumps(result,ensure_ascii=False,indent=2)+'\n'}
     buffer=io.StringIO(newline='');fields=['tax_year','salary_yen','social_insurance_yen','crypto_profit_yen','income_tax_increase_yen','reconstruction_tax_increase_yen','national_payment_increase_yen','resident_income_levy_increase_yen','total_increase_yen'];w=csv.DictWriter(buffer,fieldnames=fields,lineterminator='\n');w.writeheader();w.writerows({k:r[k] for k in fields} for r in rows);files['results.csv']=buffer.getvalue()
     for name in ['calculate_crypto_tax.py','audit_crypto_tax.py']:files[name+'.txt']=(ROOT/'scripts'/name).read_text()

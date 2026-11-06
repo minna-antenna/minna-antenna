@@ -1,6 +1,6 @@
 """Article 7 calculations and a deliberately unwaived source-consistency gate."""
 import json,subprocess,sys,unittest
-from scripts.calculate_crypto_tax import ROOT,DATA,annual,MODELS,basic_deduction,income_tax,calculate
+from scripts.calculate_crypto_tax import ROOT,DATA,annual,MODELS,basic_deduction,income_tax,calculate,national_tax_components
 from scripts.audit_crypto_tax import audit
 from test_article_integrity import Page,BASE
 import xml.etree.ElementTree as ET
@@ -17,9 +17,14 @@ class CryptoTaxTests(unittest.TestCase):
         evidence=json.loads((DATA/'source-audit.json').read_text())['blockers'][0]
         calculated=income_tax(evidence['taxable_income_yen'])
         self.assertEqual(evidence['stated_income_tax_yen'],calculated)
-        self.assertEqual(evidence['stated_reconstruction_base_yen'],calculated,
-                         'PUBLICATION BLOCKED: NTA No.2260 uses 947,000 after stating 974,000. Do not waive this gate.')
-        self.assertEqual(evidence['stated_reconstruction_tax_yen'],calculated*21//1000)
+        # The legal base is after eligible tax credits. Equality with assessed
+        # income tax is valid only when zero credits are actually established.
+        credit=evidence['documented_pre_reconstruction_credit_yen']
+        self.assertIsNotNone(credit,
+            'PUBLICATION BLOCKED: No.2260 does not document the cause of the 27,000-yen gap. Do not invent a credit or assume zero.')
+        parts=national_tax_components(evidence['taxable_income_yen'],pre_reconstruction_credit_yen=credit)
+        self.assertEqual(evidence['stated_reconstruction_base_yen'],parts['base_income_tax_yen'])
+        self.assertEqual(evidence['stated_reconstruction_tax_yen'],parts['reconstruction_tax_yen'])
         self.assertEqual(json.loads((DATA/'source-audit.json').read_text())['status'],'passed',
                          'Official clarification and applicability audit are required before release')
 
@@ -50,3 +55,33 @@ class CryptoTaxTests(unittest.TestCase):
             self.assertIn('./'+other,page.hrefs)
             self.assertEqual(Page(ROOT/'articles'/other).hrefs.count('./'+name),1)
         self.assertEqual(page.meta['robots'],'noindex,nofollow')
+
+    def test_no_credit_example_has_974000_base_and_20454_surtax(self):
+        result=national_tax_components(7000000,pre_reconstruction_credit_yen=0)
+        self.assertEqual(result['assessed_income_tax_yen'],974000)
+        self.assertEqual(result['base_income_tax_yen'],974000)
+        self.assertEqual(result['reconstruction_tax_yen'],20454)
+
+    def test_hypothetical_27000_credit_explains_arithmetic_not_source_fact(self):
+        result=national_tax_components(7000000,pre_reconstruction_credit_yen=27000)
+        self.assertEqual(result['assessed_income_tax_yen'],974000)
+        self.assertEqual(result['base_income_tax_yen'],947000)
+        self.assertEqual(result['reconstruction_tax_yen'],19887)
+        evidence=json.loads((DATA/'source-audit.json').read_text())['blockers'][0]
+        self.assertIsNone(evidence['documented_pre_reconstruction_credit_yen'])
+
+    def test_unknown_or_invalid_credit_is_not_coerced_to_zero(self):
+        for credit in [None,-1,'27000']:
+            with self.assertRaises(ValueError):
+                national_tax_components(7000000,pre_reconstruction_credit_yen=credit)
+
+    def test_nta1000_2026_example_and_zero_credit_model_scope(self):
+        result=national_tax_components(1240000,pre_reconstruction_credit_yen=0)
+        self.assertEqual(result['assessed_income_tax_yen'],62000)
+        self.assertEqual(result['base_income_tax_yen'],62000)
+        self.assertEqual(result['reconstruction_tax_yen'],1302)
+        self.assertEqual(result['national_annual_yen'],63300)
+        for row in calculate():
+            for record in [row['baseline'],row['with_crypto']]:
+                self.assertEqual(record['pre_reconstruction_credit_yen'],0)
+                self.assertEqual(record['assessed_income_tax_yen'],record['base_income_tax_yen'])
