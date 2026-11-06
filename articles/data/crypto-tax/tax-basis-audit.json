@@ -1,5 +1,5 @@
 {
-  "status": "rules_verified_source_example_unresolved",
+  "status": "rules_verified_inconsistent_example_excluded",
   "checked_at_utc": "2026-11-06T17:03:41.115125+00:00",
   "concept_order": [
     "taxable_income_after_income_deductions",
@@ -11,7 +11,7 @@
   ],
   "source_gap_yen": 27000,
   "source_credit_is_documented": false,
-  "conclusion": "27000 is the arithmetic difference only. A hypothetical eligible credit of 27000 reproduces 947000/19887, but the No.2260 example does not state such a credit. A typo is also unconfirmed. Publication remains blocked.",
+  "conclusion": "27000 remains unexplained. No.2260 example is excluded from article/calculation authorities. Current calculations use law and the consistent No.1000 example; no invented official credit.",
   "confirmed_cases": [
     {
       "label": "No eligible tax credit",
@@ -85,5 +85,6 @@
       "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
       "checked_at_utc": "2026-11-06T17:00:18.039011+00:00"
     }
-  ]
+  ],
+  "previous_status": "rules_verified_source_example_unresolved"
 }

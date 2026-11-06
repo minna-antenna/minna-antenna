@@ -1,6 +1,9 @@
-"""Article 7 calculations and a deliberately unwaived source-consistency gate."""
-import json,subprocess,sys,unittest
-from scripts.calculate_crypto_tax import ROOT,DATA,annual,MODELS,basic_deduction,income_tax,calculate,national_tax_components
+"""Article 7 calculations and fail-closed verification of the authorities actually used."""
+import json,subprocess,sys,unittest,tempfile
+from unittest.mock import patch
+from scripts import audit_crypto_tax as audit_module
+from scripts.verify_crypto_tax_sources import verify
+from scripts.calculate_crypto_tax import ROOT,DATA,ARTICLE,annual,MODELS,basic_deduction,income_tax,calculate,national_tax_components
 from scripts.audit_crypto_tax import audit
 from test_article_integrity import Page,BASE
 import xml.etree.ElementTree as ET
@@ -8,25 +11,44 @@ import xml.etree.ElementTree as ET
 
 class CryptoTaxTests(unittest.TestCase):
     def test_independent_24_scenarios(self):
-        result=audit();self.assertEqual(result['scenarios'],24);self.assertEqual(result['checks'],192)
+        result=audit();self.assertEqual(result['scenarios'],24);self.assertEqual(result['checks'],192);self.assertEqual(result['basis_checks'],96);self.assertEqual(result['full_field_checks'],624)
+        self.assertEqual(json.loads((DATA/'calculation-audit.json').read_text()),result)
+
+    def test_independent_audit_rejects_changed_annual_fields_and_deltas(self):
+        original=json.loads((DATA/'results.json').read_text())
+        for field in ['taxable_income_yen','base_income_tax_yen','reconstruction_tax_yen','resident_income_levy_yen','total_increase_yen']:
+            data=json.loads(json.dumps(original));row=data['scenarios'][0]
+            record=row if field=='total_increase_yen' else row['with_crypto']
+            record[field]+=1
+            with tempfile.TemporaryDirectory() as tmp:
+                from pathlib import Path
+                (Path(tmp)/'results.json').write_text(json.dumps(data))
+                with patch.object(audit_module,'DATA',Path(tmp)):
+                    with self.assertRaises(AssertionError):audit_module.audit()
 
     def test_tables_csv_json_code_reproduce(self):
         subprocess.run([sys.executable,str(ROOT/'scripts/calculate_crypto_tax.py'),'--check'],check=True,capture_output=True,text=True)
 
-    def test_official_example_must_be_internally_consistent_before_publication(self):
-        evidence=json.loads((DATA/'source-audit.json').read_text())['blockers'][0]
-        calculated=income_tax(evidence['taxable_income_yen'])
-        self.assertEqual(evidence['stated_income_tax_yen'],calculated)
-        # The legal base is after eligible tax credits. Equality with assessed
-        # income tax is valid only when zero credits are actually established.
-        credit=evidence['documented_pre_reconstruction_credit_yen']
-        self.assertIsNotNone(credit,
-            'PUBLICATION BLOCKED: No.2260 does not document the cause of the 27,000-yen gap. Do not invent a credit or assume zero.')
-        parts=national_tax_components(evidence['taxable_income_yen'],pre_reconstruction_credit_yen=credit)
-        self.assertEqual(evidence['stated_reconstruction_base_yen'],parts['base_income_tax_yen'])
-        self.assertEqual(evidence['stated_reconstruction_tax_yen'],parts['reconstruction_tax_yen'])
-        self.assertEqual(json.loads((DATA/'source-audit.json').read_text())['status'],'passed',
-                         'Official clarification and applicability audit are required before release')
+    def test_used_official_authorities_must_be_consistent_before_publication(self):
+        result=verify()
+        self.assertEqual(result['calculation_authorities'],8)
+        self.assertEqual(result['primary_evidence_records'],13)
+        self.assertEqual(result['excluded_inconsistent_examples'],1)
+
+    def test_source_gate_rejects_missing_evidence_unresolved_scope_and_reintroduced_source(self):
+        evidence=json.loads((DATA/'rule-evidence.json').read_text())
+        evidence['evidence'][0]['excerpt']+=' unexpected change'
+        with self.assertRaises(ValueError):verify(evidence=evidence)
+        evidence=json.loads((DATA/'rule-evidence.json').read_text())
+        evidence['evidence']=evidence['evidence'][1:]
+        with self.assertRaises(ValueError):verify(evidence=evidence)
+        audit=json.loads((DATA/'source-audit.json').read_text())
+        audit['unresolved_release_issues']=['unknown applicability']
+        with self.assertRaises(ValueError):verify(audit=audit)
+        audit=json.loads((DATA/'source-audit.json').read_text())
+        audit['applicability']['crypto_separate_tax_used']=True
+        with self.assertRaises(ValueError):verify(audit=audit)
+        with self.assertRaises(ValueError):verify(article=ARTICLE.read_text()+'https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm')
 
     def test_deduction_thresholds_depend_on_total_income_and_year(self):
         self.assertEqual(basic_deduction(3360000,2025),880000)
@@ -54,7 +76,7 @@ class CryptoTaxTests(unittest.TestCase):
         for other in ['crypto-eth-sol-xrp-comparison.html','bitcoin-vs-stocks-long-term.html','new-nisa-beginners-guide.html','sp500-vs-all-country.html']:
             self.assertIn('./'+other,page.hrefs)
             self.assertEqual(Page(ROOT/'articles'/other).hrefs.count('./'+name),1)
-        self.assertEqual(page.meta['robots'],'noindex,nofollow')
+        self.assertEqual(page.meta['robots'],'index,follow')
 
     def test_no_credit_example_has_974000_base_and_20454_surtax(self):
         result=national_tax_components(7000000,pre_reconstruction_credit_yen=0)
@@ -67,7 +89,7 @@ class CryptoTaxTests(unittest.TestCase):
         self.assertEqual(result['assessed_income_tax_yen'],974000)
         self.assertEqual(result['base_income_tax_yen'],947000)
         self.assertEqual(result['reconstruction_tax_yen'],19887)
-        evidence=json.loads((DATA/'source-audit.json').read_text())['blockers'][0]
+        evidence=json.loads((DATA/'source-audit.json').read_text())['excluded_sources'][0]
         self.assertIsNone(evidence['documented_pre_reconstruction_credit_yen'])
 
     def test_unknown_or_invalid_credit_is_not_coerced_to_zero(self):

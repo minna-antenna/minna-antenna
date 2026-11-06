@@ -1,4 +1,4 @@
-"""Article 7 review-only tax examples. Publication is blocked by source audit."""
+"""Article 7: limited 2025/2026 resident tax examples with independently audited sources."""
 import argparse,csv,hashlib,io,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -23,7 +23,7 @@ def income_tax(taxable):
         if ceiling is None or base<ceiling:return max(0,base*rate//100-offset)
 
 
-def national_tax_components(taxable_income_yen,*,pre_reconstruction_credit_yen=0):
+def national_tax_components(taxable_income_yen,*,pre_reconstruction_credit_yen):
     """2025/2026 ordinary resident model, after specified eligible tax credits.
 
     The caller must establish that a credit reduces the reconstruction-tax base.
@@ -84,7 +84,7 @@ def tables(rows):
 
 def outputs():
     rows=calculate()
-    result=dict(status='review_only_publication_blocked',calculated_on_utc='2026-11-06',model_assumptions='Single employed resident, no dependants or other deductions/income; eligible pre-reconstruction tax credits explicitly zero; fixed social insurance; crypto treated as miscellaneous in these hypothetical facts only; all crypto included on return, no exemption determination; resident standard rates 6%+4%, constant per-capita/forest levies cancel; no insurance premium increase',scenarios=rows)
+    result=dict(status='verified_for_declared_model_scope',calculated_on_utc='2026-11-06',model_assumptions='Single employed resident, no dependants or other deductions/income; eligible pre-reconstruction tax credits explicitly zero; fixed social insurance; crypto treated as miscellaneous in these hypothetical facts only; all crypto included on return, no exemption determination; resident standard rates 6%+4%, constant per-capita/forest levies cancel; no insurance premium increase',scenarios=rows)
     files={'results.json':json.dumps(result,ensure_ascii=False,indent=2)+'\n'}
     buffer=io.StringIO(newline='');fields=['tax_year','salary_yen','social_insurance_yen','crypto_profit_yen','income_tax_increase_yen','reconstruction_tax_increase_yen','national_payment_increase_yen','resident_income_levy_increase_yen','total_increase_yen'];w=csv.DictWriter(buffer,fieldnames=fields,lineterminator='\n');w.writeheader();w.writerows({k:r[k] for k in fields} for r in rows);files['results.csv']=buffer.getvalue()
     for name in ['calculate_crypto_tax.py','audit_crypto_tax.py']:files[name+'.txt']=(ROOT/'scripts'/name).read_text()
@@ -103,7 +103,7 @@ def plot():
     for offset,salary,color in [(-.25,4000000,'#176b57'),(0,8000000,'#a66a12'),(.25,12000000,'#296da3')]:
         values=[r['total_increase_yen']/10000 for r in rows if r['tax_year']==2026 and r['salary_yen']==salary]
         ax.bar([i+offset for i in range(4)],values,width=.24,label=f'Salary JPY {salary/1000000:g}m',color=color)
-    ax.set_xticks(range(4),['100k','500k','1m','3m']);ax.set(title='REVIEW ONLY | Enacted 2026 year rules effective Dec 1',xlabel='Crypto profit (JPY)',ylabel='Additional tax (JPY 10,000)');ax.legend();ax.grid(axis='y',alpha=.2);fig.tight_layout();fig.savefig(DATA/'tax-models.svg',metadata={'Date':None});fig.savefig(DATA/'tax-models.png',dpi=160);plt.close(fig)
+    ax.set_xticks(range(4),['100k','500k','1m','3m']);ax.set(title='2026 model | Enacted rules effective Dec 1',xlabel='Crypto profit (JPY)',ylabel='Additional tax (JPY 10,000)');ax.legend();ax.grid(axis='y',alpha=.2);fig.tight_layout();fig.savefig(DATA/'tax-models.svg',metadata={'Date':None});fig.savefig(DATA/'tax-models.png',dpi=160);plt.close(fig)
     p=DATA/'tax-models.svg';p.write_text('\n'.join(line.rstrip() for line in p.read_text().splitlines())+'\n')
 
 
@@ -111,7 +111,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--check',action='store_true');p.add_argument('--plots',action='store_true');a=p.parse_args();files,text=outputs()
     if a.check:
         if ARTICLE.read_text()!=text or any((DATA/k).read_text()!=v for k,v in files.items()):raise SystemExit('Stale tax outputs')
-        print('24 review-only scenarios reproduce exactly')
+        print('24 scope-limited scenarios reproduce exactly')
     else:
         ARTICLE.write_text(text)
         for k,v in files.items():(DATA/k).write_text(v)

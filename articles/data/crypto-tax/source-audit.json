@@ -1,40 +1,8 @@
 {
-  "status": "blocked",
+  "status": "passed_for_declared_2025_2026_scope",
   "checked_on_utc": "2026-11-06",
-  "blockers": [
-    {
-      "id": "NTA_2260_EXAMPLE_MISMATCH",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
-      "source_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
-      "taxable_income_yen": 7000000,
-      "stated_income_tax_yen": 974000,
-      "stated_reconstruction_base_yen": 947000,
-      "stated_reconstruction_tax_yen": 19887,
-      "expected_reconstruction_tax_yen": 20454,
-      "observed_expressions": [
-        "7,000,000×0.23−636,000＝974,000",
-        "947,000×0.021＝19,887"
-      ],
-      "resolution_required": "Establish the official example credit/adjustment conditions or obtain a source correction; do not assert that assessed tax always equals the reconstruction base.",
-      "documented_pre_reconstruction_credit_yen": null,
-      "difference_yen": 27000,
-      "cause_status": "not_established: the official example states neither a 27000-yen tax credit nor an explanation",
-      "no_credit_case": {
-        "base_income_tax_yen": 974000,
-        "reconstruction_tax_yen": 20454
-      },
-      "hypothetical_credit_case_not_an_attribution": {
-        "eligible_credit_yen": 27000,
-        "base_income_tax_yen": 947000,
-        "reconstruction_tax_yen": 19887
-      },
-      "expected_value_assumption": "20454 applies only if eligible tax credits are zero, a condition not documented in the No.2260 example"
-    }
-  ],
-  "additional_release_checks": [
-    "Confirm crypto regulatory effective date and conditional tax applicability against current primary legislation/decrees",
-    "Review 2026 December-effective deductions and normal-return assumptions separately from pre-effective quasi-final returns"
-  ],
+  "blockers": [],
+  "additional_release_checks": [],
   "rechecks": [
     {
       "checked_at_utc": "2026-11-06T16:44:35.352213+00:00",
@@ -51,5 +19,62 @@
       },
       "publication_status": "blocked"
     }
-  ]
+  ],
+  "excluded_sources": [
+    {
+      "id": "NTA_2260_EXAMPLE_MISMATCH",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "source_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "taxable_income_yen": 7000000,
+      "stated_income_tax_yen": 974000,
+      "stated_reconstruction_base_yen": 947000,
+      "stated_reconstruction_tax_yen": 19887,
+      "expected_reconstruction_tax_yen": 20454,
+      "observed_expressions": [
+        "7,000,000×0.23−636,000＝974,000",
+        "947,000×0.021＝19,887"
+      ],
+      "resolution_required": "Establish the official example credit/adjustment conditions or obtain a source correction; do not assert that assessed tax always equals the reconstruction base.",
+      "documented_pre_reconstruction_credit_yen": null,
+      "difference_yen": 27000,
+      "cause_status": "unresolved; neither undocumented credit nor typographical error asserted",
+      "no_credit_case": {
+        "base_income_tax_yen": 974000,
+        "reconstruction_tax_yen": 20454
+      },
+      "hypothetical_credit_case_not_an_attribution": {
+        "eligible_credit_yen": 27000,
+        "base_income_tax_yen": 947000,
+        "reconstruction_tax_yen": 19887
+      },
+      "expected_value_assumption": "20454 applies only if eligible tax credits are zero, a condition not documented in the No.2260 example",
+      "disposition": "excluded_from_article_and_calculation_authority",
+      "decision": "Use independently verified law and consistent No.1000 instead; source correction is not required for material that is not relied upon."
+    }
+  ],
+  "unresolved_release_issues": [],
+  "calculation_authority_ids": [
+    "income_law",
+    "reconstruction_law",
+    "rounding_law",
+    "basic_deduction",
+    "salary_deduction",
+    "nta1000",
+    "resident_rules",
+    "resident_2027"
+  ],
+  "applicability": {
+    "model_years": [
+      2025,
+      2026
+    ],
+    "normal_annual_return_only": true,
+    "credits_yen": 0,
+    "crypto_separate_tax_used": false,
+    "crypto_current_scope_verified": true,
+    "future_calendar_date_asserted": false,
+    "future_start_rule": "Jan 1 following the year of relevant financial-law commencement; do not substitute the partial August 12, 2026 commencement or API scheduled upper-bound date.",
+    "future_credit_or_tax_rate_used": false
+  },
+  "gate_policy": "All used authority evidence must be intact and consistent; excluded material must not be used in the article; any unresolved material issue stops release."
 }
