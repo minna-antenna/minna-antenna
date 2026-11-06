@@ -1,0 +1,90 @@
+{
+  "status": "rules_verified_inconsistent_example_excluded",
+  "checked_at_utc": "2026-11-06T17:03:41.115125+00:00",
+  "concept_order": [
+    "taxable_income_after_income_deductions",
+    "assessed_income_tax",
+    "applicable_pre_reconstruction_credits",
+    "base_income_tax",
+    "reconstruction_tax",
+    "withholding_and_prepayments"
+  ],
+  "source_gap_yen": 27000,
+  "source_credit_is_documented": false,
+  "conclusion": "27000 remains unexplained. No.2260 example is excluded from article/calculation authorities. Current calculations use law and the consistent No.1000 example; no invented official credit.",
+  "confirmed_cases": [
+    {
+      "label": "No eligible tax credit",
+      "taxable_income_yen": 7000000,
+      "assessed_income_tax_yen": 974000,
+      "pre_reconstruction_credit_yen": 0,
+      "base_income_tax_yen": 974000,
+      "reconstruction_tax_yen": 20454
+    },
+    {
+      "label": "Hypothetical 27000 credit, NOT an attribution to the official example",
+      "taxable_income_yen": 7000000,
+      "assessed_income_tax_yen": 974000,
+      "pre_reconstruction_credit_yen": 27000,
+      "base_income_tax_yen": 947000,
+      "reconstruction_tax_yen": 19887
+    }
+  ],
+  "laws": [
+    {
+      "kind": "special",
+      "law_revision_id": "423AC0000000117_20260401_508AC0000000012",
+      "status": "CurrentEnforced",
+      "enforcement_date": "2026-04-01",
+      "articles": [
+        10,
+        12,
+        13
+      ]
+    },
+    {
+      "kind": "income",
+      "law_revision_id": "340AC0000000033_20261001_507AC0000000070",
+      "status": "CurrentEnforced",
+      "enforcement_date": "2026-10-01",
+      "articles": [
+        89
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "special_v2",
+      "url": "https://laws.e-gov.go.jp/api/2/law_data/423AC0000000117?law_full_text_format=xml",
+      "status": 200,
+      "bytes": 945449,
+      "sha256": "610955e1e478ad78f6893d880c08edbc256873add52e7c62185b20f273973980",
+      "checked_at_utc": "2026-11-06T17:00:16.637964+00:00"
+    },
+    {
+      "name": "income_v2",
+      "url": "https://laws.e-gov.go.jp/api/2/law_data/340AC0000000033?law_full_text_format=xml",
+      "status": 200,
+      "bytes": 21924747,
+      "sha256": "8b558ad1765104bb6c9ee336bc1a5c75f000e8f3ec99d619a312cf41dbec4cd9",
+      "checked_at_utc": "2026-11-06T17:00:17.934048+00:00"
+    },
+    {
+      "name": "nta2260",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "status": 200,
+      "bytes": 20543,
+      "sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "checked_at_utc": "2026-11-06T17:00:17.638693+00:00"
+    },
+    {
+      "name": "nta1000",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "status": 200,
+      "bytes": 27049,
+      "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+      "checked_at_utc": "2026-11-06T17:00:18.039011+00:00"
+    }
+  ],
+  "previous_status": "rules_verified_source_example_unresolved"
+}
