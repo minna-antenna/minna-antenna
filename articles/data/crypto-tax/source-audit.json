@@ -1,0 +1,25 @@
+{
+  "status": "blocked",
+  "checked_on_utc": "2026-11-06",
+  "blockers": [
+    {
+      "id": "NTA_2260_EXAMPLE_MISMATCH",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "source_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "taxable_income_yen": 7000000,
+      "stated_income_tax_yen": 974000,
+      "stated_reconstruction_base_yen": 947000,
+      "stated_reconstruction_tax_yen": 19887,
+      "expected_reconstruction_tax_yen": 20454,
+      "observed_expressions": [
+        "7,000,000×0.23−636,000＝974,000",
+        "947,000×0.021＝19,887"
+      ],
+      "resolution_required": "Obtain authoritative clarification/correction; do not silently substitute the example or waive the publication gate"
+    }
+  ],
+  "additional_release_checks": [
+    "Confirm crypto regulatory effective date and conditional tax applicability against current primary legislation/decrees",
+    "Review 2026 December-effective deductions and normal-return assumptions separately from pre-effective quasi-final returns"
+  ]
+}

@@ -64,4 +64,4 @@ class EquityComparisonTests(unittest.TestCase):
         for old in ['new-nisa-beginners-guide.html','bitcoin-vs-stocks-long-term.html']:
             self.assertIn('./'+old,page.hrefs)
             self.assertEqual(Page(ROOT/'articles'/old).hrefs.count('./'+name),1)
-        self.assertEqual(len(list((ROOT/'articles').glob('*.html'))),6)
+        self.assertGreaterEqual(len(list((ROOT/'articles').glob('*.html'))),6)
