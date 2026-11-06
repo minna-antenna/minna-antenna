@@ -1,0 +1,57 @@
+{
+  "requested_start": "2016-10-31",
+  "requested_end": "2026-10-30",
+  "input_sha256": "e5abaa72ba2ebf15109fd3b60fbfc965bd346a49a9a1b8e4ef26e8f0e676feca",
+  "sources": [
+    {
+      "series": "BTC-USD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.603568+00:00",
+      "response_sha256": "6765f0e9b8fb45622cf7cca47a8e24accc739b718ab6e47a5b138e8aea7a3c51",
+      "rows": 3652,
+      "provider_timezone": "UTC"
+    },
+    {
+      "series": "SPY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.557937+00:00",
+      "response_sha256": "9f1fb67383ae7b7009588d041e39013a2cf6b599fc405d66c3b28feef0f297af",
+      "rows": 2514,
+      "provider_timezone": "America/New_York",
+      "adjustment_validation": {
+        "dividend_events": 40,
+        "reconstructed_factor": 0.8539955340137556,
+        "provider_factor": 0.8539953941502018,
+        "relative_error": 1.6377553646584886e-07
+      }
+    },
+    {
+      "series": "ACWI",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.343839+00:00",
+      "response_sha256": "9e2ee66471c224d6679b29ac28325c07c2e7ba10197e80a89c7882101dea0be8",
+      "rows": 2514,
+      "provider_timezone": "America/New_York",
+      "adjustment_validation": {
+        "dividend_events": 22,
+        "reconstructed_factor": 0.8309190501383735,
+        "provider_factor": 0.8309192887198674,
+        "relative_error": -2.8712956501308895e-07
+      }
+    },
+    {
+      "series": "FED_JPY",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "retrieved_at_utc": "2026-11-06T14:07:03.354531+00:00",
+      "response_sha256": "b979438cc4fb1878b1e4535de16cb94751d6a70fa9f6ac10200275a16652d20e",
+      "rows": 2497
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "url": "https://fred.stlouisfed.org/graph.csv?id=DEXJPUS&cosd=2016-10-31&coed=2026-10-30",
+      "result": "HTTP 404; not used. Used Federal Reserve H.10 source instead."
+    }
+  ],
+  "note": "Snapshot of observed values. Blanks are missing observations, never filled. Yahoo adjusted ETF closes are distribution/split-adjusted market prices, not official index total return series or NAV."
+}

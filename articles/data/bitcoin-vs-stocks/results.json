@@ -1,0 +1,375 @@
+{
+  "start": "2016-10-31",
+  "end": "2026-10-30",
+  "calendar_days": 3651,
+  "observations": 2486,
+  "snapshot_sha256": "e5abaa72ba2ebf15109fd3b60fbfc965bd346a49a9a1b8e4ef26e8f0e676feca",
+  "initial_jpy": 1000000,
+  "fx_start": 105.07,
+  "fx_end": 157.47,
+  "assets": {
+    "btc": {
+      "label": "BTC",
+      "start_price_usd": 700.9719848632812,
+      "end_price_usd": 77198.2109375,
+      "price_return_usd": 109.1302371628402,
+      "usd": {
+        "total_return": 109.1302371628402,
+        "cagr": 0.6005540839896801,
+        "maximum_drawdown": -0.8303625055816857,
+        "peak_date": "2017-12-18",
+        "trough_date": "2018-12-14",
+        "recovery_date": "2020-11-30",
+        "peak_to_recovery_days": 1078,
+        "trough_to_recovery_days": 717,
+        "ending_drawdown": -0.38118922186198123,
+        "longest_underwater": {
+          "peak": "2017-12-18",
+          "recovery": "2020-11-30",
+          "days": 1078,
+          "recovered": true
+        }
+      },
+      "jpy": {
+        "total_return": 164.05385405950744,
+        "cagr": 0.6666680949461818,
+        "maximum_drawdown": -0.8289287367231679,
+        "peak_date": "2017-12-18",
+        "trough_date": "2018-12-14",
+        "recovery_date": "2020-12-16",
+        "peak_to_recovery_days": 1094,
+        "trough_to_recovery_days": 733,
+        "ending_drawdown": -0.3547130863025272,
+        "longest_underwater": {
+          "peak": "2017-12-18",
+          "recovery": "2020-12-16",
+          "days": 1094,
+          "recovered": true
+        }
+      },
+      "final_jpy": 165053854.05950746
+    },
+    "spy": {
+      "label": "米国株式ETF SPY",
+      "start_price_usd": 212.5500030517578,
+      "end_price_usd": 755.719970703125,
+      "price_return_usd": 2.5554926363332044,
+      "usd": {
+        "total_return": 3.1633627777011872,
+        "cagr": 0.15336987190274343,
+        "maximum_drawdown": -0.3371726378600284,
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-08-10",
+        "peak_to_recovery_days": 173,
+        "trough_to_recovery_days": 140,
+        "ending_drawdown": -0.029996605458638692,
+        "longest_underwater": {
+          "peak": "2022-01-03",
+          "recovery": "2023-12-13",
+          "days": 709,
+          "recovered": true
+        }
+      },
+      "jpy": {
+        "total_return": 5.239694837771067,
+        "cagr": 0.20101206600954913,
+        "maximum_drawdown": -0.33741319933896363,
+        "peak_date": "2020-02-20",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-09-01",
+        "peak_to_recovery_days": 194,
+        "trough_to_recovery_days": 162,
+        "ending_drawdown": -0.037565598647637866,
+        "longest_underwater": {
+          "peak": "2018-10-03",
+          "recovery": "2019-07-26",
+          "days": 296,
+          "recovered": true
+        }
+      },
+      "final_jpy": 6239694.837771067
+    },
+    "acwi": {
+      "label": "全世界株式ETF ACWI",
+      "start_price_usd": 57.970001220703125,
+      "end_price_usd": 156.0399932861328,
+      "price_return_usd": 1.6917369329018652,
+      "usd": {
+        "total_return": 2.2394685855094476,
+        "cagr": 0.12477926402773698,
+        "maximum_drawdown": -0.33525032588300063,
+        "peak_date": "2020-02-12",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-08-24",
+        "peak_to_recovery_days": 194,
+        "trough_to_recovery_days": 154,
+        "ending_drawdown": -0.03963566353242287,
+        "longest_underwater": {
+          "peak": "2022-01-03",
+          "recovery": "2024-01-25",
+          "days": 752,
+          "recovered": true
+        }
+      },
+      "jpy": {
+        "total_return": 3.855040622063128,
+        "cagr": 0.1712404672631882,
+        "maximum_drawdown": -0.33720945154991444,
+        "peak_date": "2020-02-20",
+        "trough_date": "2020-03-16",
+        "recovery_date": "2020-11-09",
+        "peak_to_recovery_days": 263,
+        "trough_to_recovery_days": 238,
+        "ending_drawdown": -0.05096597387167001,
+        "longest_underwater": {
+          "peak": "2018-10-01",
+          "recovery": "2019-11-04",
+          "days": 399,
+          "recovered": true
+        }
+      },
+      "final_jpy": 4855040.622063127
+    }
+  },
+  "annual": [
+    {
+      "year": 2016,
+      "start": "2016-10-31",
+      "end": "2016-12-30",
+      "partial": true,
+      "returns": {
+        "btc": {
+          "usd": 0.3712930000500665,
+          "jpy": 0.5241229327671721
+        },
+        "spy": {
+          "usd": 0.05785725814315534,
+          "jpy": 0.17575493105508433
+        },
+        "acwi": {
+          "usd": 0.030175919879972035,
+          "jpy": 0.14498852121046113
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "start": "2016-12-30",
+      "end": "2017-12-29",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 14.247213031646671,
+          "jpy": 13.713208053915597
+        },
+        "spy": {
+          "usd": 0.21705339807406832,
+          "jpy": 0.17442839038334257
+        },
+        "acwi": {
+          "usd": 0.24333391656021996,
+          "jpy": 0.1997884831064496
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "start": "2017-12-29",
+      "end": "2018-12-31",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": -0.744633643811023,
+          "jpy": -0.7514092707966034
+        },
+        "spy": {
+          "usd": -0.04568957062921708,
+          "jpy": -0.07101025732562871
+        },
+        "acwi": {
+          "usd": -0.09124898127462033,
+          "jpy": -0.1153608416525499
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "start": "2018-12-31",
+      "end": "2019-12-31",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 0.9220344340849418,
+          "jpy": 0.9039879849773074
+        },
+        "spy": {
+          "usd": 0.3122385536978718,
+          "jpy": 0.2999176265300614
+        },
+        "acwi": {
+          "usd": 0.2658965676756144,
+          "jpy": 0.25401075669379236
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "start": "2019-12-31",
+      "end": "2020-12-31",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 3.0316009017076606,
+          "jpy": 2.828295730626792
+        },
+        "spy": {
+          "usd": 0.1833161691128289,
+          "jpy": 0.12364401850329254
+        },
+        "acwi": {
+          "usd": 0.16336732483662209,
+          "jpy": 0.10470115257100399
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "start": "2020-12-31",
+      "end": "2021-12-30",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 0.626735374874376,
+          "jpy": 0.8155936924535507
+        },
+        "spy": {
+          "usd": 0.29054009873043496,
+          "jpy": 0.4403673143791471
+        },
+        "acwi": {
+          "usd": 0.18852417133752897,
+          "jpy": 0.32650769273130376
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "start": "2021-12-30",
+      "end": "2022-12-30",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": -0.6480872027555143,
+          "jpy": -0.5972421133559463
+        },
+        "spy": {
+          "usd": -0.183815856446375,
+          "jpy": -0.06589188189803508
+        },
+        "acwi": {
+          "usd": -0.18516500658365742,
+          "jpy": -0.06743596003987062
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "start": "2022-12-30",
+      "end": "2023-12-29",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 1.5357135630697591,
+          "jpy": 1.7109684796888733
+        },
+        "spy": {
+          "usd": 0.2617579869995954,
+          "jpy": 0.34896392935272713
+        },
+        "acwi": {
+          "usd": 0.22274406911455324,
+          "jpy": 0.30725357878478743
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "start": "2023-12-29",
+      "end": "2024-12-31",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": 1.2192524815942032,
+          "jpy": 1.4783122553823431
+        },
+        "spy": {
+          "usd": 0.24886467926331335,
+          "jpy": 0.39464827260621393
+        },
+        "acwi": {
+          "usd": 0.17449345977344777,
+          "jpy": 0.3115954851301981
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "start": "2024-12-31",
+      "end": "2025-12-31",
+      "partial": false,
+      "returns": {
+        "btc": {
+          "usd": -0.06336749968935373,
+          "jpy": -0.06676001748294236
+        },
+        "spy": {
+          "usd": 0.1771905127643969,
+          "jpy": 0.17292668489202168
+        },
+        "acwi": {
+          "usd": 0.22413181317524522,
+          "jpy": 0.2196979621648245
+        }
+      }
+    },
+    {
+      "year": 2026,
+      "start": "2025-12-31",
+      "end": "2026-10-30",
+      "partial": true,
+      "returns": {
+        "btc": {
+          "usd": -0.11782373742649177,
+          "jpy": -0.11405423426370975
+        },
+        "spy": {
+          "usd": 0.11687979456589703,
+          "jpy": 0.12165217634114667
+        },
+        "acwi": {
+          "usd": 0.10999893083942136,
+          "jpy": 0.11474191096481934
+        }
+      }
+    }
+  ],
+  "btc_calendar_usd": {
+    "total_return": 109.1302371628402,
+    "cagr": 0.6005540839896801,
+    "maximum_drawdown": -0.8339900882218974,
+    "peak_date": "2017-12-16",
+    "trough_date": "2018-12-15",
+    "recovery_date": "2020-11-30",
+    "peak_to_recovery_days": 1080,
+    "trough_to_recovery_days": 716,
+    "ending_drawdown": -0.38118922186198123,
+    "longest_underwater": {
+      "peak": "2017-12-16",
+      "recovery": "2020-11-30",
+      "days": 1080,
+      "recovered": true
+    }
+  },
+  "btc_calendar_observations": 3652
+}

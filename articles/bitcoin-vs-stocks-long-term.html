@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="BTC・S&amp;P500連動ETF・全世界株式ETFを約10年の実データで比較。100万円の推移、CAGR、最大下落率、回復期間を再現可能な計算で示し、配当・為替・税金・NISAの違いも解説します。"><meta name="robots" content="index,follow">
+<meta property="article:published_time" content="2026-11-06"><meta property="article:modified_time" content="2026-11-06">
+<link rel="canonical" href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html">
+<meta property="og:type" content="article"><meta property="og:title" content="ビットコインと株式投資、長期保有ならどちらが有利？過去10年間のリターンとリスクを比較｜トピック基地">
+<meta property="og:description" content="BTC・S&amp;P500連動ETF・全世界株式ETFを約10年の実データで比較。100万円の推移、CAGR、最大下落率、回復期間を再現可能な計算で示し、配当・為替・税金・NISAの違いも解説します。"><meta property="og:url" content="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html">
+<meta property="og:site_name" content="トピック基地"><meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://minna-antenna.github.io/minna-antenna/articles/data/bitcoin-vs-stocks/wealth-and-drawdown.png">
+<meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1440"><meta property="og:image:height" content="1120">
+<title>ビットコインと株式投資、長期保有ならどちらが有利？過去10年間のリターンとリスクを比較｜トピック基地</title>
+<style>
+:root{--ink:#203a42;--muted:#657b83;--green:#176b57;--dark:#173d3b;--line:#d8e5df;--bg:#f5f7f5;--soft:#eef5f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Yu Gothic",Meiryo,sans-serif;font-size:15px;line-height:1.9}a{color:#126a58;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
+header{background:var(--dark);color:white;border-bottom:4px solid #d7bd76}header .bar{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 18px}header a{color:white;text-decoration:none}header .brand{font-size:23px;font-weight:800;letter-spacing:.01em}header .return{font-size:13px}
+.wrap{max-width:900px;margin:24px auto 60px;padding:0 18px}.crumb{font-size:12px;color:var(--muted);margin-bottom:16px}.crumb a{color:var(--muted)}article{background:white;border:1px solid var(--line);border-radius:12px;padding:38px 43px;box-shadow:0 2px 8px rgba(21,67,59,.025)}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.075em}.date{font-size:12px;color:var(--muted);margin-top:14px}h1{font-size:clamp(24px,3.1vw,34px);line-height:1.5;letter-spacing:.01em;margin:13px 0 18px}h2{font-size:21px;line-height:1.45;margin:38px 0 15px;padding-bottom:9px;border-bottom:2px solid #b8dcd0}h3{font-size:17px;margin:26px 0 9px}p{margin:14px 0}ul,ol{padding-left:1.5em}li{margin:6px 0}.lead{font-size:16px}.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:27px 0 33px}.toc strong{display:block;margin-bottom:6px}.toc ol{margin:6px 0}.toc a{font-size:14px}.note{padding:14px 18px;background:#fdf8ee;border-left:3px solid #cda647;border-radius:4px;margin:22px 0}.takeaway{padding:18px 20px;background:var(--soft);border-radius:8px;margin:24px 0}.table-wrap{overflow-x:auto;margin:17px 0}table{width:100%;border-collapse:collapse;min-width:580px;font-size:13px}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft)}.small{font-size:12px;color:var(--muted)}.related{padding:18px 20px;border:1px solid var(--line);border-radius:8px;margin-top:35px}.refs{font-size:13px;overflow-wrap:anywhere}.refs li{margin:9px 0}.faq dt{font-weight:700;margin-top:18px}.faq dd{margin:4px 0 16px}footer{text-align:center;padding:6px 15px 35px;font-size:13px;color:var(--muted)}footer a{margin:0 8px}strong{font-weight:750}
+@media(max-width:650px){header .bar{padding:14px 16px}header .brand{font-size:19px}.wrap{padding:0 12px;margin-top:17px}article{padding:25px 20px}h2{font-size:19px}h1{font-size:25px}}
+
+h1{text-wrap:balance}@media(min-width:651px){h1{font-size:clamp(24px,3vw,32px)}}body{overflow-wrap:anywhere}.bar{flex-wrap:wrap}.table-wrap{max-width:100%;overscroll-behavior-x:contain}.table-wrap:focus-visible,a:focus-visible{outline:3px solid #d59c22;outline-offset:3px}table{min-width:720px}caption{text-align:left;font-weight:700;margin-bottom:10px}h2[id],h3[id],li[id]{scroll-margin-top:16px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+figure{margin:24px 0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}figcaption{font-size:12px;color:var(--muted);line-height:1.7;margin-top:9px}code{overflow-wrap:anywhere}table{min-width:760px}pre{overflow:auto;max-width:100%}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ビットコインと株式投資、長期保有ならどちらが有利？過去10年間のリターンとリスクを比較","description":"BTC・S&P500連動ETF・全世界株式ETFを約10年の実データで比較。100万円の推移、CAGR、最大下落率、回復期間を再現可能な計算で示し、配当・為替・税金・NISAの違いも解説します。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","image":"https://minna-antenna.github.io/minna-antenna/articles/data/bitcoin-vs-stocks/wealth-and-drawdown.png","author":{"@type":"Organization","name":"トピック基地"},"publisher":{"@type":"Organization","name":"トピック基地","url":"https://minna-antenna.github.io/minna-antenna/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html"}}</script>
+</head><body>
+<header><div class="bar"><a class="brand" href="../">⌂ トピック基地</a><a class="return" href="../#news">新着ニュースを見る</a></div></header>
+<main class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="../">ホーム</a> &gt; <a href="../#original-articles">独自解説</a> &gt; 長期投資の比較</nav><article>
+<div class="eyebrow">独自解説 第4号｜実データで比較する長期投資</div>
+<h1>ビットコインと株式投資、長期保有ならどちらが有利？<br>過去10年間のリターンとリスクを比較</h1>
+<p class="date">公開：<time datetime="2026-11-06">2026年11月6日</time> ｜ 更新：<time datetime="2026-11-06">2026年11月6日</time><br>著者・編集：トピック基地 ｜ 調査日：2026年11月6日（日本時間）</p>
+<p class="lead">過去に大きく上がった資産を見れば、長期保有の答えは簡単に見える。しかし、途中でどれほど下がったのか、何年待ったのか、配当や税金をどう扱ったのかで比較の意味は変わる。本記事では、BTCと、S&amp;P500・全世界株式に連動する米国ETFを<strong>同じ約10年間・同じ観測日</strong>で比較した。</p>
+<div class="takeaway"><strong>今回の分析で分かったこと</strong><ul><li>2016年10月31日〜2026年10月30日の円換算では、BTCの累積リターンが最も大きかった。一方、最大下落率は約83％に達した。</li><li>株式側は指数そのものではなく、SPY・ACWIの分配金等調整後の市場価格を使用。国内投資信託やNISA口座の実績とは異なる。</li><li>「この期間で増えた」と「今後も有利」は同じではない。税引前の結果と、損失に耐えられる期間を分けて読む必要がある。</li></ul></div>
+<p class="small">銘柄の購入を推奨する記事ではありません。数値は過去データの比較計算で、将来の利益や元本を保証しません。本分析の「税引前」は投資家段階の税を引いていない意味で、ETF内部の費用や課税の影響まで消した指数ではありません。</p>
+<nav class="toc" aria-label="この記事の目次"><strong>この記事の内容</strong><ol><li><a href="#basics">ビットコインと株式投資の違い</a></li><li><a href="#conditions">比較期間・データ・配当・為替の条件</a></li><li><a href="#results">過去10年の比較結果と年別騰落率</a></li><li><a href="#simulation">100万円の資産推移グラフ</a></li><li><a href="#risk-reading">最大下落と高値回復期間の読み方</a></li><li><a href="#dividends">配当・分配金とBTCの違い</a></li><li><a href="#tax">税金・新NISA：2026年11月の確認</a></li><li><a href="#goals">長期保有のリスクと目的別の考え方</a></li><li><a href="#faq">FAQ</a></li><li><a href="#summary">まとめ</a></li><li><a href="#method">計算方法・再現手順</a></li><li><a href="#sources">出典</a></li></ol></nav>
+
+<h2 id="basics">1. ビットコインと株式投資の基本的な違い</h2>
+<p>株式は企業への持分で、企業の収益・財務状態・配当方針などが評価の材料になる。株価指数は複数の銘柄を決まったルールで集計した指標で、指数自体を直接購入することはできない。S&amp;P500は米国の主要な大型株を対象とし、MSCI ACWIは先進国と新興国の大型・中型株を対象とする。全世界株式も国別・銘柄別の比率は均等ではなく、米国株と投資対象が重なる。<a href="#ref-sp">［1］</a><a href="#ref-msci">［2］</a></p>
+<p>BTCの現物保有は企業への持分ではなく、通常の保有だけで企業利益からの配当を受け取る権利はない。価値の移転や供給ルールを持つ暗号資産であり、貸付等を加える場合は、単純保有とは別の相手方リスクが生まれる。供給の仕組みは<a href="./bitcoin-halving.html">第1号の半減期解説</a>を参照してほしい。<a href="#ref-bitcoin">［3］</a></p>
+<p>本記事が比べるのは、BTC現物価格と、分散された株式に連動を目指すETFの市場価格だ。個別株1銘柄のリスクを「株式全体」として扱わず、BTCを企業の株式と同一視もしない。</p>
+
+<h2 id="conditions">2. 比較条件：完全に同じ商品にはできない</h2>
+<h3>対象期間は2016年10月31日〜2026年10月30日</h3>
+<p>調査日直前の、完了した月までの約10年間を採用した。両端は10暦年から1日短く、間隔は<strong>3,651暦日</strong>。3資産と為替の値がそろう<strong>2,486観測日</strong>を共通標本とした。11月途中の価格は混ぜていない。土日、休場日、為替の欠測日は補間も前日値の持ち越しもせず、主比較から除外した。</p>
+<div class="table-wrap" role="region" aria-label="使用データと比較上の位置付け" tabindex="0"><table><caption>何を実際に計算へ入れたか</caption><thead><tr><th scope="col">対象</th><th scope="col">入力系列</th><th scope="col">位置付けと限界</th></tr></thead><tbody><tr><th scope="row">BTC</th><td>Yahoo Finance BTC-USDの日次終値</td><td>提供元による米ドル価格。特定の日本の交換業者で約定できる価格ではない</td></tr><tr><th scope="row">S&amp;P500の代替</th><td>SPYの終値・調整後終値</td><td>S&amp;P500への連動を目指す米国ETF。公式指数のリターンやETF基準価額（NAV）そのものではない</td></tr><tr><th scope="row">全世界株式の代替</th><td>ACWIの終値・調整後終値</td><td>MSCI ACWI Netへの連動を目指す米国ETF。小型株まで含む全世界指数や国内の「オルカン」とは別の商品</td></tr><tr><th scope="row">為替</th><td>米連邦準備制度H.10の円／米ドル</td><td>ニューヨーク正午の買い相場。同日の株価終値と完全な同時刻ではない</td></tr></tbody></table></div>
+<p>指数の構成・ETFの運用対象は指数会社と運用会社の一次資料で確認し、日次計算は取得できた市場価格系列を用いた。公式のS&amp;P500・MSCI ACWIの配当込み日次指数を同条件で直接取得した分析ではない。このため、<strong>以下のSPY・ACWI欄を「指数そのものの成績」と読み替えてはいけない</strong>。<a href="#ref-spy">［4］</a><a href="#ref-acwi">［5］</a></p>
+<h3>配当込み・円換算・コストの扱い</h3>
+<p>株式ETFは、提供元の分配金等調整後終値の比率を、分配金再投資の近似として使う。税引後に実際に再投資できた口数を追跡する計算ではない。取得応答内のSPYの40件、ACWIの22件の分配金イベントから調整係数を別計算し、提供系列との相対差が0.0001％未満であることを確認した。比較用に、未調整終値だけの価格騰落率も掲載する。</p>
+<p>調査日の公式表示の経費率はSPYが年0.0945％、ACWIが年0.32％で、期間中ずっと同率だったと仮定するものではない。<a href="#ref-spy">［4］</a><a href="#ref-acwi">［5］</a> ETFの市場価格は、ファンド内の運用費用・課税・追随差などの影響を受ける。これらを無視した理論指数ではないため、現在の経費率を過去10年分にもう一度差し引いてはいない。投資家が負担する売買手数料・為替スプレッド・保管費用・税、分配金受取時の外国源泉税や端数口数の制約は別途反映していない。BTCの貸付収入・分岐コイン等も加算していない。</p>
+<p>円換算は、各日のドル建て系列に同日の円／米ドルを掛けて行った。開始日の1ドル105.07円に対し、終了日は157.47円で、円安が円換算の成績を押し上げた。これは為替ヘッジなしの条件であり、将来の為替を予測するものではない。<a href="#ref-fx">［6］</a></p>
+<p class="note">同じ日付でも時計はそろっていない。BTCはUTC日次区切り、ETFは米国取引日の終値、為替はニューヨーク正午の観測を使う。完全に同期した約定可能な価格の再現ではなく、日次の参考比較である。BTCの土日を除くことで下落を小さく見せる可能性もあり、別途すべての暦日データで確認した結果を後述する。</p>
+
+<h2 id="results">3. 約10年間のリターン・下落率・年間騰落率</h2>
+<p>主比較は同じ2,486日。SPY・ACWIは調整後系列、BTCは現物価格、いずれも投資家段階の税引前。<strong>円換算の100万円の期末額は、BTCが約1億6,505万円、SPYが約624万円、ACWIが約486万円</strong>となった。これは2016年の価格水準から始めた特定期間の事後計算であり、今から同じ成果を再現できるという試算ではない。</p>
+<p class="small">表は入力CSVから計算コードで生成。USD＝米ドル建て、JPY＝円換算、CAGR＝年率換算リターン、DD＝過去の高値からの下落率。スマホでは表の中を左右にスクロールできる。</p>
+<!-- ANALYSIS:START -->
+<h3 id="returns">累積リターン・CAGR・100万円の比較</h3>
+<div class="table-wrap" role="region" aria-label="同じ観測日で比較した約10年間の結果" tabindex="0"><table><caption>同じ観測日で比較した約10年間の結果</caption><thead><tr><th scope="col">対象</th><th scope="col">累積収益率 USD</th><th scope="col">CAGR USD</th><th scope="col">100万円の期末額 JPY</th><th scope="col">CAGR JPY</th><th scope="col">最大DD JPY</th></tr></thead><tbody><tr><th scope="row">BTC</th><td>+10913.02%</td><td>+60.06%</td><td>165,053,854円</td><td>+66.67%</td><td>-82.89%</td></tr><tr><th scope="row">米国株式ETF SPY</th><td>+316.34%</td><td>+15.34%</td><td>6,239,695円</td><td>+20.10%</td><td>-33.74%</td></tr><tr><th scope="row">全世界株式ETF ACWI</th><td>+223.95%</td><td>+12.48%</td><td>4,855,041円</td><td>+17.12%</td><td>-33.72%</td></tr></tbody></table></div>
+<h3 id="price-only">配当を含めるかで結果は変わる</h3>
+<div class="table-wrap" role="region" aria-label="価格だけの変化と、分配金調整後の変化（米ドル建て）" tabindex="0"><table><caption>価格だけの変化と、分配金調整後の変化（米ドル建て）</caption><thead><tr><th scope="col">対象</th><th scope="col">開始日価格 USD</th><th scope="col">終了日価格 USD</th><th scope="col">価格のみ</th><th scope="col">調整後系列</th></tr></thead><tbody><tr><th scope="row">BTC</th><td>700.9720</td><td>77,198.2109</td><td>+10913.02%</td><td>+10913.02%</td></tr><tr><th scope="row">米国株式ETF SPY</th><td>212.5500</td><td>755.7200</td><td>+255.55%</td><td>+316.34%</td></tr><tr><th scope="row">全世界株式ETF ACWI</th><td>57.9700</td><td>156.0400</td><td>+169.17%</td><td>+223.95%</td></tr></tbody></table></div>
+<h3 id="drawdown-data">最大ドローダウンと回復までの期間</h3>
+<div class="table-wrap" role="region" aria-label="最大下落と、その下落前の高値を初めて回復した日（円換算）" tabindex="0"><table><caption>最大下落と、その下落前の高値を初めて回復した日（円換算）</caption><thead><tr><th scope="col">対象</th><th scope="col">最大DD USD</th><th scope="col">最大DD JPY</th><th scope="col">下落前の高値</th><th scope="col">底値</th><th scope="col">回復日</th><th scope="col">高値→回復</th><th scope="col">底値→回復</th></tr></thead><tbody><tr><th scope="row">BTC</th><td>-83.04%</td><td>-82.89%</td><td>2017-12-18</td><td>2018-12-14</td><td>2020-12-16</td><td>1094日</td><td>733日</td></tr><tr><th scope="row">米国株式ETF SPY</th><td>-33.72%</td><td>-33.74%</td><td>2020-02-20</td><td>2020-03-23</td><td>2020-09-01</td><td>194日</td><td>162日</td></tr><tr><th scope="row">全世界株式ETF ACWI</th><td>-33.53%</td><td>-33.72%</td><td>2020-02-20</td><td>2020-03-16</td><td>2020-11-09</td><td>263日</td><td>238日</td></tr></tbody></table></div>
+<h3 id="underwater">最長の未回復期間も別に見る</h3>
+<div class="table-wrap" role="region" aria-label="最長の高値未回復期間と期末時点の状態（円換算）" tabindex="0"><table><caption>最長の高値未回復期間と期末時点の状態（円換算）</caption><thead><tr><th scope="col">対象</th><th scope="col">最長期間の高値日</th><th scope="col">最長期間の回復日</th><th scope="col">高値からの暦日数</th><th scope="col">期末の直近高値からの下落</th></tr></thead><tbody><tr><th scope="row">BTC</th><td>2017-12-18</td><td>2020-12-16</td><td>1094日</td><td>-35.47%</td></tr><tr><th scope="row">米国株式ETF SPY</th><td>2018-10-03</td><td>2019-07-26</td><td>296日</td><td>-3.76%</td></tr><tr><th scope="row">全世界株式ETF ACWI</th><td>2018-10-01</td><td>2019-11-04</td><td>399日</td><td>-5.10%</td></tr></tbody></table></div>
+<h3 id="annual">年間騰落率と部分期間</h3>
+<div class="table-wrap" role="region" aria-label="年別騰落率（円換算・共通観測日、両端年は部分期間）" tabindex="0"><table><caption>年別騰落率（円換算・共通観測日、両端年は部分期間）</caption><thead><tr><th scope="col">年</th><th scope="col">比較開始日</th><th scope="col">比較終了日</th><th scope="col">BTC</th><th scope="col">SPY</th><th scope="col">ACWI</th></tr></thead><tbody><tr><th scope="row">2016（部分）</th><td>2016-10-31</td><td>2016-12-30</td><td>+52.41%</td><td>+17.58%</td><td>+14.50%</td></tr><tr><th scope="row">2017</th><td>2016-12-30</td><td>2017-12-29</td><td>+1371.32%</td><td>+17.44%</td><td>+19.98%</td></tr><tr><th scope="row">2018</th><td>2017-12-29</td><td>2018-12-31</td><td>-75.14%</td><td>-7.10%</td><td>-11.54%</td></tr><tr><th scope="row">2019</th><td>2018-12-31</td><td>2019-12-31</td><td>+90.40%</td><td>+29.99%</td><td>+25.40%</td></tr><tr><th scope="row">2020</th><td>2019-12-31</td><td>2020-12-31</td><td>+282.83%</td><td>+12.36%</td><td>+10.47%</td></tr><tr><th scope="row">2021</th><td>2020-12-31</td><td>2021-12-30</td><td>+81.56%</td><td>+44.04%</td><td>+32.65%</td></tr><tr><th scope="row">2022</th><td>2021-12-30</td><td>2022-12-30</td><td>-59.72%</td><td>-6.59%</td><td>-6.74%</td></tr><tr><th scope="row">2023</th><td>2022-12-30</td><td>2023-12-29</td><td>+171.10%</td><td>+34.90%</td><td>+30.73%</td></tr><tr><th scope="row">2024</th><td>2023-12-29</td><td>2024-12-31</td><td>+147.83%</td><td>+39.46%</td><td>+31.16%</td></tr><tr><th scope="row">2025</th><td>2024-12-31</td><td>2025-12-31</td><td>-6.68%</td><td>+17.29%</td><td>+21.97%</td></tr><tr><th scope="row">2026（部分）</th><td>2025-12-31</td><td>2026-10-30</td><td>-11.41%</td><td>+12.17%</td><td>+11.47%</td></tr></tbody></table></div>
+<!-- ANALYSIS:END -->
+<p>2016年は10月31日から年末、2026年は前年末から10月30日までの<strong>部分期間</strong>で、通年の騰落率ではない。各年の区切りも、12月31日が欠測なら最後の共通観測日を使う。BTCの365日ベースの年間リターンや、指数会社の年次公表値とそのまま一致するものではない。丸め前の米ドル・円換算の両方の年次値は<a href="./data/bitcoin-vs-stocks/results.json">分析結果JSON</a>に保存した。</p>
+
+<h2 id="simulation">4. 初期投資100万円の資産推移</h2>
+<p>開始日に100万円を一括投資し、追加投資・引き出し・資産間のリバランスはしない。円をドルへ交換して買い付け、ETFの分配金を同じETFへ再投資する近似を置く。これは積立投資の計算でも、NISA口座の実績でもない。</p>
+<figure><img src="./data/bitcoin-vs-stocks/wealth-and-drawdown.svg" width="900" height="700" loading="lazy" decoding="async" alt="2016年10月31日を100万円とした円換算の資産推移とドローダウン。期末はBTC約1億6505万円、SPY約624万円、ACWI約486万円。最大下落率は順に約83%、約34%、約34%。"><figcaption>上段：円換算資産額（<strong>対数目盛</strong>）。1m＝100万円。等しい縦の間隔は同じ金額差ではなく、同じ倍率を表す。下段：その時点までの高値からの下落率。グラフは共通観測日の全日次値を使用。数値は前の表でも確認できる。</figcaption></figure>
+<p>CAGRは「最初と最後が同じになる一定の年率」に置き換えた値で、毎年その利回りを得たという意味ではない。今回の円換算CAGRはBTCが66.67％、SPYが20.10％、ACWIが17.12％だが、年別表には大きなマイナスの年もある。高いCAGRだけから、安定した収益源と判断できない。</p>
+
+<h2 id="risk-reading">5. 最大下落率と、高値回復までの待ち時間</h2>
+<h3>最大下落は「最初の100万円からの損失」ではない</h3>
+<p>最大ドローダウンは、その時点までの最も高い評価額から、最も深く落ち込んだ割合だ。円換算ではBTCが−82.89％、SPYが−33.74％、ACWIが−33.72％となった。BTCが途中で大きく上昇した後の下落であり、初日の100万円が実際に17万円になったという意味ではない。</p>
+<p>大きさの感覚として、<em>ある高値で評価額が100万円だった</em>と仮定すると、82.89％の下落後は約17万円になる。そこから元の高値へ戻るには、下落率と同じ82.89％の上昇では足りない。損失の割合と必要な回復率は非対称だ。</p>
+<h3>「高値から」と「底値から」の回復期間を分ける</h3>
+<p>BTCの円換算で最大下落を起こした高値は2017年12月18日、底値は2018年12月14日、初回の回復は2020年12月16日だった。高値からは1,094暦日、底値からは733暦日となる。「数年持てば戻った」という言い方でも、購入日と生活上の支出時期が合わなければ、待てない場合がある。</p>
+<p>最も深い下落と、最も長く高値を回復しなかった期間は同じとは限らないため、表では両方を掲載した。また、過去の最大下落から一度回復していても、期末に別の高値を下回っていることはある。今回も全3系列で期末は直近高値を下回った。<strong>過去に回復した事実は、今後の回復期限を保証しない。</strong></p>
+<h3>観測頻度と対象期間で「最大」は変わる</h3>
+<p>BTCの全3,652暦日を使った米ドル建て最大DDは−83.40％。共通日だけの米ドル建て−83.04％より深くなった。土日や祝日の変動を落とすと結果が変わる具体例である。円換算の表と通貨まで混同しないでほしい。</p>
+<p>ここでの最大DDは2016年以降の<strong>日次観測値の範囲内</strong>であり、日中の最悪値でも歴史全体の最悪値でもない。2008年の金融危機は期間外だ。株式側の約34％を「将来も最大でその程度の損失」と解釈してはいけない。</p>
+
+<h2 id="dividends">6. 配当・分配金とビットコインは同じではない</h2>
+<p>株式側の評価では、株価の変化だけでなく配当・分配金も重要だ。表のSPYは価格だけの累積変化が＋255.55％、分配金等調整後では＋316.34％。ACWIは＋169.17％と＋223.95％だった。価格指数と配当込み指数を混ぜると、株式側を過小評価する場合がある。</p>
+<p>ただし、分配金は追加の「無料の利益」ではない。分配後の価格への影響があり、再投資しなければ資産の持ち方も変わる。ETFの調整後終値、公式の配当込み指数、税引後に実際に再投資した口座は、それぞれ異なる。MSCI ACWIの公式資料はNet Returnsの系列であり、今回のETF市場価格系列と同一視しない。<a href="#ref-msci">［2］</a></p>
+<p>BTCを単に保有しても株式の配当のような支払いは発生しない。利回りをうたう貸付・運用サービスを加えると、サービス提供者の信用や返還条件のリスクが加わる。本記事のBTCリターンには、その収入を含めていない。</p>
+
+<h2 id="tax">7. 日本居住者の税金・新NISA：2026年11月6日の確認</h2>
+<h3>現在の取引の扱いと、将来の改正を混ぜない</h3>
+<p>国税庁の現行案内・FAQでは、個人の暗号資産の売却等による損益は、原則として雑所得に区分される。例外的に事業に付随する場合などは別の扱いがあり、他の所得や取引内容によって税負担は異なる。日本円へ売却せず、別の暗号資産へ交換した場合や商品を購入した場合にも所得計算が必要になることがある。<a href="#ref-nta-crypto">［7］</a><a href="#ref-nta-faq">［8］</a></p>
+<p>課税口座の上場株式等の譲渡益は申告分離課税で、2026年分は所得税・住民税・復興特別所得税を合わせ原則20.315％。ただし、配当の申告方法、外国税、口座の種類などは別に確認が必要だ。<a href="#ref-nta-stock">［9］</a></p>
+<div class="note"><strong>改正情報の読み方：</strong>金融庁は、暗号資産に関係する金融商品取引法等の改正法が2026年7月15日に成立したと掲載している。一方、分離課税への変更は、関連法の施行や対象取引・適用開始年の条件と切り分けて読む必要がある。<strong>法律が成立したことだけで、2026年の現物売買益がすでに一律20％の分離課税になったとは扱わない。</strong>今回の確認資料から将来の個別適用開始年までは断定せず、本記事の計算はすべて投資家段階の税引前とした。申告時には最新の国税庁・金融庁資料と専門家に確認してほしい。<a href="#ref-fsa-law">［10］</a><a href="#ref-fsa-reform">［11］</a></div>
+<h3>NISAは対象商品の利益を非課税にする制度</h3>
+<p>2024年開始のNISAは、成人の年間投資枠がつみたて投資枠120万円・成長投資枠240万円、合計360万円。非課税保有限度額は取得額で1,800万円、うち成長投資枠は1,200万円で、非課税保有期間は無期限となる。2026年時点の成人向け制度と、2027年1月開始と案内されている未成年者向けの拡充は区別した。<a href="#ref-nisa">［12］</a></p>
+<p>BTCの現物をNISA口座で直接買う制度ではない。株式指数を買うのでもなく、各枠の要件を満たし、金融機関が取り扱う商品を選ぶ。本分析のSPY・ACWIが、そのままつみたて投資枠の対象になるという意味でもない。</p>
+<p>NISA口座の損失は課税口座の利益等と損益通算できない。外国株式等の分配には外国での課税が残る場合もあるため、「NISAならすべての税や損失がなくなる」とは考えない。2026年9月改訂の日本証券業協会のQ&amp;Aも確認先になる。<a href="#ref-jsda">［13］</a></p>
+<p>今回の2016年開始の計算を、その全期間で2024年以降のNISAを使えた実績に置き換えることはできない。税引後比較には、居住地、所得、分配時の課税、口座、売却年等の追加条件が必要になる。</p>
+
+<h2 id="goals">8. 長期保有でも残るリスクと、投資目的別の考え方</h2>
+<ul><li><strong>近い将来使う資金：</strong>過去の平均リターンより、支出時点に大きく下がっていないかが問題になる。生活費・緊急資金を、価格回復を待つ前提にしない。</li><li><strong>長期の資産形成：</strong>企業群への分散、費用、税制、積立方法を確認する。株式に分散しても市場全体の下落は残り、S&amp;P500と全世界株式を併用しても米国株の重複がある。</li><li><strong>BTCへの関心：</strong>大きな損失を受け止められる資金額、保管・秘密鍵、交換業者や流動性のリスクを別途検討する。高い過去リターンだけで保有額は決められない。</li><li><strong>定期収入が目的：</strong>分配の有無だけでなく、原資と税引後額、価格下落、減配も確認する。BTCの売却による取り崩しは配当ではない。</li><li><strong>複数資産を持つ場合：</strong>本記事は各資産100％保有の比較であり、特定比率の混合ポートフォリオを最適化したものではない。危機時の同時下落や円高の影響も考える。</li></ul>
+<p>過去10年の勝者を選ぶことと、これからの生活に合う資産を選ぶことは別だ。「長期」という言葉だけで、保有中の損失や予定より早い売却の必要性はなくならない。</p>
+
+<h2 id="faq">9. よくある質問</h2>
+<dl class="faq"><dt>Q. 結局、長期ならBTCの方が有利？</dt><dd>A. 今回の特定期間ではリターンが大きかったが、最大下落も大きい。今後の優劣や回復期限は分からず、必要な資金の時期・損失許容額・税・保管まで含めて考える必要がある。</dd><dt>Q. SPY・ACWIの結果は国内の投資信託でも同じ？</dt><dd>A. 同じではない。連動指数、費用、分配、為替、追随差、評価時刻が異なる。今回の値は米国ETFの調整後市場価格による近似で、国内商品の販売実績や将来収益ではない。</dd><dt>Q. 100万円は本当に1億円以上になる？</dt><dd>A. 2016年の価格で買えたという事後計算ではそうなったが、将来の試算ではない。投資家の税・売買コスト・現実の執行条件も含んでいない。開始時点を変えれば結果は変わる。</dd><dt>Q. 最大下落率は、今後の損失の上限？</dt><dd>A. 違う。今回の期間と観測頻度で見つかった最悪値にすぎない。期間外の危機や日中の値動きでは、さらに大きな損失があり得る。</dd><dt>Q. 年率66％なら毎年同じように増える？</dt><dd>A. CAGRは両端を一定年率へ置き換えた数字だ。毎年の実績ではなく、負の年や長い未回復期間もある。</dd><dt>Q. 暗号資産はもう株式と同じ税率になった？</dt><dd>A. 関連法の成立、施行、税の適用年は別だ。2026年の現物売買を一律の分離課税として計算せず、取引時と申告時の公的案内を確認する必要がある。</dd></dl>
+
+<h2 id="summary">10. まとめ：リターンだけでなく、待てる期間を見る</h2>
+<p>同じ約10年の観測では、BTCは高いリターンと大きな下落を示した。SPYとACWIも元本保証ではなく、数十％の下落や高値を取り戻すまでの待ち時間があった。円換算の好成績には円安も寄与している。</p>
+<p>今回の結果を将来の順位に置き換えず、<strong>価格と配当、通貨、費用、税、観測期間、保管条件</strong>をそろえて読むことが重要だ。株式指数の実績を将来の投資信託の収益と同一視せず、長期であっても支出計画と損失への耐性を確認したい。</p>
+
+<h2 id="method">計算方法と再現手順</h2>
+<p>データ取得日は2026年11月6日。時刻と取得URL・応答ハッシュは<a href="./data/bitcoin-vs-stocks/sources.json">取得記録JSON</a>、入力は<a href="./data/bitcoin-vs-stocks/observations.csv">観測値CSV</a>、出力は<a href="./data/bitcoin-vs-stocks/results.json">分析結果JSON</a>に保存した。空欄は欠測のまま保持している。FREDのCSV取得は404で失敗したため使わず、元データ提供者である米連邦準備制度のH.10履歴を取得・解析した。</p>
+<ul><li>円換算の系列 <code>J(t) = USD系列(t) × 円/ドル(t)</code></li><li>100万円の資産額 <code>V(t) = 1,000,000 × J(t) / J(開始日)</code></li><li>累積リターン <code>終値 / 開始値 − 1</code></li><li>CAGR <code>(終了値 / 開始値)^(365.2425 / 暦日数) − 1</code>。営業日数から10年と決め打ちしない。</li><li>DD <code>当日値 / それまでの最高値 − 1</code>。最も負の値を最大DDとする。</li><li>回復日は、その下落前の高値以上に戻った最初の観測日。高値→回復、底値→回復の両方を暦日で計算し、未回復なら日付を作らない。</li><li>年別値は前年の最終共通観測日から当年の最終共通観測日。最初の年は分析開始日、最後の年は分析終了日を使用。</li></ul>
+<p>リポジトリには計算コード・固定入力・テストを保存した。同じスナップショットから、ネット接続なしで再計算できる。市場データは後日修正される可能性があるため、再取得と保存済みデータの再計算は区別している。<a href="./data/bitcoin-vs-stocks/METHOD.md">再現手順と制約</a>も参照してほしい。</p>
+
+<h3 id="data-audit">金融データの最終監査</h3>
+<p>公開前の再確認では、取得時の原応答のハッシュ、CSVへ変換した16,205個の値、共通観測日を照合した。分析コードとは別に50桁精度で計算し、期末資産額・CAGR・最大下落率・回復日が一致した。原応答ではSPY・ACWIの株式分割イベントは0件で、分配金から全日次の調整係数も検証できた。<a href="./data/bitcoin-vs-stocks/AUDIT.md">監査結果一覧</a>と<a href="./data/bitcoin-vs-stocks/audit.json">監査JSON</a>を保存している。</p>
+<p><strong>再取得との区別：</strong>同じURL・期間でも、再取得したETFの調整後終値には最大で相対0.0001％未満の差があった。BTC・ETFの通常終値・為替は一致した。再取得値で計算した期末額はSPYで約0.52円、ACWIで約1.92円上がったが、CAGR・DDの小数点以下2桁表示は変わらない。差が生じた理由は未確認であり、推測で補っていない。表は元の固定入力を維持しており、円単位表示はその入力に対する計算上の丸めである。</p>
+<p><strong>再投資方法との区別：</strong>配信された現金分配を「権利落ち日の終値で税引前再投資」と仮定する別計算に対し、調整後終値方式の期末額はSPYで約0.0671％、ACWIで約0.0399％低かった。この別方式も実際の分配金支払日や投資家の源泉税を再現するものではない。今回は提供元の調整後価格を使う方法を維持し、実際の再投資口数・税引後収益とは同一でないことを明記した。</p>
+
+<h2 id="sources">参考資料・出典</h2>
+<p class="small">すべて2026年11月6日調査。指数・商品・制度の説明は一次情報を優先。数値分析の市場価格はYahoo Finance提供系列、為替はFederal Reserve H.10。比較表・グラフ・計算結果はトピック基地の独自計算。株価指数会社の公式運用成績として掲載したものではない。</p>
+<ol class="refs">
+<li id="ref-sp"><a href="https://www.spglobal.com/spdji/en/indices/equity/sp-500/" target="_blank" rel="noopener noreferrer">S&amp;P Dow Jones Indices — S&amp;P 500</a>：対象市場・指数の概要。</li>
+<li id="ref-msci"><a href="https://www.msci.com/documents/10199/255599/msci-acwi-net.pdf" target="_blank" rel="noopener noreferrer">MSCI — ACWI Index (USD), Net Returns（PDF）</a>：全世界株式の対象と指数の定義。日次計算の入力には使用していない。</li>
+<li id="ref-bitcoin"><a href="https://bitcoin.org/en/faq" target="_blank" rel="noopener noreferrer">Bitcoin.org — FAQ</a>：BTCの基本・リスク。</li>
+<li id="ref-spy"><a href="https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy" target="_blank" rel="noopener noreferrer">State Street — SPY</a>：ETFの運用目標、費用と投資リスク。</li>
+<li id="ref-acwi"><a href="https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf" target="_blank" rel="noopener noreferrer">iShares — MSCI ACWI ETF</a>：対象指数、分配、費用。</li>
+<li id="ref-fx"><a href="https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm" target="_blank" rel="noopener noreferrer">Federal Reserve — H.10 Historical Rates for the Japanese Yen</a>：円／米ドル日次履歴。観測時刻の説明は<a href="https://fred.stlouisfed.org/series/DEXJPUS" target="_blank" rel="noopener noreferrer">FRED DEXJPUSの系列注記</a>も確認した。</li>
+<li id="ref-nta-crypto"><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1524.htm" target="_blank" rel="noopener noreferrer">国税庁 — No.1524 暗号資産を使用することにより利益が生じた場合の課税関係</a>。</li>
+<li id="ref-nta-faq"><a href="https://www.nta.go.jp/publication/pamph/pdf/virtual_currency_faq_03.pdf" target="_blank" rel="noopener noreferrer">国税庁 — 暗号資産等に関する税務上の取扱いについて（FAQ、令和7年12月改訂、PDF）</a>：所得区分、交換・使用、損失等。</li>
+<li id="ref-nta-stock"><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm" target="_blank" rel="noopener noreferrer">国税庁 — No.1463 株式等を譲渡したときの課税</a>。</li>
+<li id="ref-fsa-law"><a href="https://www.fsa.go.jp/common/diet/221/index.html" target="_blank" rel="noopener noreferrer">金融庁 — 第221回国会における金融庁関連法律</a>：成立日を確認。<a href="https://www.fsa.go.jp/common/diet/221/02/01.pdf" target="_blank" rel="noopener noreferrer">法律・理由PDF</a>の施行期日も参照した。</li>
+<li id="ref-fsa-reform"><a href="https://www.fsa.go.jp/access/r7/270.html" target="_blank" rel="noopener noreferrer">金融庁 — アクセスFSA第270号、税制改正の大綱の概要</a>：暗号資産分離課税の条件付きの説明。将来の適用開始を確認するための資料で、2026年の一律適用の根拠にはしていない。</li>
+<li id="ref-nisa"><a href="https://www.fsa.go.jp/policy/nisa2/know/index.html" target="_blank" rel="noopener noreferrer">金融庁 — NISAを知る</a>：投資枠・保有期間・制度の時期。</li>
+<li id="ref-jsda"><a href="https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf" target="_blank" rel="noopener noreferrer">日本証券業協会 — 2024年以降のNISAに関するQ&amp;A（2026年9月、PDF）</a>：外国税・損益通算・取扱商品の注意点。</li>
+<li id="ref-market">Yahoo Financeの取得API（JSON）：<a href="https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">BTC-USD</a>、<a href="https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">SPY</a>、<a href="https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">ACWI</a>。取得範囲は本文の期間で固定し、採用した値をCSVへ保存。</li>
+</ol>
+<section class="related" aria-labelledby="related-heading"><h2 id="related-heading">関連記事</h2><p><a href="./bitcoin-halving.html">第1号：ビットコインの半減期とは？仕組みと価格への影響 →</a></p><p><a href="./bitcoin-four-year-cycle.html">第2号：ビットコインの4年周期説、根拠と限界 →</a></p><p><a href="./crypto-eth-sol-xrp-comparison.html">第3号：イーサリアム・ソラナ・XRPの違いとリスク →</a></p><p><a href="../#original-articles">独自記事一覧に戻る →</a></p></section>
+
+</article></main><footer><a href="../">ホーム</a><a href="../about.html">運営者情報</a><a href="../privacy.html">プライバシー</a><a href="../contact.html">お問い合わせ</a><p>© トピック基地</p></footer></body></html>

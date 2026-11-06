@@ -1,0 +1,178 @@
+{
+  "start": "2016-10-31",
+  "end": "2026-10-30",
+  "calendar_days": 3651,
+  "common_dates": 2486,
+  "raw_to_csv_values_verified": 16205,
+  "source_verification": {
+    "BTC-USD": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.603568+00:00",
+      "raw_sha256_verified": true
+    },
+    "SPY": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.557937+00:00",
+      "raw_sha256_verified": true
+    },
+    "ACWI": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1477872000&period2=1793404800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-06T14:05:51.343839+00:00",
+      "raw_sha256_verified": true
+    },
+    "FED_JPY": {
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "retrieved_at_utc": "2026-11-06T14:07:03.354531+00:00",
+      "raw_sha256_verified": true
+    }
+  },
+  "corporate_actions": {
+    "SPY": {
+      "split_events": 0,
+      "dividend_events": 40,
+      "maximum_daily_adjustment_relative_error": 5.745179487703922e-07,
+      "adjusted_close_growth": 4.163362777701187,
+      "hypothetical_ex_date_close_reinvestment_growth": 4.166158131380546,
+      "adjusted_relative_to_hypothetical": -0.000670966773513304,
+      "note": "Sensitivity only: assumes reinvestment on ex-date at close before investor tax; not payment-date execution or realized holdings."
+    },
+    "ACWI": {
+      "split_events": 0,
+      "dividend_events": 22,
+      "maximum_daily_adjustment_relative_error": 4.832258425624403e-07,
+      "adjusted_close_growth": 3.2394685855094476,
+      "hypothetical_ex_date_close_reinvestment_growth": 3.240760827008085,
+      "adjusted_relative_to_hypothetical": -0.00039874633384484603,
+      "note": "Sensitivity only: assumes reinvestment on ex-date at close before investor tax; not payment-date execution or realized holdings."
+    }
+  },
+  "assets": {
+    "btc": {
+      "usd": {
+        "growth": "110.13023716284020731885177921108254659994035555923",
+        "cagr": "0.6005540839896800391892305844671010845452954090805",
+        "maximum_drawdown": "-0.83036250558168573551035255817470446442895139922771",
+        "peak_date": "2017-12-18",
+        "trough_date": "2018-12-14",
+        "recovery_date": "2020-11-30",
+        "peak_to_recovery_days": 1078
+      },
+      "jpy": {
+        "growth": "165.05385405950746261576216110634619559069400260183",
+        "cagr": "0.6666680949461819330154796161642809144121442613723",
+        "maximum_drawdown": "-0.82892873672316798511731351797656178617758789670639",
+        "peak_date": "2017-12-18",
+        "trough_date": "2018-12-14",
+        "recovery_date": "2020-12-16",
+        "peak_to_recovery_days": 1094
+      },
+      "final_jpy": "165053854.05950746261576216110634619559069400260183",
+      "start_input_usd": "700.97198486328125",
+      "end_input_usd": "77198.2109375"
+    },
+    "spy": {
+      "usd": {
+        "growth": "4.1633627777011873018221434647962151602067270349062",
+        "cagr": "0.1533698719027433988833841962007829307333842608138",
+        "maximum_drawdown": "-0.33717263786002843482397905231485173894118006509845",
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-08-10",
+        "peak_to_recovery_days": 173
+      },
+      "jpy": {
+        "growth": "6.2396948377710671629854507386707112509018815351079",
+        "cagr": "0.2010120660095492445235516860239298658196144742591",
+        "maximum_drawdown": "-0.33741319933896365981996724677436983677198933505499",
+        "peak_date": "2020-02-20",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-09-01",
+        "peak_to_recovery_days": 194
+      },
+      "final_jpy": "6239694.8377710671629854507386707112509018815351079",
+      "start_input_usd": "181.5167236328125",
+      "end_input_usd": "755.719970703125"
+    },
+    "acwi": {
+      "usd": {
+        "growth": "3.2394685855094477424144204511598904788414391186878",
+        "cagr": "0.1247792640277369806036996674788964672525277866544",
+        "maximum_drawdown": "-0.33525032588300065378947099729179595703422899526772",
+        "peak_date": "2020-02-12",
+        "trough_date": "2020-03-23",
+        "recovery_date": "2020-08-24",
+        "peak_to_recovery_days": 194
+      },
+      "jpy": {
+        "growth": "4.8550406220631272917902827550720555021032546753623",
+        "cagr": "0.1712404672631881713856032045450062002265956135966",
+        "maximum_drawdown": "-0.33720945154991447821717775228005609201657887273473",
+        "peak_date": "2020-02-20",
+        "trough_date": "2020-03-16",
+        "recovery_date": "2020-11-09",
+        "peak_to_recovery_days": 263
+      },
+      "final_jpy": "4855040.6220631272917902827550720555021032546753623",
+      "start_input_usd": "48.168392181396484",
+      "end_input_usd": "156.03999328613281"
+    }
+  },
+  "refetch": {
+    "snapshot_identical": false,
+    "original_input_sha256": "e5abaa72ba2ebf15109fd3b60fbfc965bd346a49a9a1b8e4ef26e8f0e676feca",
+    "refetched_input_sha256": "0ac0626d6783bfa6f1845e7dc0ca0b058500e929f4090b574d87dce695932e83",
+    "original_retrieval": {
+      "BTC-USD": "2026-11-06T14:05:51.603568+00:00",
+      "SPY": "2026-11-06T14:05:51.557937+00:00",
+      "ACWI": "2026-11-06T14:05:51.343839+00:00",
+      "FED_JPY": "2026-11-06T14:07:03.354531+00:00"
+    },
+    "refetch_retrieval": {
+      "BTC-USD": "2026-11-06T14:30:10.641578+00:00",
+      "SPY": "2026-11-06T14:30:11.094280+00:00",
+      "ACWI": "2026-11-06T14:30:12.646518+00:00",
+      "FED_JPY": "2026-11-06T14:30:13.018905+00:00"
+    },
+    "differences": {
+      "btc_usd": {
+        "changed_observations": 0,
+        "maximum_relative_difference": "0"
+      },
+      "spy_close_usd": {
+        "changed_observations": 0,
+        "maximum_relative_difference": "0"
+      },
+      "spy_adjusted_usd": {
+        "changed_observations": 1844,
+        "maximum_relative_difference": "7.965885979680891159596E-7"
+      },
+      "acwi_close_usd": {
+        "changed_observations": 0,
+        "maximum_relative_difference": "0"
+      },
+      "acwi_adjusted_usd": {
+        "changed_observations": 1527,
+        "maximum_relative_difference": "5.74800185081892584924E-7"
+      },
+      "usd_jpy": {
+        "changed_observations": 0,
+        "maximum_relative_difference": "0"
+      }
+    },
+    "endpoint_impact": {
+      "btc": {
+        "refetched_final_jpy": "165053854.05950746261576216110634619559069400260183",
+        "difference_from_frozen_jpy": "0E-41"
+      },
+      "spy": {
+        "refetched_final_jpy": "6239695.3622968156804977316576965737010800395430092",
+        "difference_from_frozen_jpy": "0.5245257485175122809190258624501781580079013"
+      },
+      "acwi": {
+        "refetched_final_jpy": "4855042.5445393280003125911199751413294826921687088",
+        "difference_from_frozen_jpy": "1.9224762007085223083649030858273794374933465"
+      }
+    },
+    "cause": "Unverified; do not attribute small adjusted-close differences to a specific cause."
+  }
+}
