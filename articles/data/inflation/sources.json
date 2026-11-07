@@ -1,0 +1,117 @@
+{
+  "start": "2016-09-30",
+  "end": "2026-09-30",
+  "monthly_rows": 121,
+  "us_cpi_missing_months": [
+    "2025-10"
+  ],
+  "missing_policy": "No interpolation; leave US real wealth gap at October 2025. Period and annual end-points must be observed. Annual inflation regimes use December/December, not monthly real-time signals.",
+  "daily_common_rows": 2485,
+  "cpi_rows": 133,
+  "cpi_jp_base": "2025=100 official linked long-run series, nationwide all items NSA",
+  "cpi_us": "CPIAUCNS / CUUR0000SA0, all items urban consumers NSA 1982-84=100",
+  "fx": "Federal Reserve H.10 JPY per USD, New York noon; not ETF 16:00 close or BTC next UTC 00:00",
+  "selection": "All series must be observed on same label date; no interpolation/forward-fill. Monthly row is last common observed date in that calendar month, paired with that calendar month CPI. Ex-post analysis, not a real-time trading rule.",
+  "input_sha256": {
+    "daily.csv": "cbcca59b5670763ceed5e9d918bccab5178fd66d2d587f9a7b6cc6e9db5a4510",
+    "monthly.csv": "b7374ec8aa46fbdd781182b06ddde5cb658ca30dbcfb0b9b7f6332cff38c07e3",
+    "cpi.csv": "1eef366a567b70743bcb8d4aac2a0249146178ec4f229f436eeabe22e37ec57f"
+  },
+  "sources": [
+    {
+      "name": "GLD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "sha256": "b3cf5c35344aa1d5f4ed8848ec90b3c64d800b52d2bbebc9c0ed0ba67ca74e74",
+      "retrieved_at_utc": "2026-11-06T18:16:08.908307+00:00",
+      "bytes": 307326,
+      "file": "raw/GLD.gz"
+    },
+    {
+      "name": "SPY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "sha256": "6d94378b0ac3417bf4743b31cf759cb1bb2ef2f432b570b40b743a002825d09e",
+      "retrieved_at_utc": "2026-11-06T18:16:08.928327+00:00",
+      "bytes": 306408,
+      "file": "raw/SPY.gz"
+    },
+    {
+      "name": "USCPI",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2015-09-01&coed=2026-09-30",
+      "status": 200,
+      "sha256": "3b283e5ebc651257e5524b85dca7dd6039d49bfaa59c12eea06a532ba375ff0a",
+      "retrieved_at_utc": "2026-11-06T18:16:09.593682+00:00",
+      "bytes": 2546,
+      "file": "raw/USCPI.gz"
+    },
+    {
+      "name": "FX",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "status": 200,
+      "sha256": "b979438cc4fb1878b1e4535de16cb94751d6a70fa9f6ac10200275a16652d20e",
+      "retrieved_at_utc": "2026-11-06T18:16:09.717510+00:00",
+      "bytes": 1131928,
+      "file": "raw/FX.gz"
+    },
+    {
+      "name": "JP_OFFICIAL",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=1&statInfId=000040482943",
+      "status": 200,
+      "sha256": "29b63b7aa5cba598b6ab9d7fff839094a5068004bcd571afd20344e14e847c41",
+      "retrieved_at_utc": "2026-11-06T18:17:44.775586+00:00",
+      "file": "raw/JP_OFFICIAL.gz"
+    },
+    {
+      "name": "BTC",
+      "file": "raw/BTC.gz",
+      "sha256": "1a97d56bec02b600a4f255cb2051206be7b9ffb75d2d87825ddeadb96a396956",
+      "provider": "Bitstamp",
+      "upstream_manifest": "articles/data/bitcoin-crash/sources.json",
+      "retrieved_at_utc": "2026-11-06",
+      "url": "https://www.bitstamp.net/api/"
+    }
+  ],
+  "distribution_audit": {
+    "GLD": {
+      "dividends_in_comparison_period": 0,
+      "splits": 0,
+      "max_adjustment_relative_error": 0,
+      "tolerance": 1e-05
+    },
+    "SPY": {
+      "dividends_in_comparison_period": 40,
+      "splits": 0,
+      "max_adjustment_relative_error": 6.065335480531786e-07,
+      "tolerance": 1e-05
+    }
+  },
+  "excluded_sources": [
+    {
+      "series": "JPNCPIALLMINMEI",
+      "reason": "ends 2021-06; not used or spliced"
+    },
+    {
+      "series": "CPALTT01JPM661N",
+      "reason": "HTTP404; not used"
+    }
+  ],
+  "cpi_primary_crosscheck": [
+    {
+      "name": "bls2015",
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2015&endyear=2024",
+      "sha256": "e550ecbb5d3d08d952df97752877cc6a485898b8ef7e79193b06b2c0d248ddd4",
+      "retrieved_at_utc": "2026-11-06T18:18:56.389217+00:00",
+      "status": 200,
+      "file": "raw/bls2015.gz"
+    },
+    {
+      "name": "bls2025",
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2025&endyear=2026",
+      "sha256": "4d65c299f841dc4d32f24cf22e09e28b4ad1bf390ed78776f87566dffb71a57b",
+      "retrieved_at_utc": "2026-11-06T18:19:00.356674+00:00",
+      "status": 200,
+      "file": "raw/bls2025.gz"
+    }
+  ]
+}
