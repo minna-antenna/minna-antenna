@@ -94,6 +94,7 @@ def plots():
     def save(fig,name,desc):
         fig.text(.01,.005,'2016-09 to 2026-09 | Yahoo Finance / Bitstamp / Fed H.10 / BLS-FRED / Statistics Japan',fontsize=7.5)
         fig.tight_layout(rect=[0,.04,1,1]);fig.savefig(DATA/(name+'.svg'),metadata={'Date':None,'Description':desc});fig.savefig(DATA/(name+'.png'),dpi=160);plt.close(fig)
+        svg=DATA/(name+'.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
         for ext in ['svg','png']:artifacts.append(dict(file=name+'.'+ext,sha256=hashlib.sha256((DATA/(name+'.'+ext)).read_bytes()).hexdigest()))
     for name,mode,title,unit in [('usd-wealth','usd_nominal','USD nominal wealth | monthly, log scale','Index: 2016-09 = 100'),('million-yen','jpy_nominal','JPY 1m | nominal and real (dashed), log scale','JPY 10,000, initial 100')]:
         fig,ax=plt.subplots(figsize=(9,5.4))
