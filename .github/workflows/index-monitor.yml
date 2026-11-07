@@ -1,0 +1,38 @@
+name: Monitor Google indexing
+on:
+  schedule:
+    # UTC 23:17 = JST 08:17 next day; schedules can be delayed by GitHub.
+    - cron: '17 23 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-index-monitor
+  cancel-in-progress: false
+jobs:
+  inspect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Inspect published sitemap and Google index
+        env:
+          GSC_CLIENT_ID: ${{ secrets.GSC_CLIENT_ID }}
+          GSC_CLIENT_SECRET: ${{ secrets.GSC_CLIENT_SECRET }}
+          GSC_REFRESH_TOKEN: ${{ secrets.GSC_REFRESH_TOKEN }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+        run: python scripts/monitor_indexing.py
+      - name: Save diagnostic reports even on authentication or API failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: google-index-status-${{ github.run_id }}-${{ github.run_attempt }}
+          path: monitoring-output/
+          retention-days: 90
+          if-no-files-found: error
