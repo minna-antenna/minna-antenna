@@ -1,0 +1,478 @@
+{
+  "scope": "articles/market-cap-per-pbr-guide.html",
+  "method": "HTTP GET; follow redirects; retry network errors, 429 and 5xx up to 3 attempts; distinguish restrictions and TLS; no content correctness certification",
+  "all_reachable": true,
+  "counts": {
+    "reachable": 26
+  },
+  "links": [
+    {
+      "url": "https://global.toyota/jp/ir/financial-results/",
+      "checked_at_utc": "2026-11-07T07:35:50.692335+00:00",
+      "status": 200,
+      "final_url": "https://global.toyota/jp/ir/financial-results/",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 16591,
+      "sha256": "b03406bd43ff5b4cae4f3610581be1fd1939ed5077676b9fbf16dab3a3ca5442",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://global.toyota/jp/ir/financial-results/archives/03.html",
+      "checked_at_utc": "2026-11-07T07:35:50.694664+00:00",
+      "status": 200,
+      "final_url": "https://global.toyota/jp/ir/financial-results/archives/03.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 44738,
+      "sha256": "2ad83bc984f1da7d83524dd167369aeb04bb761d06e67817f0d23c8e13466800",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://global.toyota/pages/global_toyota/ir/financial-results/2026_4q_summary_jp.pdf",
+      "checked_at_utc": "2026-11-07T07:35:50.697474+00:00",
+      "status": 200,
+      "final_url": "https://global.toyota/pages/global_toyota/ir/financial-results/2026_4q_summary_jp.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 1417501,
+      "sha256": "e89768320cc76f2c855e351f0dfaab82ad390e64de901881a9a4ee0ffa8e76fe",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://group.ntt/jp/ir/library/results/",
+      "checked_at_utc": "2026-11-07T07:35:50.700371+00:00",
+      "status": 200,
+      "final_url": "https://group.ntt/jp/ir/library/results/",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 201305,
+      "sha256": "3c2d4c3da503825c3592f9d4ccfe2be6a5d2d9f3330fdb462cec0d4e67f61ea5",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://group.ntt/jp/ir/library/results/2025/pdf/fy2025q4kessan0508.pdf",
+      "checked_at_utc": "2026-11-07T07:35:51.992046+00:00",
+      "status": 200,
+      "final_url": "https://group.ntt/jp/ir/library/results/2025/pdf/fy2025q4kessan0508.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 378728,
+      "sha256": "ad442dbe4e9300f78ab54c820b85c00e5136f10ccda3594f0592660b1186ffc7",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/5401.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:51.997593+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/5401.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 40096,
+      "sha256": "35e73fa9be8df1c0a293bc5fdcf74e73f246978a1543b7c2b4d21f95274395b6",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:52.407835+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 27896,
+      "sha256": "870df27de8ec0481aebff9a2aa51959551bd7003bbd72266db8d8bd56e322438",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/7203.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:52.593540+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/7203.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 27843,
+      "sha256": "690cc6c1d4f48b2bf26811c0f0b33daea803e86c76faff6617f9f733e96282da",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/7974.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:52.720372+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/7974.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 27927,
+      "sha256": "0b2e952bcadf5f572236062c7ed52480a216c2cf4920a74e8521442c06d8a066",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/8306.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:52.802236+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/8306.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 27983,
+      "sha256": "9b86f933afd54e5863e2ebe7977aeede3ce1f4b995f018e748da7939ef737b4f",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/9432.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "checked_at_utc": "2026-11-07T07:35:52.835026+00:00",
+      "status": 200,
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/9432.T?period1=1740787200&period2=1794009600&interval=1d&events=div%2Csplits",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/json;charset=utf-8",
+      "bytes": 42393,
+      "sha256": "0c1cc83d09ab39cf32e70862c356be2300c7c309a30cf70c06b586909d14f08a",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/index.html",
+      "checked_at_utc": "2026-11-07T07:35:52.969980+00:00",
+      "status": 200,
+      "final_url": "https://www.fsa.go.jp/policy/nisa2/know/index.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 39530,
+      "sha256": "10690b3bd2b222baa2bb0e71ab5ea81183d9b6080f3e0e7fefe11d0f7c7bf456",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.jpx.co.jp/corporate/news/news-releases/1020/20261027-01.html",
+      "checked_at_utc": "2026-11-07T07:35:52.983962+00:00",
+      "status": 200,
+      "final_url": "https://www.jpx.co.jp/corporate/news/news-releases/1020/20261027-01.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 26341,
+      "sha256": "74ad34a2f34b8f7537afe4ba85a818992ea8c496bce45239d4cbc7f95a3d8657",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.jpx.co.jp/equities/follow-up/02.html",
+      "checked_at_utc": "2026-11-07T07:35:53.149646+00:00",
+      "status": 200,
+      "final_url": "https://www.jpx.co.jp/equities/follow-up/02.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 47152,
+      "sha256": "9e8a2b0454b04b1f30e62e69cc6553c2206ad623b0aa4dce41756ef6656d522b",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.jpx.co.jp/glossary/ka/73.html",
+      "checked_at_utc": "2026-11-07T07:35:53.759930+00:00",
+      "status": 200,
+      "final_url": "https://www.jpx.co.jp/glossary/ka/73.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 26430,
+      "sha256": "0ec081612fe45e79ec6da262126507a834ca174fbba1739a0edf6ab9e24dd768",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.jpx.co.jp/glossary/ka/74.html",
+      "checked_at_utc": "2026-11-07T07:35:53.813540+00:00",
+      "status": 200,
+      "final_url": "https://www.jpx.co.jp/glossary/ka/74.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 26402,
+      "sha256": "a9e4236a0d5563805c0e57eff5cd9434515ee79692bebf553770a3c4cc3e3540",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf",
+      "checked_at_utc": "2026-11-07T07:35:53.849389+00:00",
+      "status": 200,
+      "final_url": "https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 786340,
+      "sha256": "6447d50a00ebad8cc3557b4c59f02451769b3b9d7f61f867d4a511c5d8f85797",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mufg.jp/dam/ir/fs/2025/pdf/summary2603_ja.pdf",
+      "checked_at_utc": "2026-11-07T07:35:54.147550+00:00",
+      "status": 200,
+      "final_url": "https://www.mufg.jp/dam/ir/fs/2025/pdf/summary2603_ja.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 1500599,
+      "sha256": "ac59128be119c62d8a433e4f0d9b2563005eaee42383c871d7a7671e89de7aea",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mufg.jp/ir/fs/2025/index.html",
+      "checked_at_utc": "2026-11-07T07:35:54.311545+00:00",
+      "status": 200,
+      "final_url": "https://www.mufg.jp/ir/fs/2025/index.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 44606,
+      "sha256": "ef5822792bed7326c69b8344246cc0ee90c9393943e47cdb2845e4b8027ade02",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mufg.jp/ir/fs/2026/index.html",
+      "checked_at_utc": "2026-11-07T07:35:54.374408+00:00",
+      "status": 200,
+      "final_url": "https://www.mufg.jp/ir/fs/2026/index.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 44985,
+      "sha256": "d2343abb5458f26efb6e6fdad4e499a6e90e00c922c19ff39d3407e9c08105e3",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nintendo.co.jp/ir/library/earnings/index.html",
+      "checked_at_utc": "2026-11-07T07:35:54.810971+00:00",
+      "status": 200,
+      "final_url": "https://www.nintendo.co.jp/ir/library/earnings/index.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 4331,
+      "sha256": "69d25da92bc84f44281bf59a74ec5e4289ded5d1bc8044448c1e889ec15761ec",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nintendo.co.jp/ir/pdf/2026/260508.pdf",
+      "checked_at_utc": "2026-11-07T07:35:54.867201+00:00",
+      "status": 200,
+      "final_url": "https://www.nintendo.co.jp/ir/pdf/2026/260508.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 454014,
+      "sha256": "5aa4d5ff9f91b3b7496beed41043e76ce02e609502e570dd0a720d25950b5ba5",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nipponsteel.com/ir/library/settlement/",
+      "checked_at_utc": "2026-11-07T07:35:55.243062+00:00",
+      "status": 200,
+      "final_url": "https://www.nipponsteel.com/ir/library/settlement/",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 180666,
+      "sha256": "44b126e1a827cf7f73135d8c5f0707b8f137cb08783282fde56784c91466dac6",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nipponsteel.com/ir/library/settlement/pdf/20260513_100.pdf",
+      "checked_at_utc": "2026-11-07T07:35:55.589928+00:00",
+      "status": 200,
+      "final_url": "https://www.nipponsteel.com/ir/library/settlement/pdf/20260513_100.pdf",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 1467268,
+      "sha256": "6a49b63c6cf375a235cf5db6b595e2c16d773e40c21d5251e8b2402596319208",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sony.com/ja/SonyInfo/IR/library/er/archive.html",
+      "checked_at_utc": "2026-11-07T07:35:55.675964+00:00",
+      "status": 200,
+      "final_url": "https://www.sony.com/ja/SonyInfo/IR/library/er/archive.html",
+      "redirected": false,
+      "classification": "reachable",
+      "content_type": "text/html",
+      "bytes": 187007,
+      "sha256": "93670301f6455f7f47e8efa978582c8f2f6a064d5e4c7959c8c2f7d2d1c30ee2",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sony.com/ja/SonyInfo/IR/library/presen/er/pdf/25q4_sony.pdf",
+      "checked_at_utc": "2026-11-07T07:35:56.036374+00:00",
+      "status": 200,
+      "final_url": "https://www.sony.com/ja/SonyInfo/IR/library/er/pdf/25q4_sony.pdf",
+      "redirected": true,
+      "classification": "reachable",
+      "content_type": "application/pdf",
+      "bytes": 409578,
+      "sha256": "b26def75caa46317d9896f30ddd03b5b37c062eb025433c2fbedca177493795e",
+      "attempts": [
+        {
+          "number": 1,
+          "status": 200,
+          "classification": "reachable"
+        }
+      ]
+    }
+  ]
+}

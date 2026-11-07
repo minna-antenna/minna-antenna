@@ -59,6 +59,24 @@ class ExternalLinkTests(unittest.TestCase):
         self.assertEqual(result['classification'],'soft_404')
         self.assertEqual(result['content_problem'],'soft_not_found_page')
 
+    def test_aws_javascript_challenge_with_http_202_is_not_content(self):
+        class Challenge(Response):
+            status=202
+            headers={'Content-Type':'text/html'}
+            def read(self):return b'<html><title></title><div id="challenge-container"></div><script>AwsWafIntegration.getToken()</script></html>'
+        result=check('https://official.example/',opener=lambda *a,**k:Challenge(),sleeper=lambda _:None)
+        self.assertEqual(result['status'],202)
+        self.assertEqual(result['classification'],'access_restricted')
+        self.assertEqual(result['content_problem'],'soft_access_restriction')
+
+    def test_legitimate_http_202_without_challenge_is_not_blanket_rejected(self):
+        class Accepted(Response):
+            status=202
+            headers={'Content-Type':'text/html'}
+            def read(self):return b'<html><title>Official guide</title><p>Public methodology.</p></html>'
+        result=check('https://official.example/',opener=lambda *a,**k:Accepted(),sleeper=lambda _:None)
+        self.assertEqual(result['classification'],'reachable')
+
     def test_saved_article_source_audit_covers_current_links_without_unverified_results(self):
         from scripts.check_external_links import Links,ROOT
         page=ROOT/'articles/crypto-tax-japan-guide.html'
