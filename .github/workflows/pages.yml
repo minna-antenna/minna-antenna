@@ -48,7 +48,7 @@ jobs:
       - name: Stage public files only
         run: |
           mkdir -p _site/articles _site/data
-          cp index.html about.html privacy.html contact.html sitemap.xml googleb899a57e1737e8bb.html _site/
+          cp index.html about.html privacy.html contact.html sitemap.xml robots.txt googleb899a57e1737e8bb.html _site/
           cp -R articles/. _site/articles/
           cp data/news.json _site/data/
       - uses: actions/upload-pages-artifact@v3
