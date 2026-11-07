@@ -55,6 +55,9 @@ def body_problem(url,body,content_type):
     if not body:return 'empty_response'
     if 'html' in content_type.lower() or b'<html' in body[:1024].lower():
         text=decode_html(body,content_type)
+        # A WAF may return HTTP 200/202 with an empty title and only a JS challenge.
+        if 'AwsWafIntegration' in text and 'challenge-container' in text:
+            return 'soft_access_restriction'
         title=re.search(r'<title\b[^>]*>(.*?)</title>',text,re.S|re.I)
         heading=title[1] if title else ''
         if re.search(r'page not found|指定されたページを表示できませんでした|ページが見つかりません',heading,re.I):
