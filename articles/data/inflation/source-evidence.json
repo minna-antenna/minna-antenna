@@ -1,0 +1,155 @@
+{
+  "status": "reviewed_for_declared_claims",
+  "checked_on_jst": "2026-11-07",
+  "numerical_snapshot_acquired_on_utc": "2026-11-06",
+  "sources": [
+    {
+      "url": "https://bitcoin.org/en/halving",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:06.815472+00:00",
+      "sha256": "8ff82bd013906007b20a057bc3347022ee47970d41342614dab0615e6ce46d17",
+      "verified_claim": "210000ブロックごとの半減ルール。希少性と価格のインフレ連動は別として説明。"
+    },
+    {
+      "url": "https://faq.sbisec.co.jp/answer/5ed9d6a550df500012206b8b/",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:07.709195+00:00",
+      "sha256": "f25b84a0ae5170eb5b9856065e574fc3d37ce850245eb229fceedf4212a79fd8",
+      "verified_claim": "証券会社の自社取扱FAQ。NISAの外国株配当でも外国税と国内課税が異なることを確認。個別税額は計算しない。"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:06.954326+00:00",
+      "sha256": "cf53dd109f18a61afe183753f0d0c804d300cd5a13f505ac5bfec2e409964049",
+      "verified_claim": "BLS由来の米国CPI-U・総合・季節調整なし・1982–84=100。原BLS APIにも照合。"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:06.757446+00:00",
+      "sha256": "9047d7685a49d4e41b525ece6d224b5629dd3fe2b4bb2aa2d2fa8ad7a6aa3d0a",
+      "verified_claim": "GLD/SPYのUSD市場価格・adjusted close・分配金/分割イベントの取得元。保存原応答を数値監査。"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:07.229394+00:00",
+      "sha256": "7251738d21580a82406981e1b22b05c40358f43c90ff3d20afb0b654aa7de56b",
+      "verified_claim": "GLD/SPYのUSD市場価格・adjusted close・分配金/分割イベントの取得元。保存原応答を数値監査。"
+    },
+    {
+      "url": "https://www.bitstamp.net/api/",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:10.465677+00:00",
+      "sha256": "e3ba88d45c4cf11ca130cf6a8c7a05114de82f00a174d02f1a2f7156df4d8e8f",
+      "verified_claim": "BTC/USD現物OHLCの公式仕様。第8号で取得した同一スナップショットを再利用。"
+    },
+    {
+      "url": "https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:07.234627+00:00",
+      "sha256": "fada646ba27ac327b1719bd2f9c442b2fd1d3d9ae2d062ba8a4f6464398584ca",
+      "verified_claim": "政府閉鎖による2025年10月のCPI調査中断と欠測。独自に補間しない。"
+    },
+    {
+      "url": "https://www.bls.gov/cpi/questions-and-answers.htm",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:07.465908+00:00",
+      "sha256": "afb9476c1492b0be92896a75e392f5452158c8c3e880b3be4ba04a5960b0f65b",
+      "verified_claim": "CPIの対象、消費者の物価変動、季節調整と基準。個々の家計との違いを明記。"
+    },
+    {
+      "url": "https://www.chicagofed.org/publications/chicago-fed-letter/2021/464",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:07.791934+00:00",
+      "sha256": "78d0838e768c2e5bc91190f69300a18d4aeec3c8f2316a525df2e92184eaf088",
+      "verified_claim": "金価格と実質金利・期待インフレ等を検討する研究。著者の見解であり将来保証としない。"
+    },
+    {
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=1&statInfId=000040482943",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:09.068161+00:00",
+      "sha256": "29b63b7aa5cba598b6ab9d7fff839094a5068004bcd571afd20344e14e847c41",
+      "verified_claim": "2025年基準・全国総合の公式長期接続指数の総合列。2026年9月102.2、旧基準と無調整で接続しない。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:08.017656+00:00",
+      "sha256": "eaeb02f3ba29987609b34771ac0597cf295d296a9ee5f29c365516bbaa4abf89",
+      "verified_claim": "2022年3月16日FOMCの金利目標引上げ。資産の下落を単独原因と断定しない。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:08.390151+00:00",
+      "sha256": "b979438cc4fb1878b1e4535de16cb94751d6a70fa9f6ac10200275a16652d20e",
+      "verified_claim": "H.10日本円/米ドル、NY正午。ETF/BTC終値とは同時でない制約を掲載。"
+    },
+    {
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/index.html",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:08.471273+00:00",
+      "sha256": "10690b3bd2b222baa2bb0e71ab5ea81183d9b6080f3e0e7fefe11d0f7c7bf456",
+      "verified_claim": "NISAの制度と対象商品の基本。元本保証とせず、個別商品の適格性を認定しない。"
+    },
+    {
+      "url": "https://www.gold.org/goldhub/research/relevance-of-gold-as-a-strategic-asset/key-attributes-return",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:08.624480+00:00",
+      "sha256": "4cf1595448f41bf87a12fbf841d104437320dc6ced0cff21c2c156698b715033",
+      "verified_claim": "金の長期収益・需要についての業界団体資料。利害関係のある団体の研究として位置付ける。"
+    },
+    {
+      "url": "https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:10.451850+00:00",
+      "sha256": "6447d50a00ebad8cc3557b4c59f02451769b3b9d7f61f867d4a511c5d8f85797",
+      "verified_claim": "2026年9月NISA Q&A。対象商品、外貨建て購入時の枠換算、再投資等。外国税の根拠として誤用しない。"
+    },
+    {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1535.htm",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:09.541631+00:00",
+      "sha256": "2df611cd2f2be74d7f7502b7c7cf9bdedcb63630cf8c51ee2b1247cfe6402bf3",
+      "verified_claim": "NISAの非課税対象と条件。物価調整・元本保証の制度ではない。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/etfs/spdr-gold-shares-gld",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:09.796696+00:00",
+      "sha256": "af59908c9cc302ef18a36a55e0a3de2f96ed781edb59fe7e8e150054fa3abc97",
+      "verified_claim": "GLDは金地金価格から費用を差し引いた連動を目指す。公式現在経費率0.40%。過去実績へ二重控除しない。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:09.889428+00:00",
+      "sha256": "0ff619e48928ea1f68dd1e4885c1d0ac189bbe2dfa42f1c64666ff0b52ee3e3c",
+      "verified_claim": "SPYの運用目標はS&P500の価格と配当。公式現在経費率0.0945%。個人の税引後再投資とは区別。"
+    },
+    {
+      "url": "https://www.stat.go.jp/data/cpi/1.html",
+      "status": 200,
+      "retrieved_at_utc": "2026-11-07T02:37:10.624450+00:00",
+      "sha256": "6bc4120cced906381819455b20340901d25b5caaf10c35c26b6931c7bfc8e53d",
+      "verified_claim": "2025年基準の旧指数接続と全国月次CPIの案内。公表指数の比と公式丸め前年比の差に注意。"
+    }
+  ],
+  "restrictions": [
+    {
+      "url": "https://www.spdrgoldshares.com/usa/gld/",
+      "observed_http": 403,
+      "classification": "access_restricted_not_proven_deleted",
+      "replacement": "https://www.ssga.com/us/en/individual/etfs/spdr-gold-shares-gld"
+    }
+  ],
+  "limits": [
+    "Proxy ETF prices, not spot gold or a literal equity index",
+    "US and Japan CPI separated; US October 2025 gap retained",
+    "FX noon/ETF close/BTC UTC close not simultaneous",
+    "Year-end inflation regimes are retrospective, not trading signals",
+    "No optimal allocation or causal inflation-sensitivity estimate"
+  ]
+}
