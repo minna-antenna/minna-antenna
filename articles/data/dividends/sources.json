@@ -1,0 +1,107 @@
+{
+  "acquired_utc": "2026-11-07T02:56:58.695449+00:00",
+  "sources": [
+    {
+      "key": "vym-factsheet",
+      "url": "https://fund-docs.vanguard.com/F0923.pdf",
+      "status": 200,
+      "bytes": 469863,
+      "retrieved_utc": "2026-11-07T02:56:58.695449+00:00",
+      "sha256": "bd3b523ba3eb7f3bdb8c215891d1cc19c82fd4ee7a8718cd493f1e3aeaff8131"
+    },
+    {
+      "key": "VYM",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/VYM?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "bytes": 302661,
+      "retrieved_utc": "2026-11-07T02:56:58.735179+00:00",
+      "sha256": "40162673b524364d5b8445722eaf53f2a0bc96500f0ae6a901b13aa2ab07e48d"
+    },
+    {
+      "key": "SPY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "status": 200,
+      "bytes": 306406,
+      "retrieved_utc": "2026-11-07T02:56:58.686809+00:00",
+      "sha256": "ac47c12697bd5efe119141807114d7bb7f789e6dbafdf378c2b90ca56936c154"
+    },
+    {
+      "key": "spy",
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": 200,
+      "bytes": 237985,
+      "retrieved_utc": "2026-11-07T02:56:58.636761+00:00",
+      "sha256": "0ff619e48928ea1f68dd1e4885c1d0ac189bbe2dfa42f1c64666ff0b52ee3e3c"
+    },
+    {
+      "key": "nta1330",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1330.htm",
+      "status": 200,
+      "bytes": 21400,
+      "retrieved_utc": "2026-11-07T02:56:59.096090+00:00",
+      "sha256": "e97f7323c284b0e2b61c75c2b9a5c05682dea7ad740cd0d8a59c47468b3cd730"
+    },
+    {
+      "key": "nta1331",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1331.htm",
+      "status": 200,
+      "bytes": 24458,
+      "retrieved_utc": "2026-11-07T02:56:59.218907+00:00",
+      "sha256": "621495555b3d1fa3b6a0144812b873f95c704b51e928316642b802b9b42865d8"
+    },
+    {
+      "key": "nta1463",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm",
+      "status": 200,
+      "bytes": 23704,
+      "retrieved_utc": "2026-11-07T02:56:59.456249+00:00",
+      "sha256": "528a157f810c233309727cffd3587db2d4dccc9556f7fd83354d83051cb5c405"
+    },
+    {
+      "key": "nta1240",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1240.htm",
+      "status": 200,
+      "bytes": 49650,
+      "retrieved_utc": "2026-11-07T02:56:59.603393+00:00",
+      "sha256": "ca437c012620246a0254060321381e94382aec304dfa6e0fcaa01c8b62b40ddc"
+    },
+    {
+      "key": "fsa",
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/index.html",
+      "status": 200,
+      "bytes": 39530,
+      "retrieved_utc": "2026-11-07T02:56:59.167345+00:00",
+      "sha256": "10690b3bd2b222baa2bb0e71ab5ea81183d9b6080f3e0e7fefe11d0f7c7bf456"
+    },
+    {
+      "key": "jsda",
+      "url": "https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf",
+      "status": 200,
+      "bytes": 786340,
+      "retrieved_utc": "2026-11-07T02:56:59.829485+00:00",
+      "sha256": "6447d50a00ebad8cc3557b4c59f02451769b3b9d7f61f867d4a511c5d8f85797"
+    },
+    {
+      "key": "sbi",
+      "url": "https://faq.sbisec.co.jp/answer/5ed9d6a550df500012206b8b/",
+      "status": 200,
+      "bytes": 107106,
+      "retrieved_utc": "2026-11-07T02:56:59.961587+00:00",
+      "sha256": "f25b84a0ae5170eb5b9856065e574fc3d37ce850245eb229fceedf4212a79fd8"
+    }
+  ],
+  "input_sha256": {
+    "raw/VYM.json.gz": "22a689c52ed29889e2101b559e8eb500721e4859bde0e6965f12c44a950a048c",
+    "raw/SPY.json.gz": "e45f2930ecb12d059e7bd76bacbb754c5a873569728bde88be425332ed66a0d9"
+  },
+  "excluded_sources": [
+    {
+      "url": "https://www.toushin.or.jp/investmenttrust/costtax/tax/",
+      "reason": "HTTP 200 redirects to a generic association learning index; no tax claim verified. Replaced with JSDA Q37-38."
+    },
+    {
+      "url": "https://investor.vanguard.com/investment-products/etfs/profile/vym",
+      "reason": "Dynamic page lacks product facts in fetched text. Use official static F0923.pdf instead."
+    }
+  ]
+}

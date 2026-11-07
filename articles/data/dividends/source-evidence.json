@@ -1,0 +1,88 @@
+{
+  "status": "reviewed_for_declared_claims",
+  "review_date": "2026-11-07",
+  "sources": [
+    {
+      "url": "https://fund-docs.vanguard.com/F0923.pdf",
+      "retrieved_at_utc": "2026-11-07T02:56:58.695449+00:00",
+      "sha256": "bd3b523ba3eb7f3bdb8c215891d1cc19c82fd4ee7a8718cd493f1e3aeaff8131",
+      "verified_claim": "2026-09-30 factsheet: VYM tracks FTSE High Dividend Yield Index, US high-dividend universe excluding REITs, inception 2006-11-10, expense0.04%, quarterly; 593 stocks, top3/sector3; market annualized 5y11.64%,10y11.28%.",
+      "review_notes_normalized": "Expense ratio 0.04%; Dividend schedule Quarterly; Inception date 2006-11-10; Market price return 11.64 11.28"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/VYM?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-07T02:56:58.735179+00:00",
+      "sha256": "40162673b524364d5b8445722eaf53f2a0bc96500f0ae6a901b13aa2ab07e48d",
+      "verified_claim": "Frozen VYM historical close, adjusted close and distributions; event reconstruction agrees within 1e-5, no split events.",
+      "review_notes_normalized": "chart.result[0].timestamp / indicators.quote / indicators.adjclose / events.dividends"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1441065600&period2=1790812800&interval=1d&events=div%2Csplits",
+      "retrieved_at_utc": "2026-11-07T02:56:58.686809+00:00",
+      "sha256": "ac47c12697bd5efe119141807114d7bb7f789e6dbafdf378c2b90ca56936c154",
+      "verified_claim": "Frozen SPY historical close, adjusted close and distributions; event reconstruction agrees within 1e-5, no split events.",
+      "review_notes_normalized": "chart.result[0].timestamp / indicators.quote / indicators.adjclose / events.dividends"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "retrieved_at_utc": "2026-11-07T02:56:58.636761+00:00",
+      "sha256": "0ff619e48928ea1f68dd1e4885c1d0ac189bbe2dfa42f1c64666ff0b52ee3e3c",
+      "verified_claim": "SPY S&P500, inception1993-01-22, current expense0.0945%, quarterly; dated Nov5 holdings/sectors, Sept30 annual market performance13.65/15.18 distinct from our Yahoo adjustment11/5/10 calculation.",
+      "review_notes_normalized": "Gross Expense Ratio 0.0945%; Distribution Frequency Quarterly; Market Value Sep 30 2026"
+    },
+    {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1330.htm",
+      "retrieved_at_utc": "2026-11-07T02:56:59.096090+00:00",
+      "sha256": "e97f7323c284b0e2b61c75c2b9a5c05682dea7ad740cd0d8a59c47468b3cd730",
+      "verified_claim": "General Japanese listed share cash dividend withholding and election rules, exceptions for large shareholders; page law date2026-04-01.",
+      "review_notes_normalized": "15.315パーセント（他に地方税5パーセント）"
+    },
+    {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1331.htm",
+      "retrieved_at_utc": "2026-11-07T02:56:59.218907+00:00",
+      "sha256": "621495555b3d1fa3b6a0144812b873f95c704b51e928316642b802b9b42865d8",
+      "verified_claim": "Listed-share dividends may choose separate taxation; no dividend credit then, qualifying loss offsets subject to requirements.",
+      "review_notes_normalized": "申告分離課税; 配当控除の適用はありません"
+    },
+    {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm",
+      "retrieved_at_utc": "2026-11-07T02:56:59.456249+00:00",
+      "sha256": "528a157f810c233309727cffd3587db2d4dccc9556f7fd83354d83051cb5c405",
+      "verified_claim": "Stock disposal profit, not gross proceeds, is separately taxed; cost and commission deducted.",
+      "review_notes_normalized": "株式等の譲渡所得等の金額 = 譲渡価額 - (取得費 + 委託手数料等)"
+    },
+    {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1240.htm",
+      "retrieved_at_utc": "2026-11-07T02:56:59.603393+00:00",
+      "sha256": "ca437c012620246a0254060321381e94382aec304dfa6e0fcaa01c8b62b40ddc",
+      "verified_claim": "Foreign tax credit has qualifying foreign income tax and credit limits, return documentation; no unconditional full refund.",
+      "review_notes_normalized": "所得税の控除限度額; 外国所得税を課されていることを証する書類"
+    },
+    {
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/index.html",
+      "retrieved_at_utc": "2026-11-07T02:56:59.167345+00:00",
+      "sha256": "10690b3bd2b222baa2bb0e71ab5ea81183d9b6080f3e0e7fefe11d0f7c7bf456",
+      "verified_claim": "Current NISA annual120/240, combined1800 with growth1200, unlimited holding; product restrictions apply.",
+      "review_notes_normalized": "年間投資枠; 120万円; 240万円; 1,800万円; 1,200万円"
+    },
+    {
+      "url": "https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf",
+      "retrieved_at_utc": "2026-11-07T02:56:59.829485+00:00",
+      "sha256": "6447d50a00ebad8cc3557b4c59f02451769b3b9d7f61f867d4a511c5d8f85797",
+      "verified_claim": "2026-09 Q19-22 domestic listed payout method, Q35 FX, Q36 cash distribution reinvestment consumes allowance, Q37-38 ordinary versus return-of-capital domestic funds.",
+      "review_notes_normalized": "株式数比例配分方式; 再投資分は年間投資枠; 元本払戻金（特別分配金）"
+    },
+    {
+      "url": "https://faq.sbisec.co.jp/answer/5ed9d6a550df500012206b8b/",
+      "retrieved_at_utc": "2026-11-07T02:56:59.961587+00:00",
+      "sha256": "f25b84a0ae5170eb5b9856065e574fc3d37ce850245eb229fceedf4212a79fd8",
+      "verified_claim": "Broker official implementation FAQ: foreign tax still applies to NISA foreign dividends and foreign credit not applicable to NISA; ancillary to NTA legal authority.",
+      "review_notes_normalized": "NISA口座で買付した外国株式の配当金は、外国税は課税されますが、国内の所得税・住民税は非課税になります。外国税のみ課税されることから二重課税に該当しないため、外国税額控除の適用を受けることができません。"
+    }
+  ],
+  "limitations": [
+    "SPY Yahoo adjusted-close CAGR differs about 0.05 percentage point from issuer market return; both source-specific calculations explicitly distinguished; exact issuer reinvestment-price reconciliation unverified.",
+    "Generic association tax redirect excluded despite200; replaced by JSDA Q37-38.",
+    "No universal foreign tax rate or after-tax investor return claimed."
+  ]
+}
