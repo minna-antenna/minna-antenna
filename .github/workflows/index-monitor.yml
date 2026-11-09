@@ -27,7 +27,7 @@ jobs:
           GSC_CLIENT_SECRET: ${{ secrets.GSC_CLIENT_SECRET }}
           GSC_REFRESH_TOKEN: ${{ secrets.GSC_REFRESH_TOKEN }}
           GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
-        run: python scripts/monitor_indexing.py
+        run: python scripts/diagnose_indexing.py
       - name: Save diagnostic reports even on authentication or API failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
