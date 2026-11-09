@@ -114,3 +114,25 @@ python scripts/monitor_indexing.py --output /tmp/index-monitor-check
 - token失効・Testing期限: https://developers.google.com/identity/protocols/oauth2#expiration
 - 手動再クロール申請: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
 - GitHub定期実行の制約: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
+
+## 記事を起点にした一括技術診断（追加）
+
+```sh
+python scripts/diagnose_indexing.py --output monitoring-output
+```
+
+`articles/*.html` を正として全件診断する。サイトマップに漏れた記事も対象から消えない。現行13本に固定せず、将来の記事追加にも追従する。追加依存パッケージは不要。
+
+公開HTTPステータス・最終URL・canonical・meta robots/Googlebot・X-Robots-Tag・title/description（欠落・重複）・記事内の同一ホストリンク先HTTP・公開ページからの被リンク・公開/ローカルsitemap XMLと全記事掲載を検査する。被リンクの調査範囲は13記事とリポジトリ直下HTMLの公開版。外部サイトやサイト全体を無制限にクロールしない。HTMLパーサによる取得でJavaScriptのレンダリングはしない。
+
+robots.txtは **https://minna-antenna.github.io/robots.txt** が有効範囲。プロジェクト配下のrobots.txtは参考情報としてJSONに保存するがGoogleの制御とは扱わない。origin直下404はクロール許可扱い（429と5xx・通信失敗は不明）。許可はインデックス登録の証拠ではない。
+
+OAuth設定は上記手順をそのまま利用する。環境変数の3資格情報がそろえば既存のreadonly URL Inspection処理で、サイトマップの掲載有無に依存せず全対象を照会する。認証未設定でも技術検査とレポート生成は実行する。GitHub Secretsは実行時に注入するもので、リポジトリのファイルへ保存しない。
+
+出力: `diagnosis.csv`（UTF-8 BOM）、`diagnosis.html`、`diagnosis.json`、`urls.txt`。HTMLはローカルで開ける。手動検査はHTMLのSearch Consoleリンクを開き、urls.txtまたは各行のURLを検査欄に貼る。URLを指定して検査する未公開の画面パラメータは使わない。
+
+分類は登録済み（Google PASS）、未登録（FAIL/NEUTRAL）、取得不可（公開HTTP/API取得失敗）、要確認（認証なし・未定義/欠落情報）。Google応答と技術問題は別列なので、Google登録済みでも技術警告を保持する。API情報はGoogleが保持する過去の状態でライブ検査ではない。Googleによる未登録が確認できない限り、未登録と断定しない。
+
+定期診断の既存workflowはこのコマンドへ切り替え、同じ時刻・main制限・readonly権限・常時artifact保存を維持する。RSS・Pages・記事本文は変更しない。終了コード2は要確認/取得不可または技術問題が存在することを示す。未登録というGoogleの回答だけではジョブ失敗としない。
+
+このコマンドはGoogle側のサイトマップ受理状況までは照会しない。必要なら従来の `monitor_indexing.py` を別途実行する。登録申請やIndexing APIはどちらも実行しない。
