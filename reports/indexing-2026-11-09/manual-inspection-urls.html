@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13記事のSearch Console手動確認用URL｜トピック基地</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif; color: #182d3f; background: #f4f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.7; }
+    main { max-width: 1240px; margin: 0 auto; padding: 40px 24px 56px; }
+    .eyebrow { margin: 0; color: #315b7c; font-size: .85rem; font-weight: 700; letter-spacing: .07em; }
+    h1 { margin: 6px 0 14px; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.4; }
+    p { margin: 10px 0; }
+    a { color: #075b9e; text-underline-offset: 3px; }
+    .instructions { border: 1px solid #cddfe9; border-radius: 12px; padding: 18px 22px; background: #eaf3f8; }
+    .instructions p:first-child { margin-top: 0; }
+    .instructions p:last-child { margin-bottom: 0; }
+    .console-link { display: inline-block; padding: 8px 14px; border-radius: 6px; background: #173f63; color: #fff; text-decoration: none; font-weight: 600; }
+    .hint { font-size: .88rem; color: #476075; }
+    #copy-status { min-height: 1.7em; margin: 16px 0; color: #07563a; font-weight: 600; }
+    #copy-status.error { color: #9c3027; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; background: white; border: 1px solid #d3dee7; border-radius: 10px; overflow: hidden; }
+    caption { text-align: left; padding-bottom: 10px; font-size: .9rem; color: #476075; }
+    thead { background: #e8edf3; }
+    th, td { padding: 17px 16px; text-align: left; vertical-align: top; }
+    th:first-child { width: 100px; white-space: nowrap; }
+    th:nth-child(2) { width: 39%; }
+    tbody tr + tr > * { border-top: 1px solid #dce4eb; }
+    .article-number { white-space: nowrap; font-size: .85rem; color: #315b7c; }
+    .article-title { font-weight: 600; font-size: .96rem; }
+    .article-url { display: block; width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid #b9cad8; border-radius: 5px; background: #f8fafc; color: #182d3f; font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .url-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 8px; }
+    .url-actions a { font-size: .8rem; }
+    button { font: inherit; font-size: .85rem; cursor: pointer; border: 1px solid #1c5c88; background: #fff; color: #154e77; border-radius: 5px; padding: 6px 13px; min-height: 38px; font-weight: 600; }
+    button:hover { background: #edf6fc; }
+    button:disabled { opacity: .6; cursor: wait; }
+    button.copied { border-color: #187047; background: #e9f6ef; color: #125438; }
+    :focus-visible { outline: 3px solid #db840c; outline-offset: 3px; }
+    footer { margin-top: 20px; color: #476075; font-size: .85rem; }
+    noscript p { padding: 12px; background: #fff2d7; border: 1px solid #e1bc73; }
+    @media (max-width: 720px) {
+      main { padding: 24px 14px 36px; }
+      .instructions { padding: 14px; }
+      table, tbody, tr, td, tbody th { display: block; width: 100%; }
+      table { table-layout: auto; }
+      caption { display: block; }
+      thead { display: none; }
+      tbody th:first-child { width: auto; padding: 14px 14px 2px; }
+      .article-title { padding: 3px 14px 10px; }
+      .url-cell { padding: 0 14px 16px; }
+      tbody tr + tr > * { border-top: 0; }
+      tbody tr + tr { border-top: 1px solid #dce4eb; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">トピック基地 / 独自記事 第1〜13号</p>
+    <h1>Search Console 手動確認用URL</h1>
+  </header>
+  <section class="instructions" aria-label="手動確認の手順">
+    <p><a class="console-link" href="https://search.google.com/search-console?resource_id=https%3A%2F%2Fminna-antenna.github.io%2Fminna-antenna%2F" target="_blank" rel="noopener noreferrer">Search Consoleを開く <span aria-hidden="true">↗</span></a></p>
+    <p>対象プロパティを選び、各記事の「URLをコピー」を押して、Search Console上部のURL検査欄に貼り付けてください。</p>
+    <p class="hint">このHTMLをダウンロードし、ブラウザで開いて使えます。コピーが制限される環境では、選択されたURLをCtrl+C（Macは⌘C）でコピーしてください。記事番号は既存の第1〜13号に対応し、タイトルは記事のtitle要素からサイト名を除いたものです。</p>
+  </section>
+  <noscript><p>コピー機能にはJavaScriptが必要です。URL欄から手動でコピーすることもできます。</p></noscript>
+  <p id="copy-status" role="status" aria-live="polite" aria-atomic="true">13記事のURLを用意しました。</p>
+  <table>
+    <caption>対象：独自記事13本（2026年11月9日時点）</caption>
+    <thead><tr><th scope="col">記事番号</th><th scope="col">タイトル</th><th scope="col">確認用URL・コピー</th></tr></thead>
+    <tbody>
+        <tr>
+          <th scope="row"><span class="article-number">第1号</span></th>
+          <td class="article-title">ビットコインの半減期とは？仕組み・2028年の予定・価格への影響を解説</td>
+          <td class="url-cell">
+            <input id="url-1" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-halving.html" readonly aria-label="第1号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-1" aria-label="第1号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-halving.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第2号</span></th>
+          <td class="article-title">ビットコインはなぜ4年周期で暴落すると言われる？半減期との関係を解説</td>
+          <td class="url-cell">
+            <input id="url-2" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-four-year-cycle.html" readonly aria-label="第2号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-2" aria-label="第2号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-four-year-cycle.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第3号</span></th>
+          <td class="article-title">ビットコイン以外の暗号資産に将来性はある？イーサリアム・ソラナ・XRPの違いとリスクを解説</td>
+          <td class="url-cell">
+            <input id="url-3" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/crypto-eth-sol-xrp-comparison.html" readonly aria-label="第3号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-3" aria-label="第3号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/crypto-eth-sol-xrp-comparison.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第4号</span></th>
+          <td class="article-title">ビットコインと株式投資、長期保有ならどちらが有利？過去10年間のリターンとリスクを比較</td>
+          <td class="url-cell">
+            <input id="url-4" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html" readonly aria-label="第4号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-4" aria-label="第4号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第5号</span></th>
+          <td class="article-title">新NISAは何がすごい？初心者向けにメリット・デメリット・始め方をわかりやすく解説</td>
+          <td class="url-cell">
+            <input id="url-5" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/new-nisa-beginners-guide.html" readonly aria-label="第5号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-5" aria-label="第5号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/new-nisa-beginners-guide.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第6号</span></th>
+          <td class="article-title">S&amp;P500とオルカンはどっちがおすすめ？過去のリターン・リスク・構成銘柄を徹底比較</td>
+          <td class="url-cell">
+            <input id="url-6" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/sp500-vs-all-country.html" readonly aria-label="第6号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-6" aria-label="第6号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/sp500-vs-all-country.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第7号</span></th>
+          <td class="article-title">暗号資産の税金はいくら？ビットコインの利益・確定申告・株式との違いを徹底解説【2026年版】</td>
+          <td class="url-cell">
+            <input id="url-7" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/crypto-tax-japan-guide.html" readonly aria-label="第7号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-7" aria-label="第7号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/crypto-tax-japan-guide.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第8号</span></th>
+          <td class="article-title">ビットコインはなぜ暴落する？過去の下落原因と回復までの期間を徹底比較</td>
+          <td class="url-cell">
+            <input id="url-8" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-crash-history.html" readonly aria-label="第8号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-8" aria-label="第8号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/bitcoin-crash-history.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第9号</span></th>
+          <td class="article-title">金・ビットコイン・株式、インフレに強い資産はどれ？過去データと実質リターンで徹底比較</td>
+          <td class="url-cell">
+            <input id="url-9" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/gold-bitcoin-stocks-inflation.html" readonly aria-label="第9号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-9" aria-label="第9号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/gold-bitcoin-stocks-inflation.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第10号</span></th>
+          <td class="article-title">高配当株とインデックス投資はどっちが有利？配当金・20年後の資産・新NISAを徹底比較</td>
+          <td class="url-cell">
+            <input id="url-10" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/dividend-vs-index-investing.html" readonly aria-label="第10号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-10" aria-label="第10号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/dividend-vs-index-investing.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第11号</span></th>
+          <td class="article-title">ETFと投資信託の違いとは？新NISAではどっちがおすすめ？手数料・分配金・長期リターンを徹底比較</td>
+          <td class="url-cell">
+            <input id="url-11" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/etf-vs-mutual-funds.html" readonly aria-label="第11号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-11" aria-label="第11号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/etf-vs-mutual-funds.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第12号</span></th>
+          <td class="article-title">仮想通貨詐欺の見抜き方とは？よくある手口と安全対策を徹底解説【2026年版】</td>
+          <td class="url-cell">
+            <input id="url-12" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/crypto-scam-prevention.html" readonly aria-label="第12号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-12" aria-label="第12号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/crypto-scam-prevention.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="article-number">第13号</span></th>
+          <td class="article-title">時価総額・PER・PBRとは？株価の割安・割高を見極める基本指標を初心者向けに徹底解説</td>
+          <td class="url-cell">
+            <input id="url-13" class="article-url" type="text" value="https://minna-antenna.github.io/minna-antenna/articles/market-cap-per-pbr-guide.html" readonly aria-label="第13号のURL" spellcheck="false">
+            <div class="url-actions"><button type="button" class="copy-button" data-copy="url-13" aria-label="第13号のURLをコピー">URLをコピー</button><a href="https://minna-antenna.github.io/minna-antenna/articles/market-cap-per-pbr-guide.html" target="_blank" rel="noopener noreferrer">記事を開く <span aria-hidden="true">↗</span></a></div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  <footer>この一覧はURLのコピー用です。Googleへの登録申請やAPI呼び出しは行いません。インデックス登録状況はSearch Consoleで確認してください。</footer>
+</main>
+<script>
+  'use strict';
+  const status = document.getElementById('copy-status');
+
+  function selectUrl(input) {
+    input.focus({ preventScroll: true });
+    input.select();
+    input.setSelectionRange(0, input.value.length);
+  }
+
+  function legacyCopy(input) {
+    selectUrl(input);
+    try {
+      return document.execCommand('copy');
+    } catch (_) {
+      return false;
+    }
+  }
+
+  async function copyUrl(button) {
+    const input = document.getElementById(button.dataset.copy);
+    const number = input.id.replace('url-', '');
+    button.disabled = true;
+    let copied = false;
+    try {
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        await navigator.clipboard.writeText(input.value);
+        copied = true;
+      }
+    } catch (_) {
+      // A local file or browser policy may deny the Clipboard API.
+    }
+    if (!copied) copied = legacyCopy(input);
+    button.disabled = false;
+    status.classList.toggle('error', !copied);
+    if (copied) {
+      document.querySelectorAll('.copy-button').forEach((other) => {
+        other.classList.remove('copied');
+        other.textContent = 'URLをコピー';
+      });
+      button.classList.add('copied');
+      button.textContent = 'コピーしました';
+      status.textContent = `第${number}号のURLをコピーしました。Search ConsoleのURL検査欄に貼り付けてください。`;
+      button.focus({ preventScroll: true });
+    } else {
+      button.classList.remove('copied');
+      button.textContent = 'URLをコピー';
+      selectUrl(input);
+      status.textContent = `第${number}号のURLを選択しました。Ctrl+C（Macは⌘C）でコピーしてください。`;
+    }
+  }
+
+  document.querySelectorAll('.copy-button').forEach((button) => {
+    button.addEventListener('click', () => copyUrl(button));
+  });
+</script>
+</body>
+</html>

@@ -45,3 +45,13 @@ Search Console認証がこの実行環境に設定されていないため、Goo
 Googleの照会結果に未登録があれば、coverageState・Google canonical・最終クロール等と技術診断を突き合わせて原因を調べる。必要に応じて所有者が手動で再クロールを依頼する。自動登録・通常記事へのIndexing API利用は行わず、登録・順位も保証しない。
 
 CSVはUTF-8 BOM。HTMLはダウンロードしてブラウザで開く。全検査値は各行の「検査値を見る」を展開するかCSV/JSONで確認できる。
+
+## 記事番号付き・ワンクリックコピー用HTML
+
+[manual-inspection-urls.html](manual-inspection-urls.html) をGitHubの「Download raw file」からダウンロードし、ブラウザで開くと、第1〜13号の番号・タイトル・URLを一覧できます。各行の「URLをコピー」を押し、Search Console上部のURL検査欄へ貼り付けてください。GitHubのソース表示画面ではコピー用ボタンは動きません。
+
+タイトルは各記事のtitle要素からサイト名を除いたものです。記事番号は既存の号数に対応します。各URLは既存のurls.txtと照合済みです。
+
+ブラウザのClipboard APIが制限される場合は従来のコピー処理へ切り替えます。両方が使えない場合はURLを選択し、Ctrl+C（Macは⌘C）によるコピーを案内します。コピーできた場合だけ成功を表示します。このファイルはURLをコピーするだけで、Googleへの登録申請やAPI呼び出しは行いません。
+
+追加HTMLの検証: Chromium/Playwrightで13件の番号・タイトル・URLを照合し、各ボタンを1回クリックして実際のクリップボード内容が該当URLになることを全13件で確認。Clipboard API未提供時/拒否時の代替コピー、両方式失敗時のURL選択・手動案内、JavaScript無効時のURL表示、390px幅で横はみ出しがないことも確認しました。ページからの外部通信・JavaScriptエラーは検出されませんでした。
