@@ -101,7 +101,9 @@ def build(root):
     entries = []
     for article in articles:
         e = {k: html.escape(v, quote=True) for k, v in article.items()}
-        entries.append(f'<article class="article-entry"><h3><a href="./{quote(article["path"], safe="/")}">{e["title"]} →</a></h3><p class="muted"><time datetime="{e["published"]}">{e["published"]}</time>公開</p><p>{e["description"]}</p></article>')
+        entry_id = {'articles/bitcoin-halving.html': 'bitcoin-halving-entry', 'articles/bitcoin-four-year-cycle.html': 'bitcoin-cycle-entry'}.get(article['path'], '')
+        anchor = f' id="{entry_id}"' if entry_id else ''
+        entries.append(f'<article{anchor} class="article-entry"><h3><a href="./{quote(article["path"], safe="/")}">{e["title"]} →</a></h3><p class="muted"><time datetime="{e["published"]}">{e["published"]}</time>公開</p><p>{e["description"]}</p></article>')
     index = index[:index.index(START) + len(START)] + '\n' + '\n'.join(entries) + '\n' + index[index.index(END):]
     ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', ns)

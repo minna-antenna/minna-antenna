@@ -20,13 +20,15 @@ header{background:var(--dark);color:white;border-bottom:4px solid #d7bd76}header
 h1{text-wrap:balance}@media(min-width:651px){h1{font-size:clamp(24px,3vw,32px)}}body{overflow-wrap:anywhere}.bar{flex-wrap:wrap}.table-wrap{max-width:100%;overscroll-behavior-x:contain}.table-wrap:focus-visible,a:focus-visible{outline:3px solid #d59c22;outline-offset:3px}table{min-width:720px}caption{text-align:left;font-weight:700;margin-bottom:10px}h2[id],h3[id],li[id]{scroll-margin-top:16px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 figure{margin:24px 0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}figcaption{font-size:12px;color:var(--muted);line-height:1.7;margin-top:9px}code{overflow-wrap:anywhere}table{min-width:760px}pre{overflow:auto;max-width:100%}
+
+.related{scroll-margin-top:20px}.related a{display:inline-block;min-height:44px;padding:8px 0;line-height:1.6;overflow-wrap:anywhere}.reading-jump a{display:inline-block;padding:10px 14px;border:1px solid #b5d7cc;border-radius:8px;background:#f1f7f4;min-height:44px}.related p,.related li{margin:8px 0}@media(max-width:650px){.related{padding:14px!important}.related a{font-size:15px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ビットコインと株式投資、長期保有ならどちらが有利？過去10年間のリターンとリスクを比較","description":"BTC・S&P500連動ETF・全世界株式ETFを約10年の実データで比較。100万円の推移、CAGR、最大下落率、回復期間を再現可能な計算で示し、配当・為替・税金・NISAの違いも解説します。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","image":"https://minna-antenna.github.io/minna-antenna/articles/data/bitcoin-vs-stocks/wealth-and-drawdown.png","author":{"@type":"Organization","name":"トピック基地"},"publisher":{"@type":"Organization","name":"トピック基地","url":"https://minna-antenna.github.io/minna-antenna/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://minna-antenna.github.io/minna-antenna/articles/bitcoin-vs-stocks-long-term.html"}}</script>
 </head><body>
 <header><div class="bar"><a class="brand" href="../">⌂ トピック基地</a><a class="return" href="../#news">新着ニュースを見る</a></div></header>
 <main class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="../">ホーム</a> &gt; <a href="../#original-articles">独自解説</a> &gt; 長期投資の比較</nav><article>
 <div class="eyebrow">独自解説 第4号｜実データで比較する長期投資</div>
-<h1>ビットコインと株式投資、長期保有ならどちらが有利？<br>過去10年間のリターンとリスクを比較</h1>
+<h1>ビットコインと株式投資、長期保有ならどちらが有利？<br>過去10年間のリターンとリスクを比較</h1><nav class="reading-jump" aria-label="記事の読み進め方"><a href="#related-reading">関連記事を探す</a></nav>
 <p class="date">公開：<time datetime="2026-11-06">2026年11月6日</time> ｜ 更新：<time datetime="2026-11-06">2026年11月6日</time><br>著者・編集：トピック基地 ｜ 調査日：2026年11月6日（日本時間）</p>
 <p class="lead">過去に大きく上がった資産を見れば、長期保有の答えは簡単に見える。しかし、途中でどれほど下がったのか、何年待ったのか、配当や税金をどう扱ったのかで比較の意味は変わる。本記事では、BTCと、S&amp;P500・全世界株式に連動する米国ETFを<strong>同じ約10年間・同じ観測日</strong>で比較した。</p>
 <div class="takeaway"><strong>今回の分析で分かったこと</strong><ul><li>2016年10月31日〜2026年10月30日の円換算では、BTCの累積リターンが最も大きかった。一方、最大下落率は約83％に達した。</li><li>株式側は指数そのものではなく、SPY・ACWIの分配金等調整後の市場価格を使用。国内投資信託やNISA口座の実績とは異なる。</li><li>「この期間で増えた」と「今後も有利」は同じではない。税引前の結果と、損失に耐えられる期間を分けて読む必要がある。</li></ul></div>
@@ -137,15 +139,15 @@ figure{margin:24px 0}figure img{display:block;width:100%;height:auto;border:1px 
 <li id="ref-jsda"><a href="https://www.jsda.or.jp/shijyo/seido/tax/files/202609_nisa_qa.pdf" target="_blank" rel="noopener noreferrer">日本証券業協会 — 2024年以降のNISAに関するQ&amp;A（2026年9月、PDF）</a>：外国税・損益通算・取扱商品の注意点。</li>
 <li id="ref-market">Yahoo Financeの取得API（JSON）：<a href="https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">BTC-USD</a>、<a href="https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">SPY</a>、<a href="https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1477872000&amp;period2=1793404800&amp;interval=1d&amp;events=div%2Csplits" target="_blank" rel="noopener noreferrer">ACWI</a>。取得範囲は本文の期間で固定し、採用した値をCSVへ保存。</li>
 </ol>
-<section class="related" aria-labelledby="related-heading"><h2 id="related-heading">関連記事</h2><p><a href="./bitcoin-halving.html">第1号：ビットコインの半減期とは？仕組みと価格への影響 →</a></p><p><a href="./bitcoin-four-year-cycle.html">第2号：ビットコインの4年周期説、根拠と限界 →</a></p><p><a href="./crypto-eth-sol-xrp-comparison.html">第3号：イーサリアム・ソラナ・XRPの違いとリスク →</a></p><p><a href="../#original-articles">独自記事一覧に戻る →</a></p><p><a href="./new-nisa-beginners-guide.html">第5号：新NISAのメリット・リスク・始め方</a> — 株式投信の非課税制度と、36条件の積立シミュレーションを解説。</p>
-<p><a href="./sp500-vs-all-country.html">第6号：S&amp;P500とオルカンのリターン・リスク・構成比較</a> — 集中と分散、過去実績と積立の仮定を分けて解説。</p>
-<p><a href="./crypto-tax-japan-guide.html">第7号：暗号資産の税金・確定申告・株式との違い</a> — 利益計算と制度の適用時点を整理。</p>
-<p><a href="./bitcoin-crash-history.html">第8号：ビットコイン暴落の歴史と回復までの期間</a> — 終値データで下落率と回復日を比較。</p>
-<p><a href="./gold-bitcoin-stocks-inflation.html">第9号：金・BTC・株式のインフレ耐性と実質リターン</a> — 物価・為替・下落リスクを分けて比較。</p>
-<p><a href="./dividend-vs-index-investing.html">第10号：高配当株とインデックス投資・配当再投資の比較</a></p>
-<p><a href="./etf-vs-mutual-funds.html">第11号：ETFと非上場投信の費用・新NISA・長期比較</a></p>
-<p><a href="./crypto-scam-prevention.html">第12号：暗号資産詐欺の手口・安全対策・被害時の初動</a></p>
-<p><a href="./market-cap-per-pbr-guide.html">第13号：時価総額・PER・PBRと企業分析の基本</a></p>
+<section class="related" id="related-reading" aria-labelledby="related-heading"><h2 id="related-heading">関連記事</h2><p><a href="./bitcoin-halving.html">ビットコインの半減期とは？仕組みと価格への影響</a></p><p><a href="./bitcoin-four-year-cycle.html">ビットコインの4年周期説、根拠と限界</a></p><p><a href="./crypto-eth-sol-xrp-comparison.html">イーサリアム・ソラナ・XRPの違いとリスク</a></p><p><a href="../#original-articles">独自記事一覧に戻る</a></p><p><a href="./new-nisa-beginners-guide.html">新NISAのメリット・リスク・始め方</a> — 株式投信の非課税制度と、36条件の積立シミュレーションを解説。</p>
+<p><a href="./sp500-vs-all-country.html">S&amp;P500とオルカンのリターン・リスク・構成比較</a> — 集中と分散、過去実績と積立の仮定を分けて解説。</p>
+<p><a href="./crypto-tax-japan-guide.html">暗号資産の税金・確定申告・株式との違い</a> — 利益計算と制度の適用時点を整理。</p>
+<p><a href="./bitcoin-crash-history.html">ビットコイン暴落の歴史と回復までの期間</a> — 終値データで下落率と回復日を比較。</p>
+<p><a href="./gold-bitcoin-stocks-inflation.html">金・BTC・株式のインフレ耐性と実質リターン</a> — 物価・為替・下落リスクを分けて比較。</p>
+<p><a href="./dividend-vs-index-investing.html">高配当株とインデックス投資・配当再投資の比較</a></p>
+<p><a href="./etf-vs-mutual-funds.html">ETFと非上場投信の費用・新NISA・長期比較</a></p>
+<p><a href="./crypto-scam-prevention.html">暗号資産詐欺の手口・安全対策・被害時の初動</a></p>
+<p><a href="./market-cap-per-pbr-guide.html">時価総額・PER・PBRと企業分析の基本</a></p>
 </section>
 
 </article></main><footer><a href="../">ホーム</a><a href="../about.html">運営者情報</a><a href="../privacy.html">プライバシー</a><a href="../contact.html">お問い合わせ</a><p>© トピック基地</p></footer></body></html>
