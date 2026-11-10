@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-10T14:42:38.299717+00:00",
+  "feeds": [
+    {
+      "feed": "NHK総合",
+      "status": "ok",
+      "records": 7
+    },
+    {
+      "feed": "NHK社会",
+      "status": "ok",
+      "records": 54
+    },
+    {
+      "feed": "BBC News 日本語",
+      "status": "ok",
+      "records": 16
+    },
+    {
+      "feed": "Google ニュース・ゲーム",
+      "status": "ok",
+      "records": 60
+    },
+    {
+      "feed": "Google ニュース・アニメ",
+      "status": "ok",
+      "records": 51
+    },
+    {
+      "feed": "Google ニュース・車",
+      "status": "ok",
+      "records": 100
+    },
+    {
+      "feed": "Google ニュース・株",
+      "status": "ok",
+      "records": 99
+    },
+    {
+      "feed": "Google ニュース・仮想通貨",
+      "status": "ok",
+      "records": 94
+    },
+    {
+      "feed": "Google ニュース・政治",
+      "status": "ok",
+      "records": 100
+    },
+    {
+      "feed": "Google ニュース・スポーツ",
+      "status": "ok",
+      "records": 99
+    }
+  ],
+  "input_records": 680,
+  "before_selected": 60,
+  "after_selected": 60,
+  "all_selected_scores_verified": true,
+  "nhk_duplicate_examples": [
+    {
+      "url": "https://news.web.nhk/newsweb/na/nd-20261110de73782",
+      "feed_names": [
+        "NHK社会",
+        "NHK総合"
+      ],
+      "publisher_ids": [
+        "nhk"
+      ],
+      "before_score": 83,
+      "after_score": 58,
+      "before_multiple_points": 15,
+      "after_multiple_points": 0
+    }
+  ]
+}
