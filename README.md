@@ -32,3 +32,7 @@ AdSense・品質確認と残課題は `QUALITY_REVIEW.md` を参照してくだ�
 ### RSS採点・編集方針
 
 発行主体と取得フィードを分けた採点、提供元の利用条件の確認状況、広告掲載対象の考え方は [RSSニュースの採点・表示・広告掲載方針](docs/rss-editorial-review.md) を参照してください。実データの旧新比較は [検証結果](reports/rss-publishers-2026-11-10/validation.json) に記録しています。
+
+### カスタムドメインへの移行
+
+正規URLを `https://topic-kichi.com/` に統一する変更と公開時の確認事項は [ドメイン移行の検証・反映手順](docs/domain-migration.md) を参照してください。RSS停止状態を維持し、Search ConsoleやAdSenseの登録操作は移行コードの変更とは別に扱います。

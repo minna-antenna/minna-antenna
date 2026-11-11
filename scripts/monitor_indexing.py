@@ -13,7 +13,7 @@ from urllib.parse import quote, urlencode, urlsplit
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 import xml.etree.ElementTree as ET
 
-BASE = 'https://minna-antenna.github.io/minna-antenna/'
+BASE = 'https://topic-kichi.com/'
 SITEMAP = BASE + 'sitemap.xml'
 SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly'
 API = 'https://searchconsole.googleapis.com/v1/urlInspection/index:inspect'
@@ -94,7 +94,7 @@ def article_urls(raw):
         url = (loc.text or '').strip()
         parsed = urlsplit(url)
         if (url.startswith(BASE + 'articles/') and parsed.scheme == 'https'
-                and parsed.netloc == 'minna-antenna.github.io'
+                and parsed.netloc == urlsplit(BASE).netloc
                 and parsed.path.endswith('.html') and not parsed.query and not parsed.fragment
                 and not re.search(r'(^|/)(\.|\.\.)(/|$)', parsed.path)
                 and not re.search(r'%2e|%2f|%5c', parsed.path, re.I)):
@@ -156,7 +156,7 @@ def monitor(env=None, sleep=time.sleep):
     site = env.get('GSC_SITE_URL') or BASE
     report = dict(checked_at=dt.datetime.now(dt.timezone.utc).isoformat(), site_url=site,
                   sitemap_url=SITEMAP, authentication='not_attempted', sitemap={}, google_sitemap={}, articles=[])
-    if site != BASE and site != 'sc-domain:minna-antenna.github.io' and site != 'https://minna-antenna.github.io/':
+    if site not in (BASE, 'sc-domain:topic-kichi.com'):
         report['error'] = 'unsupported_property'
         return report, 2
     try:

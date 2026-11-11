@@ -12,7 +12,7 @@ import tempfile
 from urllib.parse import quote
 import xml.etree.ElementTree as ET
 
-BASE = 'https://minna-antenna.github.io/minna-antenna/'
+BASE = 'https://topic-kichi.com/'
 START, END = '<!-- ARTICLES:START -->', '<!-- ARTICLES:END -->'
 
 

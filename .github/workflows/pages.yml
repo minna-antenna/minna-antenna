@@ -26,13 +26,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Require GitHub Actions as Pages source
+      - name: Require GitHub Actions and the configured custom domain
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           source_type=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type')
           if [ "$source_type" != "workflow" ]; then
             echo '::error::Pages Source must be GitHub Actions before deploying. Existing branch publishing has been left unchanged.'
+            exit 1
+          fi
+          custom_domain=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.cname // ""')
+          if [ "$custom_domain" != "topic-kichi.com" ]; then
+            echo '::error::Pages Custom domain must remain topic-kichi.com. No domain setting was changed.'
             exit 1
           fi
       - uses: actions/checkout@v4
