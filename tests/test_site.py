@@ -25,7 +25,7 @@ class SiteTests(unittest.TestCase):
     def test_new_article_escaped_nested_and_idempotent(self):
         path = self.root / 'articles' / '基礎' / 'new.html'
         path.parent.mkdir()
-        path.write_text('<h1>A &amp; B &lt;test&gt;</h1><meta name="description" content="説明 &amp; 内容"><meta property="article:published_time" content="2026-11-06">')
+        path.write_text('<html><head><meta name="description" content="説明 &amp; 内容"><meta property="article:published_time" content="2026-11-06"></head><body><h1>A &amp; B &lt;test&gt;</h1></body></html>')
         build_site.build(self.root)
         first = (self.root / 'index.html').read_bytes()
         self.assertIn(b'A &amp; B &lt;test&gt;', first)

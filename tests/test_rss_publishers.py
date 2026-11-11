@@ -62,6 +62,7 @@ class PublisherTests(unittest.TestCase):
         root=Path(__file__).resolve().parents[1]
         text=(root/'index.html').read_text()
         self.assertLess(text.index('id="original-articles"'),text.index('id="news"'))
-        self.assertNotIn('adsbygoogle',text)
+        self.assertNotIn('<ins',text)
+        self.assertNotIn('enable_page_level_ads',text)
         self.assertNotIn('fetch(',text)
         self.assertNotIn('.real-row',text[text.index('<body>'):])
