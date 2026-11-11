@@ -1,7 +1,7 @@
 # topic-kichi.comへのURL移行
 
-移行元: https://minna-antenna.github.io/minna-antenna/  
-移行先（正規URL）: https://topic-kichi.com/  
+移行元: https://minna-antenna.github.io/minna-antenna/
+移行先（正規URL）: https://topic-kichi.com/
 調査日: 2026-11-11（日本時間）
 
 ## 変更範囲
