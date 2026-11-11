@@ -1,8 +1,6 @@
 name: Update news RSS
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '7 */3 * * *'
 permissions:
   contents: write
 concurrency:
@@ -10,7 +8,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   update:
-    if: github.ref == 'refs/heads/main'
+    # Paused: permission review and a separate restart PR are required.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -63,4 +63,5 @@ class PublisherTests(unittest.TestCase):
         text=(root/'index.html').read_text()
         self.assertLess(text.index('id="original-articles"'),text.index('id="news"'))
         self.assertNotIn('adsbygoogle',text)
-        self.assertIn('7 */3 * * *',(root/'.github/workflows/news.yml').read_text())
+        self.assertNotIn('fetch(',text)
+        self.assertNotIn('.real-row',text[text.index('<body>'):])

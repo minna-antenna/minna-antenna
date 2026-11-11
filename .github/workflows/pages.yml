@@ -1,7 +1,7 @@
 name: Deploy GitHub Pages
 on:
   workflow_run:
-    workflows: ['Build article index and sitemap', 'Update news RSS']
+    workflows: ['Build article index and sitemap']
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -47,10 +47,10 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Stage public files only
         run: |
-          mkdir -p _site/articles _site/data
+          rm -rf _site
+          mkdir -p _site/articles
           cp index.html about.html privacy.html contact.html sitemap.xml robots.txt googleb899a57e1737e8bb.html _site/
           cp -R articles/. _site/articles/
-          cp data/news.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
