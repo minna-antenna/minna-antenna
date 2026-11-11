@@ -1,6 +1,8 @@
+> 移行先は https://topic-kichi.com/ です。この文書は設定手順の案内であり、今回Search Consoleのプロパティ追加・所有権確認・サイトマップ送信は行っていません。既存GSC_SITE_URLが旧URLの場合は、権限を確認した新プロパティへ利用者が切り替えてください。
+
 # Googleインデックス毎日監視：設定・使い方
 
-対象: https://minna-antenna.github.io/minna-antenna/ 。仕様調査: 2026-11-07。
+対象: https://topic-kichi.com/ 。仕様調査: 2026-11-07。
 
 ## 現在できること／まだできないこと
 
@@ -15,7 +17,7 @@ APIはGoogleが保持する情報の照会のみ。ライブ検査・インデ�
 ## 1. Search Consoleの所有権・権限を確認（ユーザー操作）
 
 1. https://search.google.com/search-console を開き、監視に使うGoogleアカウントでログイン。
-2. 左上のプロパティ選択から `https://minna-antenna.github.io/minna-antenna/` を選ぶ。なければ「プロパティを追加」→「URLプレフィックス」へこのURLを入力し、画面に従って所有権を確認する。既存の検証ファイル・Pages設定は削除しない。
+2. 左上のプロパティ選択から `https://topic-kichi.com/` を選ぶ。なければ「プロパティを追加」→「URLプレフィックス」へこのURLを入力し、画面に従って所有権を確認する。既存の検証ファイル・Pages設定は削除しない。
 3. 「設定」→「ユーザーと権限」で自分が所有者またはフルユーザーであることを確認。別アカウントなら所有者に必要な権限付与を依頼する。Codexは権限追加を行わない。
 4. 左の「サイトマップ」で `sitemap.xml` の送信・取得状況を確認。未送信なら、ユーザーが必要性を確認した上で送信する。本システムは送信しない。公開HTTP取得の成功とGoogleによる取得成功は別々に記録する。
 
@@ -58,7 +60,7 @@ URLプレフィックスの末尾 `/`、https、パスを一致させる。別�
 | `GSC_CLIENT_SECRET` | 同じクライアントのシークレット |
 | `GSC_REFRESH_TOKEN` | 同じクライアント・監視ユーザー・readonly同意で発行したrefresh token |
 
-3. 通常 `GSC_SITE_URL` は未設定でよい。プロパティがホスト全体のURLプレフィックスやDomainの場合のみ、同画面「Variables」→「New repository variable」で設定。対応値は `https://minna-antenna.github.io/` または `sc-domain:minna-antenna.github.io`。それらの所有権を実際に持つ場合に限る。Cloud側の設定やGitHub変数だけで所有権は付与されない。
+3. 通常 `GSC_SITE_URL` は未設定でよい。プロパティがホスト全体のURLプレフィックスやDomainの場合のみ、同画面「Variables」→「New repository variable」で設定。対応値は `sc-domain:topic-kichi.com`。それらの所有権を実際に持つ場合に限る。Cloud側の設定やGitHub変数だけで所有権は付与されない。
 4. Secretsの値をログへ表示して検証しない。不明なPR・forkのコードへSecretsを渡さない。このワークフローはPRイベントでは動かずmainのみ、contents:read、checkout認証保持なし。
 
 ## 5. 初回実行と毎日の見方
