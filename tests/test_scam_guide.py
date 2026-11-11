@@ -36,7 +36,7 @@ class ScamGuideTests(unittest.TestCase):
             if f['file'].endswith('.svg'):ET.fromstring(b)
     def test_no_dangerous_inputs_forms_or_scripts(self):
         p=Controls(guide.ARTICLE.read_text());self.assertEqual(len(p.inputs),12);self.assertTrue(all(x.get('type')=='checkbox' for x in p.inputs));self.assertFalse(set(p.tags)&{'form','textarea','iframe','object','embed'});self.assertFalse(p.events)
-        scripts=[x.get('src') for x in p.scripts if x.get('src')];self.assertEqual(scripts,['./data/scam-prevention/checklist.js'])
+        scripts=[x.get('src') for x in p.scripts if x.get('src')];self.assertCountEqual(scripts,['https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155299200535467','./data/scam-prevention/checklist.js'])
         js=(DATA/'checklist.js').read_text()
         for token in ['fetch(', 'XMLHttpRequest','WebSocket','sendBeacon','localStorage','sessionStorage','document.cookie','window.ethereum','WalletConnect','eval(', 'innerHTML','window.location']:
             self.assertNotIn(token,js)

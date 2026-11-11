@@ -15,6 +15,27 @@ import xml.etree.ElementTree as ET
 BASE = 'https://topic-kichi.com/'
 START, END = '<!-- ARTICLES:START -->', '<!-- ARTICLES:END -->'
 
+ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155299200535467'
+ADSENSE_SCRIPT = f'<script async src="{ADSENSE_SRC}" crossorigin="anonymous"></script>'
+ADSENSE_LOADER = re.compile(
+    r'<script\b(?=[^>]*\bsrc\s*=\s*(["\'])(?:https?:)?//pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js(?:\?[^"\']*)?\1)[^>]*>\s*</script\s*>', re.I)
+
+
+def ensure_adsense_code(source):
+    """Keep one canonical loader in head; never create ad units or ad settings."""
+    heads = list(re.finditer(r'<head(?:\s[^>]*)?>', source, re.I))
+    ends = list(re.finditer(r'</head\s*>', source, re.I))
+    if len(heads) != 1 or len(ends) != 1 or heads[0].end() > ends[0].start():
+        raise ValueError('AdSense接続コードには単一のhead要素が必要です')
+    loaders = list(ADSENSE_LOADER.finditer(source))
+    if (len(loaders) == 1 and loaders[0].group() == ADSENSE_SCRIPT
+            and heads[0].end() <= loaders[0].start() < ends[0].start()):
+        return source
+    source = ADSENSE_LOADER.sub('', source)
+    end = re.search(r'</head\s*>', source, re.I)
+    return source[:end.start()] + ADSENSE_SCRIPT + '\n' + source[end.start():]
+
+
 
 class Metadata(HTMLParser):
     def __init__(self, source):
@@ -91,7 +112,8 @@ def article_metadata(path, root):
 
 def build(root):
     root = Path(root).resolve()
-    articles = [article_metadata(p, root) for p in sorted((root / 'articles').rglob('*.html'))]
+    article_paths = sorted((root / 'articles').rglob('*.html'))
+    articles = [article_metadata(p, root) for p in article_paths]
     if not articles:
         raise ValueError('記事が0件です。既存の生成物を維持します')
     articles.sort(key=lambda x: (x['published'], x['path']), reverse=True)
@@ -105,6 +127,11 @@ def build(root):
         anchor = f' id="{entry_id}"' if entry_id else ''
         entries.append(f'<article{anchor} class="article-entry"><h3><a href="./{quote(article["path"], safe="/")}">{e["title"]} →</a></h3><p class="muted"><time datetime="{e["published"]}">{e["published"]}</time>公開</p><p>{e["description"]}</p></article>')
     index = index[:index.index(START) + len(START)] + '\n' + '\n'.join(entries) + '\n' + index[index.index(END):]
+    # Validate every page before writing, including future articles.
+    updated = {root / 'index.html': ensure_adsense_code(index)}
+    fixed_pages = [root / name for name in ('about.html', 'privacy.html', 'contact.html') if (root / name).exists()]
+    for path in article_paths + fixed_pages:
+        updated[path] = ensure_adsense_code(path.read_text(encoding='utf-8'))
     ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', ns)
     sitemap = ET.Element(f'{{{ns}}}urlset')
@@ -117,7 +144,9 @@ def build(root):
     ET.indent(sitemap, space='  ')
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(sitemap, encoding='unicode') + '\n'
     # Finish validation before replacing any generated file.
-    atomic_write(root / 'index.html', index)
+    for path, content in updated.items():
+        if path.read_text(encoding='utf-8') != content:
+            atomic_write(path, content)
     atomic_write(root / 'sitemap.xml', xml)
     print(f'Built {len(articles)} articles, {len(pages)} sitemap URLs')
 
