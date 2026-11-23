@@ -77,9 +77,12 @@ class VerificationTests(unittest.TestCase):
         command='\n'.join(line[10:] for line in block.splitlines())
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
-            for name in ('index.html','about.html','privacy.html','contact.html','sitemap.xml','robots.txt','googleb899a57e1737e8bb.html'):shutil.copy(ROOT/name,root/name)
+            for name in ('index.html','about.html','privacy.html','contact.html','sitemap.xml','robots.txt','ads.txt','googleb899a57e1737e8bb.html'):shutil.copy(ROOT/name,root/name)
             shutil.copytree(ROOT/'articles',root/'articles')
             subprocess.run(['bash','-eu','-c',command],cwd=root,check=True)
+            publisher = SRC.split('?client=ca-', 1)[1]
+            self.assertEqual((root/'_site/ads.txt').read_text().splitlines(),
+                             [f'google.com, {publisher}, DIRECT, f08c47fec0942fa0'])
             pages=[p for p in (root/'_site').rglob('*.html') if p.name!='googleb899a57e1737e8bb.html']
             self.assertEqual(len(pages),17)
             for p in pages:self.assert_code(p.read_text())
