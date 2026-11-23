@@ -54,7 +54,7 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site/articles
-          cp index.html about.html privacy.html contact.html sitemap.xml robots.txt googleb899a57e1737e8bb.html _site/
+          cp index.html about.html privacy.html contact.html sitemap.xml robots.txt ads.txt googleb899a57e1737e8bb.html _site/
           cp -R articles/. _site/articles/
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -32,7 +32,7 @@ class RssPauseTests(unittest.TestCase):
         command='\n'.join(line[10:] for line in block.splitlines())
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
-            for name in ('index.html','about.html','privacy.html','contact.html','sitemap.xml','robots.txt','googleb899a57e1737e8bb.html'):
+            for name in ('index.html','about.html','privacy.html','contact.html','sitemap.xml','robots.txt','ads.txt','googleb899a57e1737e8bb.html'):
                 shutil.copy(ROOT/name,root/name)
             shutil.copytree(ROOT/'articles',root/'articles')
             (root/'data').mkdir();(root/'data/news.json').write_text('OLD HEADLINE')
