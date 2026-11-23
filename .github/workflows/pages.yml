@@ -7,13 +7,14 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
-  deploy:
+  package:
     if: >-
       (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
       (github.event_name == 'workflow_run' &&
@@ -22,9 +23,6 @@ jobs:
        github.event.workflow_run.head_repository.full_name == github.repository &&
        (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch'))
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Require GitHub Actions and the configured custom domain
         env:
@@ -59,5 +57,37 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
+  deploy:
+    needs: package
+    if: needs.package.result == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Wait for Pages artifact to be discoverable
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 12); do
+            if count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?per_page=100" --jq '[.artifacts[] | select(.name == "github-pages" and (.expired | not))] | length'); then
+              if [ "$count" -eq 1 ]; then
+                echo "Pages artifact is visible; allow metadata propagation before deploy."
+                sleep 20
+                exit 0
+              fi
+              if [ "$count" -gt 1 ]; then
+                echo "::error::Multiple github-pages artifacts are present; aborting."
+                exit 1
+              fi
+            fi
+            echo "Pages artifact not visible yet (attempt $attempt/12)."
+            sleep 10
+          done
+          echo "::error::Timed out waiting for the github-pages artifact to become visible."
+          exit 1
       - uses: actions/deploy-pages@v4
         id: deployment
