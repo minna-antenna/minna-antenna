@@ -84,6 +84,8 @@ class VerificationTests(unittest.TestCase):
             self.assertEqual((root/'_site/ads.txt').read_text().splitlines(),
                              [f'google.com, {publisher}, DIRECT, f08c47fec0942fa0'])
             pages=[p for p in (root/'_site').rglob('*.html') if p.name!='googleb899a57e1737e8bb.html']
-            self.assertEqual(len(pages),17)
+            expected = {p.relative_to(root) for p in (root/'articles').rglob('*.html')}
+            expected.update(Path(name) for name in ('index.html','about.html','privacy.html','contact.html'))
+            self.assertEqual({p.relative_to(root/'_site') for p in pages}, expected)
             for p in pages:self.assert_code(p.read_text())
             self.assertFalse((root/'_site/data/news.json').exists())
