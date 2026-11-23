@@ -1,0 +1,42 @@
+{
+  "dataset": "Cryptocurrency Dataset, Ghent University research team",
+  "original_market_source": "CryptoCompare histoday, tsym=USD",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "input_csv_sha256": "876267aa92aa94511b414908411cd4b16485b9315a19b083a003bb057d604ee2",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/edloginova/cryptodata/d75a21bf67ad306ec5699691a84bd8685df9243c/basetables/bitcointalk/LDA_t2_s0_basetable.p",
+      "sha256": "f66e55dec3c1e965906163ef79b4d72d9dc6f77ff69fef9be01531a9ce42584a",
+      "retrieved_at_utc": "2026-11-23T12:13:28+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/edloginova/cryptodata/d75a21bf67ad306ec5699691a84bd8685df9243c/README.md",
+      "sha256": "d78397ec75a112d2a8f4288fc2885a5ec623816d8b6e7fa5a9a8389357e1073d",
+      "retrieved_at_utc": "2026-11-23T12:13:28+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/edloginova/cryptodata/d75a21bf67ad306ec5699691a84bd8685df9243c/scripts/scrapers/CryptoValuesAPI.py",
+      "sha256": "ae838be93ad2300c87a1f4287f5a93f427d1f0efd88e310b1f62363899cbd843",
+      "retrieved_at_utc": "2026-11-23T12:13:28+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/edloginova/cryptodata/d75a21bf67ad306ec5699691a84bd8685df9243c/scripts/data/BasetableCreator.py",
+      "sha256": "77fcd19486361ab9f8dd4f512b6a673826d2e80c3f957b1a4187db98969fc6b3",
+      "retrieved_at_utc": "2026-11-23T12:13:28+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cosmos/chain-registry/f47d3559ecb21e93b3141953c4b11c3ca743fed2/terra/assetlist.json",
+      "sha256": "6f841428ee5facc8aade4192d5006affcef3aa695a626deb4da5b457f42fb227",
+      "retrieved_at_utc": "2026-11-23T12:13:29+00:00",
+      "base": "uluna",
+      "symbol": "LUNC"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cosmos/chain-registry/f47d3559ecb21e93b3141953c4b11c3ca743fed2/terra2/assetlist.json",
+      "sha256": "f6f76b623028334ecd68609425172d8ba820b99bb34e292ce137abe3b377ef14",
+      "retrieved_at_utc": "2026-11-23T12:13:29+00:00",
+      "base": "uluna",
+      "symbol": "LUNA"
+    }
+  ]
+}

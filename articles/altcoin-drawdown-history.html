@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アルトコイン暴落史｜ETH・LTC・XRPは何％下がり、いつ高値に戻ったか｜トピック基地</title><meta name="description" content="2017年から2019年4月までの826日間、ETH・LTC・XRPとBTCの米ドル建て終値を比較。最大下落率、回復した局面の日数、未回復で観測を終えた期間を、日足CSVとPythonで検算できます。"><link rel="canonical" href="https://topic-kichi.com/articles/altcoin-drawdown-history.html">
+<meta property="og:title" content="アルトコイン暴落史｜ETH・LTC・XRPは何％下がり、いつ高値に戻ったか"><meta property="og:description" content="2017年から2019年4月までの826日間、ETH・LTC・XRPとBTCの米ドル建て終値を比較。最大下落率、回復した局面の日数、未回復で観測を終えた期間を、日足CSVとPythonで検算できます。"><meta property="og:type" content="article"><meta property="og:url" content="https://topic-kichi.com/articles/altcoin-drawdown-history.html">
+<meta property="article:published_time" content="2026-11-23"><meta property="article:modified_time" content="2026-11-23">
+<style>
+:root{--ink:#203a42;--muted:#657b83;--green:#176b57;--dark:#173d3b;--line:#d8e5df;--bg:#f5f7f5;--soft:#eef5f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Yu Gothic",Meiryo,sans-serif;font-size:15px;line-height:1.9}a{color:#126a58;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
+header{background:var(--dark);color:white;border-bottom:4px solid #d7bd76}header .bar{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 18px}header a{color:white;text-decoration:none}header .brand{font-size:23px;font-weight:800;letter-spacing:.01em}header .return{font-size:13px}
+.wrap{max-width:900px;margin:24px auto 60px;padding:0 18px}.crumb{font-size:12px;color:var(--muted);margin-bottom:16px}.crumb a{color:var(--muted)}article{background:white;border:1px solid var(--line);border-radius:12px;padding:38px 43px;box-shadow:0 2px 8px rgba(21,67,59,.025)}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.075em}.date{font-size:12px;color:var(--muted);margin-top:14px}h1{font-size:clamp(24px,3.1vw,34px);line-height:1.5;letter-spacing:.01em;margin:13px 0 18px}h2{font-size:21px;line-height:1.45;margin:38px 0 15px;padding-bottom:9px;border-bottom:2px solid #b8dcd0}h3{font-size:17px;margin:26px 0 9px}p{margin:14px 0}ul,ol{padding-left:1.5em}li{margin:6px 0}.lead{font-size:16px}.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:27px 0 33px}.toc strong{display:block;margin-bottom:6px}.toc ol{margin:6px 0}.toc a{font-size:14px}.note{padding:14px 18px;background:#fdf8ee;border-left:3px solid #cda647;border-radius:4px;margin:22px 0}.takeaway{padding:18px 20px;background:var(--soft);border-radius:8px;margin:24px 0}.table-wrap{overflow-x:auto;margin:17px 0}table{width:100%;border-collapse:collapse;min-width:580px;font-size:13px}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft)}.small{font-size:12px;color:var(--muted)}.related{padding:18px 20px;border:1px solid var(--line);border-radius:8px;margin-top:35px}.refs{font-size:13px;overflow-wrap:anywhere}.refs li{margin:9px 0}.faq dt{font-weight:700;margin-top:18px}.faq dd{margin:4px 0 16px}footer{text-align:center;padding:6px 15px 35px;font-size:13px;color:var(--muted)}footer a{margin:0 8px}strong{font-weight:750}
+@media(max-width:650px){header .bar{padding:14px 16px}header .brand{font-size:19px}.wrap{padding:0 12px;margin-top:17px}article{padding:25px 20px}h2{font-size:19px}h1{font-size:25px}}
+
+.related{scroll-margin-top:20px}.related a{display:inline-block;min-height:44px;padding:8px 0;line-height:1.6;overflow-wrap:anywhere}.reading-jump a{display:inline-block;padding:10px 14px;border:1px solid #b5d7cc;border-radius:8px;background:#f1f7f4;min-height:44px}.related p,.related li{margin:8px 0}@media(max-width:650px){.related{padding:14px!important}.related a{font-size:15px}}
+
+figure{margin:1.5rem 0}figure img{display:block;width:100%;height:auto}figcaption,caption{font-size:.87rem;text-align:left}caption{font-weight:700;margin-bottom:.5rem}.table-wrap{max-width:100%}article{min-width:0;overflow-wrap:anywhere}.related a{display:inline-block;padding:.22rem 0}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "アルトコイン暴落史｜ETH・LTC・XRPは何％下がり、いつ高値に戻ったか", "description": "2017年から2019年4月までの826日間、ETH・LTC・XRPとBTCの米ドル建て終値を比較。最大下落率、回復した局面の日数、未回復で観測を終えた期間を、日足CSVとPythonで検算できます。", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "inLanguage": "ja", "mainEntityOfPage": "https://topic-kichi.com/articles/altcoin-drawdown-history.html", "author": {"@type": "Organization", "name": "トピック基地", "url": "https://topic-kichi.com/about.html"}}</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155299200535467" crossorigin="anonymous"></script>
+</head>
+<body><header><div class="bar"><a class="brand" href="../">トピック基地</a><a class="return" href="../#original-articles">独自解説一覧</a></div></header>
+<main class="wrap"><nav class="crumb" aria-label="パンくず"><a href="../">トップ</a> ／ 暗号資産</nav><article>
+<h1>アルトコイン暴落史｜ETH・LTC・XRPは何％下がり、いつ高値に戻ったか</h1><p class="date">第14号　執筆・更新 <time datetime="2026-11-23">2026年11月23日</time> ｜ <a href="../about.html#editorial-policy">トピック基地の編集方針</a></p>
+<p class="lead">2017年1月1日から2019年4月6日まで、米ドル建ての終値を毎日追うと、最大下落率はETHが93.94%、LTCが93.54%、XRPが90.54%、BTCが83.29%でした。各銘柄の高値で100万円相当を保有していたとすると、底で残るのは約6万〜17万円です。</p>
+<p>この4つの高値には、いずれも観測最終日までに戻りませんでした。一方、2017年前半だけで最大だった下落からは、4銘柄とも元の高値に届いています。どの高値を起点にするかで「回復に何日かかったか」の答えが変わります。</p>
+<nav class="toc" aria-label="目次"><strong>この記事の内容</strong><ol><li><a href="#why">時価総額と売りやすさ</a></li><li><a href="#ranking">最大下落率とピーク・底値</a></li><li><a href="#recovery">回復日と未回復の読み方</a></li><li><a href="#btc">BTCと同じ日に比べる</a></li><li><a href="#money">100万円はどうなるか</a></li><li><a href="#exit">消えた市場と銘柄の改称</a></li><li><a href="#lessons">過去の数字を使うとき</a></li><li><a href="#sources">データと再計算</a></li></ol></nav>
+<h2 id="why">1. 時価総額が大きくても、その値段で売れるとは限らない</h2>
+<p>流通量が1億枚、最後に取引された価格が100円なら、時価総額は100億円です。次の売買が80円で成立すれば、流通量が同じでも80億円になります。この差の20億円は、売り手が実際に引き出した金額を示しません。大量に売ったときに何円で約定するかは、買い注文の厚みと取引場所で変わります。</p>
+<p>新規発行やロック解除で市場に出せる枚数が増えると、1枚の価格が下がっても時価総額が増えることがあります。資金が別の銘柄に移る局面では買い手も減り得ます。本稿の終値から、流通量の変化や売り注文の内訳、特定日の下落原因までは特定できません。</p>
+<h2 id="ranking">2. 826日で最大だった下落を比べる</h2>
+<p>各日の終値を、それまでの期間内最高終値で割り、最も深く落ち込んだ組を採りました。スマートフォンでは表を横に動かして終値を確認できます。ここでの「高値」「底値」はすべて米ドル建ての日足終値です。上場来や日中の瞬間値を示す順位ではありません。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="同じ826日間の最大下落。BTCは比較用"><table><caption>同じ826日間の最大下落。BTCは比較用</caption><thead><tr><th scope="col">銘柄</th><th scope="col">高値日・終値（USD）</th><th scope="col">底値日・終値（USD）</th><th scope="col">高値から底まで</th><th scope="col">下落率</th></tr></thead><tbody>
+<tr><th scope="row">ETH</th><td>2018-01-13<br>1385.02</td><td>2018-12-14<br>83.9</td><td>335日</td><td>-93.94%</td></tr>
+<tr><th scope="row">LTC</th><td>2017-12-18<br>357.51</td><td>2018-12-13<br>23.1</td><td>360日</td><td>-93.54%</td></tr>
+<tr><th scope="row">XRP</th><td>2018-01-07<br>2.78</td><td>2018-09-11<br>0.263</td><td>247日</td><td>-90.54%</td></tr>
+<tr><th scope="row">BTC</th><td>2017-12-16<br>19345.49</td><td>2018-12-15<br>3232.51</td><td>364日</td><td>-83.29%</td></tr>
+</tbody></table></div>
+<figure><a href="./data/altcoin-drawdowns/drawdown.svg"><img src="./data/altcoin-drawdowns/drawdown.svg" alt="下落幅はETH、LTC、XRP、BTCの順。値は直前の表に掲載。" loading="lazy"></a><figcaption>棒は高値から失った割合。ETHとLTCの差は約0.4ポイントです。 図を選ぶと拡大できます。</figcaption></figure>
+<p><strong>ETHとLTC。</strong> 下げ幅は近くても、高値を付けたのはLTCが2017年12月18日、ETHが翌年1月13日。底に届くまでの日数も360日と335日でした。どちらが先に動いたかは、下落率の棒だけでは読み取れません。</p>
+<p><strong>XRP。</strong> 2.78ドルから0.263ドルまで下げ、底は2018年9月11日。ほかの3銘柄が12月に底を付けるより早く、4銘柄共通の「暴落が終わった日」は設定できません。</p>
+<h2 id="recovery">3. 高値から何日待ったか。底から何日戻したか</h2>
+<p>回復日は底の後、初めて終値が元の高値以上になった日です。同値に戻った日も含めます。たとえば2017年前半のETHは高値から底まで14日、底から回復まで150日で、高値で保有していた人から見れば164日です。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="全期間で最大だった下落の追跡結果（2019年4月6日現在）"><table><caption>全期間で最大だった下落の追跡結果（2019年4月6日現在）</caption><thead><tr><th scope="col">銘柄</th><th scope="col">判定</th><th scope="col">高値から観測終了まで</th><th scope="col">最終終値（USD）</th><th scope="col">最終日の高値比</th></tr></thead><tbody>
+<tr><th scope="row">ETH</th><td>未回復</td><td>448日</td><td>166.28</td><td>-87.99%</td></tr>
+<tr><th scope="row">LTC</th><td>未回復</td><td>474日</td><td>92.63</td><td>-74.09%</td></tr>
+<tr><th scope="row">XRP</th><td>未回復</td><td>454日</td><td>0.354</td><td>-87.27%</td></tr>
+<tr><th scope="row">BTC</th><td>未回復</td><td>476日</td><td>5057.25</td><td>-73.86%</td></tr>
+</tbody></table></div>
+<p>表の日数は回復までの日数の下限です。そこで観測を打ち切ったため、その後の初回回復日や現在の状態はこのデータでは決まりません。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="2017年1〜6月に高値と底がある最大下落を選び、同じ最終日まで追跡"><table><caption>2017年1〜6月に高値と底がある最大下落を選び、同じ最終日まで追跡</caption><thead><tr><th scope="col">銘柄</th><th scope="col">高値日 → 底値日</th><th scope="col">下落率</th><th scope="col">初回回復日</th><th scope="col">高値から</th><th scope="col">底から</th></tr></thead><tbody>
+<tr><th scope="row">ETH</th><td>2017-06-12 → 2017-06-26</td><td>-35.72%</td><td>2017-11-23</td><td>164日</td><td>150日</td></tr>
+<tr><th scope="row">LTC</th><td>2017-05-24 → 2017-05-27</td><td>-34.40%</td><td>2017-06-17</td><td>24日</td><td>21日</td></tr>
+<tr><th scope="row">XRP</th><td>2017-04-02 → 2017-04-20</td><td>-51.24%</td><td>2017-05-04</td><td>32日</td><td>14日</td></tr>
+<tr><th scope="row">BTC</th><td>2017-01-04 → 2017-01-11</td><td>-30.82%</td><td>2017-02-23</td><td>50日</td><td>43日</td></tr>
+</tbody></table></div>
+<figure><a href="./data/altcoin-drawdowns/recovery.svg"><img src="./data/altcoin-drawdowns/recovery.svg" alt="2017年前半の局面の高値から初回回復まで、ETH164日、LTC24日、XRP32日、BTC50日。" loading="lazy"></a><figcaption>濃色が下落中、緑が底から回復まで。右端の数は合計の暦日です。 図を選ぶと拡大できます。</figcaption></figure>
+<p><strong>SOL・ADA・DOGEは判定不能。</strong> 今回取得した研究表には3銘柄の系列がありません。取引開始前の日を0ドルで埋めたり、同名の別商品の価格を足したりせず、順位・平均の対象から外しました。</p>
+<h2 id="btc">4. BTCと同じ日に保有していたらどうか</h2>
+<p>上の順位は、銘柄別に起点と終点を探した結果です。全員がETHの高値日（2018年1月13日）に買い、ETHの底値日（12月14日）まで持ったと仮定すると、終値の変化率はETH −93.94%、LTC −90.94%、XRP −85.53%、BTC −77.28%です。購入日の違いを消して比べても、この事例ではBTCにも大幅な損失が残ります。</p>
+<figure><a href="./data/altcoin-drawdowns/prices.svg"><img src="./data/altcoin-drawdowns/prices.svg" alt="4銘柄の初日を100とした日足推移。2017年に上昇した後、各銘柄が異なる時期に下落。" loading="lazy"></a><figcaption>初日を100にそろえた全826終値。縦軸は対数目盛で、同じ縦幅が同じ倍率を表します。米ドル建てです。 図を選ぶと拡大できます。</figcaption></figure>
+<p>BTCは採掘報酬の発行予定を持ち、ETHとXRPにはそれぞれ異なる供給や手数料の仕組みがあります。この期間のBTCの下落幅が小さかった理由を、発行上限や流動性だけに帰すことはできません。出来高にもとづく市場の厚みを調べるには、各時点の板や注文額ごとの約定価格が必要です。</p>
+<p>取引場所を変えた場合も確認しました。比較用BTC系列の高値・底値は19,345.49ドルと3,232.51ドル。同じ日のBitstamp終値は19,187.78ドルと3,179.54ドルで、こちらを使うと下落率は−83.43%です。異なる取引所・集計法の終値をつないで、見かけ上精密な回復日を作ることは避けました。<a href="./bitcoin-crash-history.html#method">Bitstamp系列の集計条件</a></p>
+<h2 id="money">5. 100万円が10万円に減ったら、元に戻るには何％必要か</h2>
+<p>90%下落した100万円は10万円です。ここから90%上昇しても19万円。100万円に届くには10倍、つまり<strong>底から900%の上昇</strong>が必要です。必要上昇率は（高値 ÷ 底値 − 1）× 100で求められます。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="各銘柄の期間内高値で100万円相当を保有した仮定"><table><caption>各銘柄の期間内高値で100万円相当を保有した仮定</caption><thead><tr><th scope="col">銘柄</th><th scope="col">底値時の評価額</th><th scope="col">底値から必要な上昇率</th></tr></thead><tbody>
+<tr><th scope="row">ETH</th><td>60,577円</td><td>1550.80%</td></tr>
+<tr><th scope="row">LTC</th><td>64,614円</td><td>1447.66%</td></tr>
+<tr><th scope="row">XRP</th><td>94,604円</td><td>957.03%</td></tr>
+<tr><th scope="row">BTC</th><td>167,094円</td><td>498.47%</td></tr>
+</tbody></table></div>
+<figure><a href="./data/altcoin-drawdowns/balance.svg"><img src="./data/altcoin-drawdowns/balance.svg" alt="100万円を高値に置いたときの底値評価額。4銘柄とも17万円以下。" loading="lazy"></a><figcaption>円は割合を理解するための換算単位。為替一定、税・手数料・売買スプレッドを除く単純モデルです。 図を選ぶと拡大できます。</figcaption></figure>
+<p>同じ数量を持ち続けた想定です。分割購入、途中売却、フォークで受け取った資産、ステーキング収益、保管先の破綻などは含みません。市場の終値が一度元に戻っても、各投資家が取得費と諸費用を回収できたかは別途計算が必要です。</p>
+<h2 id="exit">6. 消えた市場、名前が変わった資産をどう数えるか</h2>
+<p>市場自体が終了する例があります。BNB Beacon Chainの板取引型DEXは、実装済みのBEP-151で新規注文と新規ペアの上場を停止しました。その市場で売買できなくなった後の空欄から、価格ゼロとも、最後の終値で売れたとも判断できません。<a href="https://github.com/bnb-chain/BEPs/blob/aad6b1bd65605ae2d6d268b176f009386862d6ca/BEPs/BEP151.md">BNB Chainの実装仕様</a></p>
+<p>Terraの例では、Cosmosの台帳にある最小単位が同じ <code>uluna</code> でも、旧チェーン側の表示はLUNC、新チェーン側はLUNAです。名前や単位だけでチャートをつなぐと、保有していない別資産の上昇を「回復」と数えてしまいます。<a href="https://github.com/cosmos/chain-registry/blob/f47d3559ecb21e93b3141953c4b11c3ca743fed2/terra/assetlist.json">旧チェーンの登録情報</a> ／ <a href="https://github.com/cosmos/chain-registry/blob/f47d3559ecb21e93b3141953c4b11c3ca743fed2/terra2/assetlist.json">新チェーンの登録情報</a></p>
+<p>研究データの作成者は、改称や収録不足を除外条件に挙げています。さらに今回は終値と出来高を4銘柄で毎日照合できる期間に限定しました。早く市場から消えた銘柄が入りにくいため、ここで観測した回復の件数を「アルトコイン全体が回復する確率」には換算できません。全取引所の上場廃止、4銘柄の全イベントの調整履歴は未確認です。</p>
+<h2 id="lessons">7. この結果を読むときに確かめる3点</h2>
+<ul><li>購入日の問いには、全銘柄を同じ日付にそろえた比較を使う。銘柄固有の最悪局面を知る問いには最大下落率を使う。</li>
+<li>「回復」の起点と期限を読む。2017年前半のXRPは約半値になって32日で高値に戻りましたが、全期間の最大下落は基準日までに戻っていません。</li>
+<li>売れる場所と保有単位を確かめる。市場撤退・フォーク・移行の前後では、同じチャートを見ていても実際に売買できた条件が変わります。</li></ul>
+<h2 id="sources">8. 出典・計算条件・再現方法</h2>
+<p>原資料はゲント大学の研究チームによる <a href="https://github.com/edloginova/cryptodata/tree/d75a21bf67ad306ec5699691a84bd8685df9243c">Cryptocurrency Dataset</a>。Wai Kit Tsang・Ekaterina LoginovaがGuus van Heijningenの修士研究を基に作成し、Dries Benoitが指導しました。原価格はCryptoCompareの <code>histoday</code> で指定通貨はUSD。取引所を指定しない取得コードの <code>close</code> を採用しました。構成取引所や換算経路の過去の内訳は未確認です。</p>
+<p>取得・検算は2026年11月23日。研究表は2015年8月7日〜2019年4月7日を収録しています。初期の一部系列に出来高ゼロの日があるため比較は2017年の年初から。原取得時に最終足が確定していたか分からないため、末日は4月6日としました。日付はUTCの日足の開始日です。各銘柄875行のうち、価格と両方の出来高が一致する重複49行を除き、826日すべてに正の観測値がありました。欠損補間は行っていません。</p>
+<p>XRPの2017年4月2日の終値は前日比約2.80倍です。自動的に削除せず、提示した研究表の観測として採用しました。元取引の全件照合はできていません。当時の各プロトコルの2版で通貨の最小単位も確認しました。BTCとLTCは1枚が10の8乗単位、ETHは10の18乗wei、XRPは10の6乗dropsです（版と出典は再現手順に掲載）。集計系列には名称・分割調整のフラグがなく、別チェーンへの換算や取得原価の調整は加えていません。</p>
+<p>下落率は（底値終値 ÷ 先行高値終値 − 1）× 100。回復判定には丸める前の終値を使います。同じ高さ・同じ深さなら先の日を採用。再計算はCSVと <code>analyze.py</code> を同じ場所に保存し、Python 3で <code>python analyze.py</code> を実行してください。</p>
+<ul><li><a href="./data/altcoin-drawdowns/input.csv">日足入力CSV</a> ／ <a href="./data/altcoin-drawdowns/results.json">8局面の計算結果</a></li>
+<li><a href="./data/altcoin-drawdowns/analyze.py">計算コード</a> ／ <a href="./data/altcoin-drawdowns/charts.py">作図コード</a> ／ <a href="./data/altcoin-drawdowns/extract.py">原資料からの抽出コード</a></li>
+<li><a href="./data/altcoin-drawdowns/METHOD.md">抽出・検算の手順と利用条件</a> ／ <a href="./data/altcoin-drawdowns/sources.json">原資料の固定URL・取得時刻・SHA-256</a></li></ul>
+<p class="small">原データのライセンスは <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>。トピック基地が上記期間を抽出し、重複を除き、表・グラフを作成しました。加工CSV・集計表・図も同じ条件で利用できます。</p>
+<section class="related" id="related-reading"><h2>関連記事</h2>
+<p><strong>暗号資産の仕組みと市場</strong>　<a href="./bitcoin-halving.html">半減期で変わる発行量</a> ／ <a href="./bitcoin-four-year-cycle.html">4年周期説の検算</a> ／ <a href="./crypto-eth-sol-xrp-comparison.html">ETH・SOL・XRPの用途と供給</a> ／ <a href="./bitcoin-crash-history.html">単一取引所で測ったBTC暴落史</a></p>
+<p><strong>比較期間・通貨・評価指標</strong>　<a href="./bitcoin-vs-stocks-long-term.html">BTCと株式の円換算比較</a> ／ <a href="./sp500-vs-all-country.html">米国株と全世界株の重複</a> ／ <a href="./gold-bitcoin-stocks-inflation.html">物価を考慮した実質リターン</a> ／ <a href="./market-cap-per-pbr-guide.html">株式の時価総額と価格の違い</a></p>
+<p><strong>保有中の費用・税と資産管理</strong>　<a href="./new-nisa-beginners-guide.html">新NISAの制度と積立例</a> ／ <a href="./crypto-tax-japan-guide.html">暗号資産の取得価額と税金</a> ／ <a href="./dividend-vs-index-investing.html">配当受取と再投資</a> ／ <a href="./etf-vs-mutual-funds.html">ETFと投信の費用差</a> ／ <a href="./crypto-scam-prevention.html">資産を保有できなくなる詐欺のリスク</a></p>
+</section></article></main><footer><a href="../">トップ</a> ｜ <a href="../about.html">運営者・編集方針</a> ｜ <a href="../privacy.html">プライバシー</a> ｜ <a href="../contact.html">お問い合わせ・訂正依頼</a></footer></body></html>
